@@ -80,10 +80,10 @@ instance.
 
 Starting eclimd
 
-The eclim daemon inside of eclipse is implemented as an eclipse view.
-To open the view, go to the Window menu and select:
+The eclim daemon inside of eclipse is implemented as an eclipse view
+which can be found via:
 
-Show View ‣ Other ‣ Eclim ‣ eclimd
+Window ‣ Show View ‣ Other ‣ Eclim ‣ eclimd
 
 The view will be opened in a new tab in the same pane as the
 "Problems" tab, as shown below.
@@ -176,6 +176,20 @@ Note: Some users have reported issues with the embedded gvim's command
 
   <
 
+
+*eclim-gvim-embedded-focus*
+
+Embedded gvim focus
+
+In some windowing environments, the embedded gvim is treated more like
+a separate window. The result of this is that clicking the eclipse tab
+(or using tab focusing keyboard shortcuts) may focus that tab, but it
+won't focus the embedded gvim on that tab. Eclim adds a setting to
+vimplugin which when enabled, will attempt to simulate a click on the
+embedded gvim window to force it to focus:
+
+Window ‣ Preferences ‣ Vimplugin ‣ Force gvim focus via automated
+click
 
 *eclim-gvim-embedded-shortcuts*
 
@@ -327,7 +341,7 @@ can be configured via the
 $ECLIPSE_HOME/plugins/org.eclim_version/log4j.xml file.
 
 By default, eclimd writes all logging info to both the console and to
-a log file in your workspace: <workspace>/.metadata/.log.eclimd
+a log file in your workspace: <workspace>/eclimd.log
 
 *eclimd-multiworkspace*
 

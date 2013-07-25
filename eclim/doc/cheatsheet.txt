@@ -197,6 +197,9 @@ Java Commands
 - |:JavaConstructor| - Creates class constructor, either empty or
   based on selected class fields.
 
+- |:JavaCallHierarchy| - Display the call hierarchy for the method
+  under the cursor.
+
 - |:JavaHierarchy| - View the type hierarchy tree.
 
 - |:JavaImpl| - View implementable / overridable methods from super
@@ -380,6 +383,12 @@ Ruby Commands
   its context.
 
 - :Validate (|:Validate_ruby|) - Manually runs source code validation.
+
+- |:RubyInterpreterAdd| [-n <name>] <path> - Add a ruby interpreter.
+
+- |:RubyInterpreterRemove| <path> - Remove a ruby interpreter.
+
+- |:RubyInterpreterList|  - List the available ruby interpreters.
 
 
 WebXml Commands

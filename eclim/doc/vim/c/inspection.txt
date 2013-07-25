@@ -55,10 +55,10 @@ Configuration
 
 Vim Settings (|vim-settings|)
 
-*g:EclimCHierarchyDefaultAction*
+*g:EclimCCallHierarchyDefaultAction*
 
-- g:EclimCHierarchyDefaultAction (defaults to 'split') - Determines
-  the command used to open the file when hitting <enter> on an entry
-  in the hierarchy buffer.
+- g:EclimCCallHierarchyDefaultAction (defaults to 'split') -
+  Determines the command used to open the file when hitting <enter> on
+  an entry in the hierarchy buffer.
 
 vim:ft=eclimhelp

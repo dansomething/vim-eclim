@@ -131,10 +131,25 @@ What's New?
 [image: Rss Feed for What's New][image] (index.rss)
 
 
+Jul. 14, 2013
+-------------
+
+This is primarily a bug fix release with a few new features. Unless
+some critical error is found, this will be the last release targeting
+Juno. The next release will likely target Kepler though this release
+should work fine on Kepler as well, with the exception of scala
+support which has not been tested. Indigo support will continue but
+will likely end with the release of Luna, possibly sooner.
+
+- Eclim 2.2.7 (|2.2.7|) for Eclipse 4.2 (Juno).
+
+- Eclim 1.7.16 (|1.7.16|) for Eclipse 3.7/3.8 (Indigo).
+
+
 May 18, 2013
 ------------
 
-Eclim has been updated to suport the Android Developement Toolkit
+Eclim has been updated to support the Android Development Toolkit
 version 22.0.0, scala is now supported for both Juno and Indigo, and
 there are a few other improvements and many bug fixes.
 

@@ -125,7 +125,7 @@ local file system (file:) or remote (http:).
      <attributes>
        <attribute value="file:<javadoc>" name="javadoc_location"/>
      </attributes>
-   </classpath>
+   </classpathentry>
 
 <
 
@@ -217,6 +217,23 @@ Note: For additional information on the Eclipse plugin from maven, you may
 
   <
 
+  Note: This feature simply updates the entries in your project's
+    .classpath file, it does not download any newly added jars. When
+    you'd like maven to download those new jars, you can run the
+    following from the command line:>
+
+       mvn dependency:resolve
+
+    <
+
+
+    or from within Vim:>
+
+       :Mvn dependency:resolve
+
+    <
+
+
 - Search Online Maven Repository
 
   Eclim also provides the command :MvnDependencySearch
@@ -263,6 +280,33 @@ updated, and any stale entries deleted.
   Once you have performed the initial setup, updating the Eclipse
   .classpath file is as easy as saving your ivy.xml file (:w) and
   letting eclim do the rest.
+
+  Note: This will update your project's .classpath file accordingly, but
+    it will not download any newly added jars. For that you'll need to
+    have a target in your ant build file which you can run that will
+    force ivy to download dependencies. Something like the example
+    from the ivy docs:>
+
+       <target name="resolve" description="--> retrieve dependencies with ivy">
+         <ivy:retrieve/>
+       </target>
+
+    <
+
+
+    You can then run this target from the command line:>
+
+       ant resolve
+
+    <
+
+
+    or from within Vim>
+
+       :Ant resolve
+
+    <
+
 
 - Preserving manually added entries
 
