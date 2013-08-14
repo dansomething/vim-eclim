@@ -16,8 +16,8 @@ following requirements.
 
 - Vim (http://www.vim.org/download.php) 7.1 or greater
 
-- Eclipse 4.2.x (Juno) (http://eclipse.org/downloads/index.php) (eclim
-  2.2.x), Eclipse 3.7.x (Indigo)
+- Eclipse 4.3.x (Kepler) (http://eclipse.org/downloads/index.php)
+  (eclim 2.2.x), Eclipse 3.7.x (Indigo)
   (http://eclipse.org/downloads/packages/release/indigo/sr2) (eclim
   1.7.x), or Eclipse 3.8
   (http://download.eclipse.org/eclipse/downloads/drops/R-3.8-201206081200/)
@@ -73,12 +73,12 @@ Download
 You can find the official eclim installer on eclim's sourceforge
 downloads page (https://sourceforge.net/projects/eclim/files/eclim/):
 
-- eclim_2.2.7.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.2.7/eclim_2.2.7.jar/download)
-  (for Eclipse 4.2.x, Juno)
+- eclim_2.3.1.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.3.1/eclim_2.3.1.jar/download)
+  (for Eclipse 4.3.x, Kepler)
 
-- eclim_1.7.16.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/1.7.16/eclim_1.7.16.jar/download)
+- eclim_1.7.17.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/1.7.17/eclim_1.7.17.jar/download)
   (for Eclipse 3.8 or Eclipse 3.7.x, Indigo)
 
 
@@ -119,13 +119,13 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting the
   installation procedure.
 
-- First download the installer:  eclim_2.2.7.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.2.7/eclim_2.2.7.jar/download)
+- First download the installer:  eclim_2.3.1.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.3.1/eclim_2.3.1.jar/download)
 
 - Next run the installer:
 
   >
-     $ java -jar eclim_2.2.7.jar
+     $ java -jar eclim_2.3.1.jar
 
   <
 
@@ -225,7 +225,7 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.2.7.jar
+   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.3.1.jar
 
 <
 
@@ -238,7 +238,7 @@ proxy settings:
 
 >
 
-   $ java -Djava.net.useSystemProxies=true -jar eclim_2.2.7.jar
+   $ java -Djava.net.useSystemProxies=true -jar eclim_2.3.1.jar
 
 <
 
@@ -279,7 +279,7 @@ In some rare cases you might encounter one of the following errors:
    installer like so:
 
    >
-      $ java -Djava.ext.dirs -jar eclim_2.2.7.jar
+      $ java -Djava.ext.dirs -jar eclim_2.3.1.jar
 
    <
 
@@ -303,7 +303,7 @@ your eclipse install via system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.2.7.jar install
+     -jar eclim_2.3.1.jar install
 
 <
 
@@ -526,7 +526,7 @@ eclim installer's automated install option (see the Unattended
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.2.7.jar install
+     -jar eclim_2.3.1.jar install
 
 <
 
@@ -574,7 +574,7 @@ argument like so:
 
 >
 
-   $ java -jar eclim_2.2.7.jar uninstaller
+   $ java -jar eclim_2.3.1.jar uninstaller
 
 <
 
@@ -602,7 +602,7 @@ system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.2.7.jar uninstall
+     -jar eclim_2.3.1.jar uninstall
 
 <
 

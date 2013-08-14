@@ -65,9 +65,6 @@ and open files or buffers.
 
   - quickfix: search the quickfix results
 
-  - vcsmodified: search files reported by your vcs as modified or
-    untracked.
-
   Note: For performance reasons, locating files in the 'project' and
     'workspace' scopes depends on eclipse being aware of all your
     project files.  For the most part this is handled automatically as
@@ -75,6 +72,18 @@ and open files or buffers.
     outside of vim or eclipse (moving/removing files, updates from a
     version control system, etc.) will not be visible until you force
     a project refresh via |:ProjectRefresh|.
+
+  Note: If you would like to use :LocateFile even when eclimd is not
+    running or for projects not known to eclim, one option would be to
+    install the silver searcher
+    (https://github.com/ggreer/the_silver_searcher), then install my
+    ag plugin (https://github.com/ervandew/ag), and configure eclim to
+    use the plugin as the fallback default:>
+
+       let g:EclimLocateFileNonProjectScope = 'ag'
+
+    <
+
 
   Configuration
 
@@ -116,5 +125,10 @@ and open files or buffers.
     - 'always': searching will always be case insensitive.
 
     - 'never': searching will never be case insensitive.
+
+  Note: Search Filters: eclim does not yet expose the ability to add
+    filters should you want to ignore certain directories, but you can
+    configure this ability from within Eclipse:<right click on your
+    project> ‣ Properties ‣ Resource ‣ Resource Filters
 
 vim:ft=eclimhelp

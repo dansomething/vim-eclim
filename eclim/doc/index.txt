@@ -131,6 +131,27 @@ What's New?
 [image: Rss Feed for What's New][image] (index.rss)
 
 
+Jul. 27, 2013
+-------------
+
+The previous eclim installer for Kepler was still pointing at the Juno
+update site. This release remedies that.
+
+- Eclim 2.3.1 (|2.3.1|) for Eclipse 4.3 (Kepler).
+
+
+Jul. 21, 2013
+-------------
+
+The focus of this release is to bring eclim fully up to date with
+Eclipse Kepler support. The installer for eclim 2.3.0 now requires
+that you install against Kepler.
+
+- Eclim 2.3.0 (|2.3.0|) for Eclipse 4.3 (Kepler).
+
+- Eclim 1.7.17 (|1.7.17|) for Eclipse 3.7/3.8 (Indigo).
+
+
 Jul. 14, 2013
 -------------
 
