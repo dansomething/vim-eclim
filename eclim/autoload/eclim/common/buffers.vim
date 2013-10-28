@@ -92,6 +92,7 @@ function! eclim#common#buffers#Buffers(bang) " {{{
   nnoremap <silent> <buffer> <cr> :call <SID>BufferOpen(g:EclimBuffersDefaultAction)<cr>
   nnoremap <silent> <buffer> E :call <SID>BufferOpen('edit')<cr>
   nnoremap <silent> <buffer> S :call <SID>BufferOpen('split')<cr>
+  nnoremap <silent> <buffer> V :call <SID>BufferOpen('vsplit')<cr>
   nnoremap <silent> <buffer> T :call <SID>BufferOpen('tablast \| tabnew')<cr>
   nnoremap <silent> <buffer> D :call <SID>BufferDelete()<cr>
   nnoremap <silent> <buffer> R :Buffers<cr>
@@ -102,6 +103,7 @@ function! eclim#common#buffers#Buffers(bang) " {{{
       \ '<cr> - open buffer with default action',
       \ 'E - open with :edit',
       \ 'S - open in a new split window',
+      \ 'V - open in a new vertically split window',
       \ 'T - open in a new tab',
       \ 'D - delete the buffer',
       \ 'R - refresh the buffer list',

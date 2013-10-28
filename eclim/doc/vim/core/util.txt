@@ -61,6 +61,8 @@ of eclim.
 
   - S (shift-s) - Open the file with 'split'.
 
+  - V (shift-v) - Open the file with 'vsplit'.
+
   - T (shift-t) - Open the file with 'tabnew'.
 
   - D (shift-d) - Deletes the buffer and removes it from the list.

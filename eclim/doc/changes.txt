@@ -3,6 +3,22 @@
 History of Changes
 ******************
 
+*2.3.2* *1.7.18*
+
+
+2.3.2 / 1.7.18 (Sep. 12, 2013)
+==============================
+
+Installer:
+   - Fixed extraction of scala vim files when installing scala
+     support.
+
+Php:
+   - Fixed completion of php namespaces.
+
+Git Log (2.3.2) (https://github.com/ervandew/eclim/compare/2.3.1...2.3.2)
+Git Log (1.7.18) (https://github.com/ervandew/eclim/compare/1.7.17...1.7.18)
+
 *2.3.1*
 
 
