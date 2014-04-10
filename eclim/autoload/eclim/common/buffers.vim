@@ -4,7 +4,7 @@
 "
 " License:
 "
-" Copyright (C) 2005 - 2013  Eric Van Dewoestine
+" Copyright (C) 2005 - 2014  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -30,6 +30,9 @@ if !exists('g:EclimBuffersSortDirection')
 endif
 if !exists('g:EclimBuffersDefaultAction')
   let g:EclimBuffersDefaultAction = g:EclimDefaultFileOpenAction
+endif
+if !exists('g:EclimBuffersDeleteOnTabClose')
+  let g:EclimBuffersDeleteOnTabClose = 0
 endif
 if !exists('g:EclimOnlyExclude')
   let g:EclimOnlyExclude = '^NONE$'
@@ -214,22 +217,24 @@ function! eclim#common#buffers#TabEnter() " {{{
     call s:SetTabId()
   endif
 
-  if exists('s:tab_count') && s:tab_count > tabpagenr('$')
-    " delete any buffers associated with the closed tab
-    let buffers = eclim#common#buffers#GetBuffers()
-    for buffer in buffers
-      let eclim_tab_id = getbufvar(buffer.bufnr, 'eclim_tab_id')
-      " don't delete active buffers, just in case the tab has the wrong
-      " eclim_tab_id
-      if eclim_tab_id == s:tab_prev && buffer.status !~ 'a'
-        try
-          exec 'bdelete ' . buffer.bufnr
-        catch /E89/
-          " ignore since it happens when using bd! on the last buffer for
-          " another tab.
-        endtry
-      endif
-    endfor
+  if g:EclimBuffersDeleteOnTabClose
+    if exists('s:tab_count') && s:tab_count > tabpagenr('$')
+      " delete any buffers associated with the closed tab
+      let buffers = eclim#common#buffers#GetBuffers()
+      for buffer in buffers
+        let eclim_tab_id = getbufvar(buffer.bufnr, 'eclim_tab_id')
+        " don't delete active buffers, just in case the tab has the wrong
+        " eclim_tab_id
+        if eclim_tab_id == s:tab_prev && buffer.status !~ 'a'
+          try
+            exec 'bdelete ' . buffer.bufnr
+          catch /E89/
+            " ignore since it happens when using bd! on the last buffer for
+            " another tab.
+          endtry
+        endif
+      endfor
+    endif
   endif
 endfunction " }}}
 
@@ -325,18 +330,12 @@ function! s:BufferDelete() " {{{
   let buffer = b:eclim_buffers[index]
   call remove(b:eclim_buffers, index)
 
-  let winnr = bufwinnr(buffer.bufnr)
-  if winnr != -1
-    " if active in a window, go to the window to delete the buffer since that
-    " keeps eclim's prevention of closing the last non-utility window working
-    " properly.
-    let curwin = winnr()
-    exec winnr . 'winc w'
-    bdelete
-    exec curwin . 'winc w'
-  else
-    exec 'bd ' . buffer.bufnr
-  endif
+  let winnr = winnr()
+  " make sure the autocmds are executed in the following order
+  noautocmd exec 'bd ' . buffer.bufnr
+  doautocmd BufDelete
+  doautocmd BufEnter
+  exec winnr . 'winc w'
 endfunction " }}}
 
 function! s:BufferEntryToLine(buffer, filelength) " {{{

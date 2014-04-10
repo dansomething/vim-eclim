@@ -3,9 +3,9 @@
 Plugins
 *******
 
-Note: This guide is a work in progress. If in the process of writing a new
-  plugin you find anything here that is unclear or missing, please
-  don't hesitate to post to the eclim-dev
+Note: This guide is a work in progress. If in the process of writing
+  a new plugin you find anything here that is unclear or missing,
+  please don't hesitate to post to the eclim-dev
   (http://groups.google.com/group/eclim-dev) mailing list with
   questions, suggestions, etc.
 
@@ -115,17 +115,11 @@ You'll first need to find out where the plugin's nature id is defined.
 Here are some examples that should give you an idea of where to look:
 
 - jdt: org.eclipse.jdt.core.JavaCore.NATURE_ID
-
 - cdt:
-
   - org.eclipse.cdt.core.CProjectNature.CNATURE_ID
-
   - org.eclipse.cdt.core.CCProjectNature.CC_NATURE_ID
-
 - dltkruby: org.eclipse.dltk.ruby.core.RubyNature.NATURE_ID
-
 - adt: com.android.ide.eclipse.adt.AdtConstants.NATURE_DEFAULT
-
 One way to find it is to open up the .project file in a project
 containing the nature, locate the fully qualified name in the
 <natures> section, then grep the plugin's code for that name.
@@ -181,24 +175,22 @@ mailing list.
 Eclim does provide a couple ant tasks to at least help you to quickly
 extract any docs and source code found in your eclipse install:
 
-- eclipse.doc: This target will extract any doc jars from your eclipse
-  install to a 'doc' directory in your eclipse home (or user local
-  eclipse home).
-
-- eclipse.src: This target will extract any src jars from your eclipse
-  install to a 'src' directory in your eclipse home (or user local
-  eclipse home). If you download the sdk version of eclipse then the
-  jdt and all the core eclipse source will be available. Some other
-  plugins provide sdk versions which include the source code and this
-  target can extract those as well, but some plugins don't seem to
-  have this option when installing via eclipse's update manager (and
-  may not include the source when installed from a system package
+- eclipse.doc: This target will extract any doc jars from your
+  eclipse install to a 'doc' directory in your eclipse home (or user
+  local eclipse home).
+- eclipse.src: This target will extract any src jars from your
+  eclipse install to a 'src' directory in your eclipse home (or user
+  local eclipse home). If you download the sdk version of eclipse then
+  the jdt and all the core eclipse source will be available. Some
+  other plugins provide sdk versions which include the source code and
+  this target can extract those as well, but some plugins don't seem
+  to have this option when installing via eclipse's update manager
+  (and may not include the source when installed from a system package
   manager). For those you can often download a zip version of their
   update site which should include source bundles. Once you've
   extracted that file, you can tell this target to extract source
   bundles from a specified directory. Here is an example of extracting
   the source from an unpacked dltk update site:
-
   >
      $ ant -Dsrc.dir=/home/ervandew/downloads/dltk-core-5.0.0/plugins eclipse.src
 
