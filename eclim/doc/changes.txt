@@ -3,7 +3,16 @@
 History of Changes
 ******************
 
-*2.3.3*
+*2.3.4*
+
+
+2.3.4 (Apr. 12, 2014)
+=====================
+
+Project:
+   - Fixed the projects command result on Windows.
+   Git Log (2.3.4) (https://github.com/ervandew/eclim/compare/2.3.3...2.3.4)
+ *2.3.3*
 
 
 2.3.3 (Apr. 06, 2014)
@@ -12,8 +21,8 @@ History of Changes
 Installer:
    - Fixed running of the installer with Java 8.
 Eclimd:
-   - Starting eclimd in the background is not done using the -b flag
-     now instead of passing a start flag.
+   - Starting eclimd in the background is now done using the -b flag
+     instead of passing a start argument.
    - Eclimd debug logging can now be enabled at startup using the
      --debug flag.
 Ant:
