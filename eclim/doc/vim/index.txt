@@ -20,6 +20,7 @@ Supported Languages
 
 - C/C++ (vim-c-index)
 - Html / Css (vim-html-index)
+- Groovy (vim-groovy-index)
 - Java (vim-java-index)
 - Javascript (vim-javascript-index)
 - Php (vim-php-index)

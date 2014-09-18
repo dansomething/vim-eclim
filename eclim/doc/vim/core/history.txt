@@ -18,7 +18,7 @@ vimrc:
 
 >
 
-   let g:EclimProjectKeepLocalHistory = 1
+   let g:EclimKeepLocalHistory = 1
 
 <
 
@@ -68,13 +68,13 @@ Eclipse Settings
 
 Vim Settings (|vim-settings|)
 
-*g:EclimProjectKeepLocalHistory*
+*g:EclimKeepLocalHistory*
 
-- g:EclimProjectKeepLocalHistory (Default: 0) - Controls whether
-  writes in vim will update the eclipse local history. This is
-  disabled by default unless gvim was started from the eclipse gui, in
-  which case eclim will honor the default eclipse editor behavior and
-  update the local history.
+- g:EclimKeepLocalHistory (Default: 0) - Controls whether writes in
+  vim will update the eclipse local history. This is disabled by
+  default unless gvim was started from the eclipse gui, in which case
+  eclim will honor the default eclipse editor behavior and update the
+  local history.
 *g:EclimHistoryDiffOrientation*
 
 - g:EclimHistoryDiffOrientation (Default: 'vertical') - When
