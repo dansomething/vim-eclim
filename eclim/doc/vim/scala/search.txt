@@ -10,7 +10,17 @@ Eclim's scala searching currently supports searching for the
 definition of the element under the cursor. Simply place the cursor on
 the element you wish to search for and run :ScalaSearch. If the
 definition of the element is found, the corresponding file will be
-opened and the cursor placed on the element's definition.
+opened and the cursor placed on the element's definition. The command
+used to open the result can be defined usin the
+|g:EclimScalaSearchSingleResult| variable or on a per search basis by
+supplying the -a <action> arg:
+
+>
+
+   :ScalaSearch -a edit
+
+<
+
 
 
 Configuration

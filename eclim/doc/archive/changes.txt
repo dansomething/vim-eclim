@@ -353,8 +353,7 @@ Java:
    - Updated |:JUnitImpl| to support junit 4 method signatures.
    - Updated |:JavaImport| and :JavaImportSort to honor eclipse's
      import order preference and added the ability to edit that
-     preference via |:ProjectSettings| and :EclimSettings
-     (|vim-core-eclim#:EclimSettings|).
+     preference via |:ProjectSettings| and :EclimSettings.
    - Added initial refactoring (|vim-java-refactor|) support.
 Git Log (1.5.2)
 (https://github.com/ervandew/eclim/compare/1.5.1...1.5.2)
@@ -414,8 +413,7 @@ Ruby:
      (|vim-ruby-validate|).
 Java:
    - Added ability to configure java indentation globally via
-     :EclimSettings (|vim-core-eclim#:EclimSettings|) or per project
-     using |:ProjectSettings|.
+     :EclimSettings or per project using |:ProjectSettings|.
 Git Log (1.5.0)
 (https://github.com/ervandew/eclim/compare/1.4.9...1.5.0)
 
@@ -1141,8 +1139,8 @@ Eclipse:
      made some improvements to how inner classes are handled that
      eclim now depends on.
 Eclim:
-   - Added support for global settings/preferences via new
-     :EclimSettings (|vim-core-eclim#:EclimSettings|) command.
+   - Added support for global settings/preferences via new :Settings
+     command.
 Java:
    - Delegate method creation.
    - Added g:EclimJavaSearchSingleResult setting to determine action

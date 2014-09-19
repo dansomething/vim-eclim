@@ -232,6 +232,8 @@ focus, you will fall into one of two groups:
      - Ctrl+X: in eclipse this cuts a selection to the clipboard,
        but in gvim this is needed to start various insert completions
        (ex. ctrl-x ctrl-u).
+     - Delete: prevent the eclipse delete key binding from
+       suppressing delete attempts in the embedded gvim.
 *FeedKeys*
 
 2. In the second group, all key presses are received by gvim and

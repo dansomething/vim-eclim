@@ -202,7 +202,7 @@ a relevant level.  You can set the log level at any time by running:
 
 >
 
-   :let g:EclimLogLevel = 10
+   :let g:EclimLogLevel = 'trace'
 
 <
 
@@ -323,7 +323,7 @@ more details which you can do by enabling eclim debugging in vim:
 
 >
 
-   :let g:EclimLogLevel = 10
+   :let g:EclimLogLevel = 'trace'
 
 <
 

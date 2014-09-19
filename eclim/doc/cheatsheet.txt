@@ -13,8 +13,10 @@ Global Commands
 - :PingEclim (|vim-core-eclim#:PingEclim|) - Pings eclimd server.
 - :ShutdownEclim (|vim-core-eclim#:ShutdownEclim|) - Shuts down
   eclimd server.
-- :EclimSettings (|vim-core-eclim#:EclimSettings|) - View / edit
-  global settings.
+- :VimSettings (|vim-core-eclim#:VimSettings|) - View / edit eclim's
+  vim client settings.
+- :WorkspaceSettings (|vim-core-eclim#:WorkspaceSettings|) - View /
+  edit global workspace settings.
 - :EclimDisable (|vim-core-eclim#:EclimDisable|) - Temporarily
   disables communication with eclimd.
 - :EclimEnable (|vim-core-eclim#:EclimEnable|) - Re-enables
@@ -123,6 +125,11 @@ Html Commands
 - :Validate (|:Validate_html|) - Validate the current file.
 - |:BrowserOpen| - Opens the current file in your configured
   browser.
+
+Groovy Commands
+===============
+
+- :Validate (|:Validate_groovy|) - Validate the current file.
 
 Ivy Commands
 ============
@@ -269,6 +276,15 @@ Ruby Commands
 - |:RubyInterpreterAdd| [-n <name>] <path> - Add a ruby interpreter.
 - |:RubyInterpreterRemove| <path> - Remove a ruby interpreter.
 - |:RubyInterpreterList|  - List the available ruby interpreters.
+
+Scala Commands
+==============
+
+- |:ScalaSearch| - Search for the definition of the element under
+  the cursor.
+- |:ScalaImport| - Import the type under the cursor.
+- :Validate (|:Validate_scala|) - Manually runs source code
+  validation.
 
 WebXml Commands
 ===============

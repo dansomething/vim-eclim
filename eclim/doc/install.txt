@@ -12,14 +12,9 @@ following requirements.
 
 - Java Development Kit
   (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  1.6 or greater
+  1.7 or greater
 - Vim (http://www.vim.org/download.php) 7.1 or greater
-- Eclipse 4.3.x (Kepler) (http://eclipse.org/downloads/index.php)
-  (eclim 2.2.x), Eclipse 3.7.x (Indigo)
-  (http://eclipse.org/downloads/packages/release/indigo/sr2) (eclim
-  1.7.x), or Eclipse 3.8
-  (http://download.eclipse.org/eclipse/downloads/drops/R-3.8-201206081200/)
-  (eclim 1.7.13 or greater)
+- Eclipse eclipse_version (http://eclipse.org/downloads/index.php)
 - Mac and Linux users must also have make and gcc installed.
   Minimum Vim Settings: In order for eclim to function properly, there
   is a minimum set of vim options that must be enabled in your vimrc
@@ -67,12 +62,8 @@ Download
 You can find the official eclim installer on eclim's sourceforge
 downloads page (https://sourceforge.net/projects/eclim/files/eclim/):
 
-- eclim_2.3.4.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.3.4/eclim_2.3.4.jar/download)
-  (for Eclipse 4.3.x, Kepler)
-- eclim_1.7.18.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/1.7.18/eclim_1.7.18.jar/download)
-  (for Eclipse 3.8 or Eclipse 3.7.x, Indigo)
+- eclim_2.4.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.4.0/eclim_2.4.0.jar/download)
 
 Third Party Packages
 --------------------
@@ -106,11 +97,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.3.4.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.3.4/eclim_2.3.4.jar/download)
+- First download the installer:  eclim_2.4.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.4.0/eclim_2.4.0.jar/download)
 - Next run the installer:
   >
-     $ java -jar eclim_2.3.4.jar
+     $ java -jar eclim_2.4.0.jar
 
   <
 
@@ -205,7 +196,7 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.3.4.jar
+   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.4.0.jar
 
 <
 
@@ -218,7 +209,7 @@ proxy settings:
 
 >
 
-   $ java -Djava.net.useSystemProxies=true -jar eclim_2.3.4.jar
+   $ java -Djava.net.useSystemProxies=true -jar eclim_2.4.0.jar
 
 <
 
@@ -258,7 +249,7 @@ In some rare cases you might encounter one of the following errors:
    installer like so:
 
    >
-      $ java -Djava.ext.dirs -jar eclim_2.3.4.jar
+      $ java -Djava.ext.dirs -jar eclim_2.4.0.jar
 
    <
 
@@ -282,7 +273,7 @@ your eclipse install via system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.3.4.jar install
+     -jar eclim_2.4.0.jar install
 
 <
 
@@ -511,7 +502,7 @@ eclim installer's automated install option (see the Unattended
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.3.4.jar install
+     -jar eclim_2.4.0.jar install
 
 <
 
@@ -521,7 +512,7 @@ The last step is to start Xvfb followed by eclimd:
 >
 
    $ Xvfb :1 -screen 0 1024x768x24 &
-   $ DISPLAY=:1 ./eclipse/eclimd start
+   $ DISPLAY=:1 ./eclipse/eclimd -b
 
 <
 
@@ -559,7 +550,7 @@ argument like so:
 
 >
 
-   $ java -jar eclim_2.3.4.jar uninstaller
+   $ java -jar eclim_2.4.0.jar uninstaller
 
 <
 
@@ -587,7 +578,7 @@ system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.3.4.jar uninstall
+     -jar eclim_2.4.0.jar uninstall
 
 <
 
