@@ -2,7 +2,7 @@
 "
 " License: {{{
 "
-" Copyright (C) 2005 - 2014  Eric Van Dewoestine
+" Copyright (C) 2005 - 2015  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
   let s:includepaths = '-command c_includepaths -p "<project>"'
   let s:sourcepaths = '-command c_sourcepaths -p "<project>"'
   let s:options_map = {
-      \ '-a': ['split', 'vsplit', 'edit', 'tabnew', 'lopen'],
+      \ '-a': ['split', 'vsplit', 'edit', 'tabnew'],
       \ '-s': ['all', 'project'],
       \ '-i': [],
       \ '-p': [],
@@ -54,6 +54,9 @@ function eclim#c#search#FindInclude(argline) " {{{
     return
   endif
 
+  let [action_args, argline] = eclim#util#ExtractCmdArgs(a:argline, '-a:')
+  let action = len(action_args) == 2 ? action_args[1] : g:EclimCSearchSingleResult
+
   let file = substitute(getline('.'), '.*#include\s*[<"]\(.*\)[>"].*', '\1', '')
 
   let project = eclim#project#util#GetCurrentProjectName()
@@ -69,41 +72,13 @@ function eclim#c#search#FindInclude(argline) " {{{
   if index(paths, dir) == -1
     call add(paths, dir)
   endif
-  let results = split(globpath(join(paths, ','), file), '\n')
+  let results = map(
+    \ split(globpath(join(paths, ','), file), '\n'),
+    \ '{"filename": v:val, "line": 0, "column": 0}')
 
   if !empty(results)
-    call eclim#util#SetLocationList(eclim#util#ParseLocationEntries(results))
-
-    let [action_args, argline] = eclim#util#ExtractCmdArgs(a:argline, '-a:')
-    let action = len(action_args) == 2 ? action_args[1] : g:EclimCSearchSingleResult
-
-    " single result in another file.
-    if len(results) == 1 && action != "lopen"
-      let entry = getloclist(0)[0]
-      call eclim#util#GoToBufferWindowOrOpen(bufname(entry.bufnr), action)
-      call eclim#display#signs#Update()
-
-    " multiple results and user specified an action other than lopen
-    elseif len(results) && len(action_args) && action != 'lopen'
-      let locs = getloclist(0)
-      let files = map(copy(locs),  'printf(' .
-        \ '"%s|%s col %s| %s", ' .
-        \ 'bufname(v:val.bufnr), v:val.lnum, v:val.col, v:val.text)')
-      let response = eclim#util#PromptList(
-        \ 'Please choose the file to ' . action,
-        \ files, g:EclimHighlightInfo)
-      if response == -1
-        return
-      endif
-      let entry = locs[response]
-      let name = substitute(bufname(entry.bufnr), '\', '/', 'g')
-      call eclim#util#GoToBufferWindowOrOpen(name, action)
-      call eclim#display#signs#Update()
-      call cursor(entry.lnum, entry.col)
-
-    else
-      exec 'lopen ' . g:EclimLocationListHeight
-    endif
+    call eclim#lang#SearchResults(results, action)
+    return 1
   else
     call eclim#util#EchoInfo("File not found.")
   endif

@@ -28,9 +28,7 @@
 
 " Script Variables {{{
   let s:echo_connection_errors = 1
-" }}}
 
-" Script Variables {{{
   let s:command_ping = '-command ping'
   let s:command_settings = '-command settings'
   let s:command_settings_update = '-command settings_update -s "<settings>"'
@@ -135,7 +133,7 @@ function! eclim#Execute(command, ...) " {{{
   let error = ''
   if result =~ '^[^\n]*Exception:\?[^\n]*\n\s\+\<at\> ' ||
    \ result =~ '^[^\n]*ResourceException(.\{-})\[[0-9]\+\]:[^\n]*\n\s\+\<at\> '
-    if g:EclimLogLevel != 'trace'
+    if g:EclimLogLevel != 'trace' && !&verbose
       let error = substitute(result, '\(.\{-}\)\n.*', '\1', '')
     else
       let error = result
@@ -352,6 +350,13 @@ function! eclim#ShutdownEclim() " {{{
 endfunction " }}}
 
 function! eclim#LoadVimSettings() " {{{
+  " Set some initial logging variables for the case where eclim#UserHome needs
+  " to make a system call
+  if !exists('g:EclimLogLevel')
+    let g:EclimLogLevel = 'info'
+    let g:EclimHighlightTrace = 'Normal'
+  endif
+
   let settings_file = eclim#UserHome() . '/.eclim/.eclim_settings'
   if filereadable(settings_file)
     let lines = readfile(settings_file)
@@ -551,11 +556,12 @@ function! eclim#SaveVimSettings() " {{{
 endfunction " }}}
 
 function! eclim#UserHome() " {{{
-  let home = expand('$HOME')
   if has('win32unix')
     let home = eclim#cygwin#WindowsHome()
   elseif has('win32') || has('win64')
     let home = expand('$USERPROFILE')
+  else
+    let home = $HOME
   endif
   return substitute(home, '\', '/', 'g')
 endfunction " }}}
