@@ -1,4 +1,4 @@
-*vim-c-index*
+*vim-c-index.html*
 
 C/C++
 *****

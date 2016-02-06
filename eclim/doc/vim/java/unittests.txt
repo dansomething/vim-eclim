@@ -1,4 +1,4 @@
-*vim-java-unittests*
+*vim-java-unittests.html*
 
 Unit Tests
 **********
@@ -97,7 +97,7 @@ Opening test results run from you build tool.
 If you are running your unit tests from a build tool like ant or
 maven, then you most likely are writing those results to a directory
 in your project. If so then you can set the
-|org.eclim.java.junit.output_dir| setting to that location which then
+org.eclim.java.junit.output_dir setting to that location which then
 allows you to use the command :JUnitResult to locate and opening the
 result file for the currently open test or the test supplied as an
 argument.

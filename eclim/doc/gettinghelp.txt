@@ -1,4 +1,4 @@
-*gettinghelp*
+*gettinghelp.html*
 
 Getting Help
 ************

@@ -1,4 +1,4 @@
-*vim-scala-validate*
+*vim-scala-validate.html*
 
 *:Validate_scala*
 

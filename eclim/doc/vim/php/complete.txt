@@ -1,4 +1,4 @@
-*vim-php-complete*
+*vim-php-complete.html*
 
 Php Code Completion
 *******************

@@ -1,4 +1,4 @@
-*development-plugins*
+*development-plugins.html*
 
 Plugins
 *******

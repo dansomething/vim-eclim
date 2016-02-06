@@ -1,4 +1,4 @@
-*cheatsheet*
+*cheatsheet.html*
 
 Cheatsheet
 **********

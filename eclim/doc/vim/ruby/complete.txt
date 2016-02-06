@@ -1,4 +1,4 @@
-*vim-ruby-complete*
+*vim-ruby-complete.html*
 
 Ruby Code Completion
 ********************

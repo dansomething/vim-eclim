@@ -1,4 +1,4 @@
-*vim-core-history*
+*vim-core-history.html*
 
 Eclipse Local History
 *********************

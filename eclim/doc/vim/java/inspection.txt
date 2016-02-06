@@ -1,4 +1,4 @@
-*vim-java-inspection*
+*vim-java-inspection.html*
 
 Java Code Inspection
 ********************

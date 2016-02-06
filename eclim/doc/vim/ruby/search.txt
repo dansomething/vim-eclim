@@ -1,4 +1,4 @@
-*vim-ruby-search*
+*vim-ruby-search.html*
 
 Ruby Search
 ***********
@@ -14,9 +14,9 @@ element.  A pattern search can be executed using the command
 
 :RubySearch -p <pattern> [-t <type> -s <scope> -i -a <action>]
 
-All of the results will be placed into the current window's location
-list (:help location-list) so that you can easily navigate the
-results.
+When there is more than 1 result, those results will be placed into
+vim's quickfix list (:help quickfix) so that you can easily navigate
+them using vim's quickfix commands.
 
 Vim command completion is supported through out the command with the
 exception of the pattern to search for.
@@ -73,10 +73,10 @@ not specify the -p option since the element under the cursor will be
 searched for instead.
 
 If only one result is found and that result is in the current source
-file, the cursor will be moved to the element found.  Otherwise, on
+file, the cursor will be moved to the element found. Otherwise, on
 single result matches, the value of |g:EclimRubySearchSingleResult|
-will be consulted for the action to take.  If there are multiple
-results, the location list will be opened with the list of results.
+will be consulted for the action to take. If there are multiple
+results, the quickfix list will be opened with the list of results.
 
 *:RubySearchContext*
 
@@ -103,13 +103,15 @@ Vim Settings (|vim-settings|)
   - 'split' - open the result in a new window via "split".
   - 'edit' - open the result in the current window.
   - 'tabnew' - open the result in a new tab.
-  - 'lopen' - open the location list to display the result.
   This setting overrides the global default for all supported language
   types which can be set using the g:EclimDefaultFileOpenAction
   setting which accepts the same possible values.
 
-- g:EclimLocationListHeight (Default: 10) - Sets the height in lines
-  of the location list window when eclim opens it to display search
+- g:EclimQuickFixOpen (Default: 'botright copen') Specifies the
+  command used to open the quickfix window when multiple results are
+  found.
+- g:EclimQuickFixHeight (Default: 10) - Sets the height, in lines,
+  of the quickfix window when eclim opens it to display search
   results.
 
 vim:ft=eclimhelp

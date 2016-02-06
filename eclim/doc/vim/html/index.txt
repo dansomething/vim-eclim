@@ -1,4 +1,4 @@
-*vim-html-index*
+*vim-html-index.html*
 
 Html / Css
 **********

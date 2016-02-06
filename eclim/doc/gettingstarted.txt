@@ -1,4 +1,4 @@
-*gettingstarted*
+*gettingstarted.html*
 
 Getting Started
 ***************

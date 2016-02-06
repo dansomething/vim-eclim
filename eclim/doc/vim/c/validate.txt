@@ -1,4 +1,4 @@
-*vim-c-validate*
+*vim-c-validate.html*
 
 *:Validate_c*
 

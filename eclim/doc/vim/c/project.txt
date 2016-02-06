@@ -1,4 +1,4 @@
-*vim-c-project*
+*vim-c-project.html*
 
 *:CProjectConfigs*
 

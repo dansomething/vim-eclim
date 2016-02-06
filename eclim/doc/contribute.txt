@@ -1,4 +1,4 @@
-*contribute*
+*contribute.html*
 
 Contribute
 **********

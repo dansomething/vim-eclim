@@ -1,4 +1,4 @@
-*vim-index*
+*vim-index.html*
 
 Documentation
 *************

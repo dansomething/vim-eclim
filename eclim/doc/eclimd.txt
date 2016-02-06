@@ -1,4 +1,4 @@
-*eclimd*
+*eclimd.html*
 
 The Eclim Daemon
 ****************
@@ -30,7 +30,7 @@ on the eclimd.bat file found in your eclipse root directory:
 Note: Even though an eclipse gui is not started in eclim's headless
   mode, eclipse still requires a running X server to function.  To run
   eclimd on a truely headless server, please see the headless guide
-  (|install-headless|).
+  (install#install-headless).
 
 Stopping eclimd
 

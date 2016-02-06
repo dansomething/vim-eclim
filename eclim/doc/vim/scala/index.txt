@@ -1,4 +1,4 @@
-*vim-scala-index*
+*vim-scala-index.html*
 
 Scala
 *****

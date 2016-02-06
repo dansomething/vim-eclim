@@ -1,4 +1,4 @@
-*vim-java-format*
+*vim-java-format.html*
 
 Java Source Code Formatting
 ***************************
@@ -64,14 +64,16 @@ eclipse settings.
 Configuration
 =============
 
-Currently source code formatting is only configurable via the eclipse
-GUI.  To do so, shutdown eclim, start the eclipse GUI and configure
-your settings via:
+*org.eclim.java.format.strip_trialing_whitespace*
 
->
+- org.eclim.java.format.strip_trialing_whitespace - When set to
+  true, all trailing whitespace will be removed when formatting java
+  code.
+Aside from the above configuration, source code formatting is only
+configurable via the eclipse GUI. So to make changes to the eclipse
+java formatting rules, shutdown eclim, start the eclipse GUI and
+configure your settings via:
 
-   Preferences : Java / Code Style / Formatter / Active Profile: / Edit
-
-<
+Preferences ‣ Java ‣ Code Style ‣ Formatter ‣ Active Profile: ‣ Edit
 
 vim:ft=eclimhelp

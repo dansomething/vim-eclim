@@ -1,4 +1,4 @@
-*vim-python-search*
+*vim-python-search.html*
 
 Python Search
 *************
@@ -26,7 +26,7 @@ If only one result is found and that result is in the current source
 file, the cursor will be moved to the element found. Otherwise, on
 single result matches, the value of |g:EclimPythonSearchSingleResult|
 will be consulted for the action to take. If there are multiple
-results, the location list will be opened with the list of results.
+results, the quickfix list will be opened with the list of results.
 You can also force the action to use for the current search by
 suppling the -a <action> arg:
 
@@ -66,13 +66,15 @@ Vim Settings (|vim-settings|)
   - 'split' - open the result in a new window via "split".
   - 'edit' - open the result in the current window.
   - 'tabnew' - open the result in a new tab.
-  - 'lopen' - open the location list to display the result.
   This setting overrides the global default for all supported language
   types which can be set using the g:EclimDefaultFileOpenAction
   setting which accepts the same possible values.
 
-- g:EclimLocationListHeight (Default: 10) - Sets the height in lines
-  of the location list window when eclim opens it to display search
+- g:EclimQuickFixOpen (Default: 'botright copen') Specifies the
+  command used to open the quickfix window when multiple results are
+  found.
+- g:EclimQuickFixHeight (Default: 10) - Sets the height, in lines,
+  of the quickfix window when eclim opens it to display search
   results.
 
 vim:ft=eclimhelp

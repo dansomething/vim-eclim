@@ -1,4 +1,4 @@
-*vim-java-ant*
+*vim-java-ant.html*
 
 Ant
 ***
@@ -105,7 +105,8 @@ child elements are valid, etc., but it does perform the following:
 - Check for missing dependencies.
 - Check for circular dependencies.
 Eclim also combines the above validation with xml validation
-(|xml-validation|) to validate that the ant file is well formed.
+(vim-xml-index#xml-validation) to validate that the ant file is well
+formed.
 
 If you do not want your ant files validated automatically when saved,
 you can set the |g:EclimAntValidate| variable described in the

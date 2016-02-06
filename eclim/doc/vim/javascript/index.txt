@@ -1,4 +1,4 @@
-*vim-javascript-index*
+*vim-javascript-index.html*
 
 Javascript
 **********

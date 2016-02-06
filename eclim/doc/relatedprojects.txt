@@ -1,4 +1,4 @@
-*relatedprojects*
+*relatedprojects.html*
 
 Related Projects
 ****************

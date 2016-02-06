@@ -1,4 +1,4 @@
-*vim-validation*
+*vim-validation.html*
 
 Note: When enabled, syntastic
   (https://github.com/scrooloose/syntastic) is disabled so that eclim

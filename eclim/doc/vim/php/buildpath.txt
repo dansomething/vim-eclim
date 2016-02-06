@@ -1,4 +1,4 @@
-*vim-php-buildpath*
+*vim-php-buildpath.html*
 
 Php Build Path
 **************

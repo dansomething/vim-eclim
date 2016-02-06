@@ -1,4 +1,4 @@
-*vim-php-index*
+*vim-php-index.html*
 
 Php
 ***

@@ -1,4 +1,4 @@
-*vim-python-validate*
+*vim-python-validate.html*
 
 Python Validation
 *****************

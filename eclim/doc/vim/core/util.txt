@@ -1,4 +1,4 @@
-*vim-core-util*
+*vim-core-util.html*
 
 Utility Commands
 ****************

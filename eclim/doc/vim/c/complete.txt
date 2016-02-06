@@ -1,4 +1,4 @@
-*vim-c-complete*
+*vim-c-complete.html*
 
 C/C++ Code Completion
 *********************

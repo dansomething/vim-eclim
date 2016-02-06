@@ -1,4 +1,4 @@
-*vim-python-path*
+*vim-python-path.html*
 
 Python Interpreter / Paths
 **************************

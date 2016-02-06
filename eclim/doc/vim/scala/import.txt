@@ -1,4 +1,4 @@
-*vim-scala-import*
+*vim-scala-import.html*
 
 *:ScalaImport*
 

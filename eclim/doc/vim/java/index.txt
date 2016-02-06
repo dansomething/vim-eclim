@@ -1,4 +1,4 @@
-*vim-java-index*
+*vim-java-index.html*
 
 Java
 ****
@@ -12,11 +12,13 @@ Features
 - Java Code Completion (vim-java-complete)
 - Java Search (vim-java-search)
 - Java / Jps (vim-java-java)
+- Java Debugging (vim-java-debug)
 - Javadoc Support (vim-java-javadoc)
 - Java Source Code Formatting (vim-java-format)
 - Java Refactoring (vim-java-refactor)
 - Java Code Inspection (vim-java-inspection)
 - Automated Imports (vim-java-import)
+- Type Creation (vim-java-types)
 - Method Generation (vim-java-methods)
 - Unit Tests (vim-java-unittests)
 - Logging (log4j, etc) (vim-java-logging)

@@ -1,4 +1,4 @@
-*vim-groovy-complete*
+*vim-groovy-complete.html*
 
 Groovy Code Completion
 **********************

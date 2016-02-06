@@ -1,4 +1,4 @@
-*vim-core-project*
+*vim-core-project.html*
 
 Eclipse Project Management
 **************************
@@ -64,6 +64,19 @@ may use Vim's command line completion to complete the project name.
 
   >
      :ProjectImport ~/workspace/some_project
+
+  <
+
+*:ProjectImportDiscover*
+
+- :ProjectImportDiscover <folder>
+  If you have several existing eclipse projects within a parent
+  directory that you'd like to import, you can do so using this
+  command, which scans the supplied folder for all .project files and
+  imports the corresponding project into your current workspace:
+
+  >
+     :ProjectImport ~/some/parent/dir
 
   <
 
@@ -142,11 +155,6 @@ may use Vim's command line completion to complete the project name.
 - :ProjectRefreshAll
   Refreshes all projects.
 
-*:ProjectBuild*
-
-- :ProjectBuild [<project>]
-  Builds the current or supplied project.
-
 *:ProjectInfo*
 
 - :ProjectInfo [<project>]
@@ -222,9 +230,9 @@ may use Vim's command line completion to complete the project name.
 
   Vim Settings (|vim-settings|)
 
-  *g:EclimProjectProblemsQuickFixOpen*
-  - g:EclimProjectProblemsQuickFixOpen (Default: 'botright copen')
-    Specified the command used to open the quickfix window when
+  *g:EclimQuickFixOpen*
+  - g:EclimQuickFixOpen (Default: 'botright copen')
+    Specifies the command used to open the quickfix window when
     executing the :ref`:ProjectProblems` command.
 
   *g:EclimProjectProblemsUpdateOnSave*
@@ -237,6 +245,41 @@ may use Vim's command line completion to complete the project name.
     When non 0, indicates that the problems list should be updated
     after a :ProjectBuild, but only if the quickfix list currently
     represents a problems list.
+
+*:ProjectBuild*
+
+- :ProjectBuild [<project>]
+  Builds the current or supplied project.
+
+*:ProjectRun*
+
+- :ProjectRun [<launch_config_name>]
+  Runs an eclipse launch configuration. When no launch configuration
+  name is supplied, the first available launch configuration will be
+  used.
+
+  Before you can run this command, you must first start vim with the
+  --servername argument (eclimd currently sends the process stdout and
+  stderr to vim using vim's remote invocation support):
+
+  >
+     $ vim --servername run ...
+
+  <
+
+  When your launch configuration is executed, a temporary buffer will
+  be opened in vim to display any output. When you close this window
+  the launch configuration process will be terminated. You can also
+  terminate the process from within the temporary output buffer by
+  running the :Terminate command (only available from that window).
+  Also note that if you close vim, any running launch configurations
+  will be terminated.
+
+*:ProjectRunList*
+
+- :ProjectRunList
+  Print a list of available eclipse launch configurations for the
+  current project.
 
 *:ProjectCD*
 

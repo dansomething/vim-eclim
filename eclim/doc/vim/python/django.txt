@@ -1,4 +1,4 @@
-*vim-python-django*
+*vim-python-django.html*
 
 Django
 ******

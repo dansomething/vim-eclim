@@ -1,4 +1,4 @@
-*vim-php-validate*
+*vim-php-validate.html*
 
 *:Validate_php*
 

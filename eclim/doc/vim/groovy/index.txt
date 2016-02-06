@@ -1,4 +1,4 @@
-*vim-groovy-index*
+*vim-groovy-index.html*
 
 Groovy
 ******

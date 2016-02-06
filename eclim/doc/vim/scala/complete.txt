@@ -1,4 +1,4 @@
-*vim-scala-complete*
+*vim-scala-complete.html*
 
 Scala Code Completion
 *********************

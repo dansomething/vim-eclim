@@ -1,4 +1,4 @@
-*vim-python-index*
+*vim-python-index.html*
 
 Python
 ******

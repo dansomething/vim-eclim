@@ -4,7 +4,7 @@
 "
 " License:
 "
-" Copyright (C) 2005 - 2014  Eric Van Dewoestine
+" Copyright (C) 2005 - 2015  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -171,6 +171,22 @@ function! s:ProjectNatureHooks(natureIds, hookName, args) " {{{
   endif
 
   return 1
+endfunction " }}}
+
+function! eclim#project#util#ProjectImportDiscover(arg) " {{{
+  " Recursively searches the given directory for any project files
+  " and imports them.
+  let projects = split(globpath(a:arg, '**/.project'), '\n')
+  if (len(projects) == 0)
+    call eclim#util#Echo("No projects found")
+    return
+  endif
+
+  for project in projects
+    call eclim#project#util#ProjectImport(fnamemodify(project, ':h'))
+  endfor
+
+  call eclim#util#Echo("Imported " . len(projects) . " projects.")
 endfunction " }}}
 
 function! eclim#project#util#ProjectImport(arg) " {{{
@@ -637,6 +653,71 @@ function! eclim#project#util#ProjectNatureModify(command, args) " {{{
   endif
 endfunction " }}}
 
+function! eclim#project#util#ProjectRun(...) " {{{
+  " Option args:
+  "   config: The name of the configuration to run for the current project
+  
+  if !eclim#EclimAvailable()
+    return
+  endif
+
+  let config = a:0 > 0 ? a:1 : ''
+  if !eclim#project#util#IsCurrentFileInProject()
+    return
+  endif
+  let project = eclim#project#util#GetCurrentProjectName()
+
+  let command = s:command_project_run
+  if config != ''
+    let command = s:command_project_run_config
+  endif
+
+  call eclim#util#Echo("Running project '" . project . "'...")
+  let command = substitute(command, '<project>', project, '')
+  let command = substitute(command, '<config>', config, '')
+  let result = eclim#Execute(command, {'project': project})
+  call eclim#util#Echo(result)
+endfunction " }}}
+
+function! eclim#project#util#ProjectRunList() " {{{
+
+  if !eclim#EclimAvailable()
+    return
+  endif
+
+  if !eclim#project#util#IsCurrentFileInProject()
+    return
+  endif
+  let project = eclim#project#util#GetCurrentProjectName()
+
+  let command = s:command_project_run_list
+
+  call eclim#util#Echo("Fetching launch configs for project '" . project . "'...")
+  let command = substitute(command, '<project>', project, '')
+  let result = eclim#Execute(command, {'project': project})
+  if type(result) != g:LIST_TYPE
+    call eclim#util#Echo(result)
+    return
+  endif
+
+  if len(result) == 0
+    call eclim#util#Echo("No launch configs for project '" . project . ".")
+    return
+  endif
+
+  let pad = 0
+  for config in result
+    let pad = len(config.name) > pad ? len(config.name) : pad
+  endfor
+
+  let output = []
+  for config in result
+    call add(output,
+      \ eclim#util#Pad(config.name, pad) . ' - ' . config.type)
+  endfor
+  call eclim#util#Echo(join(output, "\n"))
+endfunction " }}}
+
 function! eclim#project#util#ProjectSettings(project) " {{{
   " Opens a window that can be used to edit a project's settings.
 
@@ -917,7 +998,7 @@ function! eclim#project#util#GetProjectRelativeFilePath(...) " {{{
 
   let file = substitute(fnamemodify(file, ':p'), '\', '/', 'g')
   let pattern = '\(/\|$\)'
-  if has('win32') || has('win64')
+  if has('win32') || has('win64') || has('macunix')
     let pattern .= '\c'
   endif
   let result = substitute(file, get(project, 'path', '') . pattern, '', '')
@@ -1005,7 +1086,7 @@ function! eclim#project#util#GetProject(path) " {{{
 
   let path = substitute(fnamemodify(path, ':p'), '\', '/', 'g')
   let pattern = '\(/\|$\)'
-  if has('win32') || has('win64')
+  if has('win32') || has('win64') || has('macunix')
     let pattern .= '\c'
   endif
 

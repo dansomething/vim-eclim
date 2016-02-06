@@ -1,4 +1,4 @@
-*vim-java-maven*
+*vim-java-maven.html*
 
 Maven
 *****

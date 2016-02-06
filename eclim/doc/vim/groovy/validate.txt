@@ -1,4 +1,4 @@
-*vim-groovy-validate*
+*vim-groovy-validate.html*
 
 *:Validate_groovy*
 

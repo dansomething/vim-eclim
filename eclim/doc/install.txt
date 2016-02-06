@@ -1,4 +1,4 @@
-*install*
+*install.html*
 
 Download / Install
 ******************
@@ -62,8 +62,8 @@ Download
 You can find the official eclim installer on eclim's sourceforge
 downloads page (https://sourceforge.net/projects/eclim/files/eclim/):
 
-- eclim_2.4.0.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.4.0/eclim_2.4.0.jar/download)
+- eclim_2.5.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.5.0/eclim_2.5.0.jar/download)
 
 Third Party Packages
 --------------------
@@ -71,8 +71,8 @@ Third Party Packages
 As an alternative to the official installer, there are also some
 packages maintained by third parties:
 
-- Arch: aur (eclim) (http://aur.archlinux.org/packages.php?ID=7291),
-  aur (eclim-git) (http://aur.archlinux.org/packages.php?ID=33120)
+- Arch: aur (eclim) (https://aur.archlinux.org/packages/eclim/), aur
+  (eclim-git) (https://aur.archlinux.org/packages/eclim-git/)
 
 Installing / Upgrading
 ======================
@@ -97,11 +97,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.4.0.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.4.0/eclim_2.4.0.jar/download)
+- First download the installer:  eclim_2.5.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.5.0/eclim_2.5.0.jar/download)
 - Next run the installer:
   >
-     $ java -jar eclim_2.4.0.jar
+     $ java -jar eclim_2.5.0.jar
 
   <
 
@@ -167,7 +167,7 @@ then test eclim:
   connecting to it.  If you receive this or any other errors you can
   start by first examining the eclimd output to see if it gives any
   info as to what went wrong.  If at this point you are unsure how to
-  proceed you can view the troubleshooting guide (|troubleshooting|)
+  proceed you can view the troubleshooting guide (faq#troubleshooting)
   or feel free to post your issue on the eclim-user
   (http://groups.google.com/group/eclim-user) mailing list.
   Example of a successful ping:
@@ -192,11 +192,11 @@ Running The Installer Behind a Proxy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are behind a proxy, you may need to run the installer like so
-(be sure to take a look at the related faq (|eclim-proxy|) as well):
+(be sure to take a look at the related faq (faq#eclim-proxy) as well):
 
 >
 
-   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.4.0.jar
+   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.5.0.jar
 
 <
 
@@ -209,7 +209,7 @@ proxy settings:
 
 >
 
-   $ java -Djava.net.useSystemProxies=true -jar eclim_2.4.0.jar
+   $ java -Djava.net.useSystemProxies=true -jar eclim_2.5.0.jar
 
 <
 
@@ -249,7 +249,7 @@ In some rare cases you might encounter one of the following errors:
    installer like so:
 
    >
-      $ java -Djava.ext.dirs -jar eclim_2.4.0.jar
+      $ java -Djava.ext.dirs -jar eclim_2.5.0.jar
 
    <
 
@@ -273,7 +273,7 @@ your eclipse install via system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.4.0.jar install
+     -jar eclim_2.5.0.jar install
 
 <
 
@@ -311,15 +311,6 @@ Building from source
 <
 
 
-Note: If you are still using Eclipse 3.7 (Indigo) you will need to
-  checkout the eclim indigo branch before attempting to build eclim:>
-
-     $ cd eclim
-     $ git checkout indigo
-
-  <
-
-
 
 2. Build eclim:
 ~~~~~~~~~~~~~~~
@@ -332,6 +323,36 @@ Note: If you are still using Eclipse 3.7 (Indigo) you will need to
 <
 
 
+This will build and deploy eclim to your eclipse and vim directories.
+
+Warning: Building eclim as root is highly discouraged. If your
+  eclipse install is only writable as root, you can supply the
+  eclipse.local property to tell eclim where your eclipse user local
+  directory is located and eclimd will be installed there (make sure
+  to replace <version> portion of the path below accordingly):>
+
+     $ ant \
+         -Declipse.home=/opt/eclipse \
+         -Declipse.local=$HOME/.eclipse/org.eclipse.platform_<version>
+
+  <
+
+
+  If you do not yet have a .eclipse directory in your home directory,
+  you can run either of the following commands to create it:>
+
+     $ ant -Declipse.home=/opt/eclipse eclipse.init
+
+  <
+
+
+  or>
+
+     $ /path/to/eclipse/eclipse -initialize
+
+  <
+
+
 Note: If your eclipse home path contains a space, be sure to quote
   it:>
 
@@ -339,8 +360,6 @@ Note: If your eclipse home path contains a space, be sure to quote
 
   <
 
-
-This will build and deploy eclim to your eclipse and vim directories.
 
 Note: If your vimfiles directory is not located at the default
   location for your OS, then you can specify the location using the
@@ -376,21 +395,7 @@ will be skipped:
 
 In this case we can see that four eclim plugins will be skipped along
 with the eclipse feature that would be required to build those
-plugins. If you see an eclipse feature in that list that you know you
-have, it may be the case that you installed it as a regular user, so
-that feature was installed in your user local eclipse directory. In
-that case you will need to notify the build of that directory so it
-can examine it as well (just replace the <version> portion below with
-the actual version found in your ~/.eclipse directory):
-
->
-
-   $ ant \
-       -Declipse.home=/opt/eclipse \
-       -Declipse.local=$HOME/.eclipse/org.eclipse.platform_<version>
-
-<
-
+plugins.
 
 If you don't want to supply the eclipse home directory, or any other
 properties, on the command line every time you build eclim, you can
@@ -401,6 +406,7 @@ your properties in there:
 
    $ vim user.properties
    eclipse.home=/opt/eclipse
+   eclipse.local=${user.home}/.eclipse/org.eclipse.platform_<version>
    vim.files=${user.home}/.vim/bundle/eclim
 
 <
@@ -418,6 +424,15 @@ Note: The eclim vim help files, used by the :EclimHelp
 
   This target also supports the vim.files property if you want the
   docs deployed to a directory other than the default location.
+
+  Warning: Debian/Ubuntu users: The debian version of sphinx has
+    unfortunately been patched to behave differently than the upstream
+    version, resulting in one or more eclim supplied sphinx extensions
+    not loading. Another issue you may run into is the docutils
+    package, which sphinx depends on, is outdated on debian/ubuntu,
+    resulting in another set of errors.So to get around these issues
+    you'll need to install sphinx using pip
+    (http://pip.readthedocs.org/en/latest/index.html) or similar.
 
 *install-headless*
 
@@ -502,7 +517,7 @@ eclim installer's automated install option (see the Unattended
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.4.0.jar install
+     -jar eclim_2.5.0.jar install
 
 <
 
@@ -550,7 +565,7 @@ argument like so:
 
 >
 
-   $ java -jar eclim_2.4.0.jar uninstaller
+   $ java -jar eclim_2.5.0.jar uninstaller
 
 <
 
@@ -578,7 +593,7 @@ system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.4.0.jar uninstall
+     -jar eclim_2.5.0.jar uninstall
 
 <
 

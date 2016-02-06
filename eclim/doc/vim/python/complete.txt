@@ -1,4 +1,4 @@
-*vim-python-complete*
+*vim-python-complete.html*
 
 Python Code Completion
 **********************

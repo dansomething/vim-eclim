@@ -1,4 +1,4 @@
-*vim-java-import*
+*vim-java-import.html*
 
 *:JavaImport*
 

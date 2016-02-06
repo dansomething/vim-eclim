@@ -1,4 +1,4 @@
-*vim-java-webxml*
+*vim-java-webxml.html*
 
 WEB-INF/web.xml
 ***************
@@ -13,7 +13,8 @@ location list (:help location-list) and their corresponding line
 number noted via Vim's sign functionality.
 
 Eclim also combines the above validation with xml validation
-(|xml-validation|) to validate that the file is well formed.
+(vim-xml-index#xml-validation) to validate that the file is well
+formed.
 
 If you do not want your web.xml files validated automatically when
 saved, you can set the |g:EclimWebXmlValidate| variable described in

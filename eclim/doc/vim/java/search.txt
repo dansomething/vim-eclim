@@ -1,4 +1,4 @@
-*vim-java-search*
+*vim-java-search.html*
 
 Java Search
 ***********
@@ -15,9 +15,9 @@ element.  A pattern search can be executed using the command
 :JavaSearch -p <pattern> [-t <type> -x <context> -s <scope> -i -a
 <action>]
 
-All of the results will be placed into the current window's location
-list (:help location-list) so that you can easily navigate the
-results.
+When there is more than 1 result, those results will be placed into
+vim's quickfix list (:help quickfix) so that you can easily navigate
+them using vim's quickfix commands.
 
 Vim command completion is supported through out the command with the
 excption of the pattern to search for.
@@ -58,7 +58,7 @@ excption of the pattern to search for.
   - type
 - -x <context> (Default: declarations): The context of the search,
   where possible context values include
-  - all - All occurances.
+  - all - All occurrences.
   - declarations - Declarations matching the pattern or element.
   - implementors - Implementors of the pattern or element.
   - references - References of the pattern or element.
@@ -200,6 +200,21 @@ Note: Alternate searching is bound to the performance of the file
 Configuration
 =============
 
+Eclim Settings (|vim-settings|)
+
+*org.eclim.java.search.sort*
+
+- org.eclim.java.search.sort - Json formatted list of project
+  releative paths used to sort the search results.
+  For example, if your projects follow maven hierarchy and you want
+  the test references to be listed after the main code references,
+  then you can configure this setting like so:
+
+  >
+     org.eclim.java.search.sort=["src/main", "src/test"]
+
+  <
+
 Vim Settings (|vim-settings|)
 
 *g:EclimJavaSearchSingleResult*
@@ -211,19 +226,21 @@ Vim Settings (|vim-settings|)
   - 'split' - open the result in a new window via "split".
   - 'edit' - open the result in the current window.
   - 'tabnew' - open the result in a new tab.
-  - 'lopen' - open the location list to display the result.
   This setting overrides the global default for all supported language
   types which can be set using the g:EclimDefaultFileOpenAction
   setting which accepts the same possible values.
 
-- g:EclimLocationListHeight (Default: 10) - Sets the height in lines
-  of the location list window when eclim opens it to display search
+- g:EclimQuickFixOpen (Default: 'botright copen') Specifies the
+  command used to open the quickfix window when multiple results are
+  found.
+- g:EclimQuickFixHeight (Default: 10) - Sets the height, in lines,
+  of the quickfix window when eclim opens it to display search
   results.
 *g:EclimJavaSearchMapping*
 
 - g:EclimJavaSearchMapping (Default: 1) - When set to 1, <enter>
   will be mapped to the java search functionality for the various java
   related xml files (spring, hibernate, web.xml, and
-  struts-config.xml).  By default this is enabled.
+  struts-config.xml).
 
 vim:ft=eclimhelp

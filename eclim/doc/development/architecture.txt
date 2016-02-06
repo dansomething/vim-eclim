@@ -1,4 +1,4 @@
-*development-architecture*
+*development-architecture.html*
 
 Architecture
 ************

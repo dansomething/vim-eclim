@@ -1,4 +1,4 @@
-*vim-core-eclim*
+*vim-core-eclim.html*
 
 Eclim Manage / Config
 *********************

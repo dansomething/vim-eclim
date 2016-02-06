@@ -1,4 +1,4 @@
-*vim-java-logging*
+*vim-java-logging.html*
 
 Logging (log4j, etc)
 ********************
@@ -78,7 +78,8 @@ window's location list (:help location-list) and their corresponding
 line number noted via Vim's sign functionality.
 
 Eclim also combines the above validation with xml validation
-(|xml-validation|) to validate that the file is well formed.
+(vim-xml-index#xml-validation) to validate that the file is well
+formed.
 
 If you do not want your log4j files validated automatically when
 saved, you can set the |g:EclimLog4jValidate| variable described in

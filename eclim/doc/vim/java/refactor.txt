@@ -1,4 +1,4 @@
-*vim-java-refactor*
+*vim-java-refactor.html*
 
 Java Refactoring
 ****************

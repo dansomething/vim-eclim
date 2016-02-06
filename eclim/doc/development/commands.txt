@@ -1,4 +1,4 @@
-*development-commands*
+*development-commands.html*
 
 Commands
 ********

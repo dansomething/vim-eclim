@@ -1,4 +1,4 @@
-*vim-c-inspection*
+*vim-c-inspection.html*
 
 *:CCallHierarchy*
 

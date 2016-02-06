@@ -1,4 +1,4 @@
-*vim-xml-index*
+*vim-xml-index.html*
 
 Xml / Dtd / Xsd
 ***************

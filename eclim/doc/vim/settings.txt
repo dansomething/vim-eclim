@@ -1,4 +1,4 @@
-*vim-settings*
+*vim-settings.html*
 
 Settings
 ********

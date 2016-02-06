@@ -1,4 +1,4 @@
-*vim-java-validate*
+*vim-java-validate.html*
 
 *:Validate_java*
 

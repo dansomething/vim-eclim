@@ -1,4 +1,4 @@
-*vim-ruby-validate*
+*vim-ruby-validate.html*
 
 *:Validate_ruby*
 

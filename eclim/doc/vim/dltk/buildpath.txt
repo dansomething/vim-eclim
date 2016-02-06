@@ -1,4 +1,4 @@
-*vim-dltk-buildpath*
+*vim-dltk-buildpath.html*
 
 Source code completion, searching, and other features make use of the
 eclipse dltk's (http://eclipse.org/dltk/) .buildpath to locate

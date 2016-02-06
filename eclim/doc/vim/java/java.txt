@@ -1,4 +1,4 @@
-*vim-java-java*
+*vim-java-java.html*
 
 Java / Jps
 **********
@@ -21,8 +21,8 @@ The :Java will locate the main class to run using the following steps:
 
 1. if the first argument is '%' (:Java %) then run the current
    class.
-2. if the setting |org.eclim.java.run.mainclass| is set, then use
-   the value as the fully qualified class name to run.
+2. if the setting org.eclim.java.run.mainclass is set, then use the
+   value as the fully qualified class name to run.
 3. lastly, attempt to locate a class containing a static main
    method, if only one is found, use that class.
 

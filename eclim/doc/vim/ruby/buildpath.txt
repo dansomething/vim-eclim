@@ -1,4 +1,4 @@
-*vim-ruby-buildpath*
+*vim-ruby-buildpath.html*
 
 Ruby Interpreters / Build Path
 ******************************

@@ -1,4 +1,4 @@
-*vim-ruby-index*
+*vim-ruby-index.html*
 
 Ruby
 ****

@@ -1,4 +1,4 @@
-*vim-code_completion*
+*vim-code_completion.html*
 
 Code Completion
 ***************

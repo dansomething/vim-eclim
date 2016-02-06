@@ -1,4 +1,4 @@
-*vim-java-classpath*
+*vim-java-classpath.html*
 
 Eclipse Classpath Editing
 *************************

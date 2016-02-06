@@ -214,12 +214,14 @@ endfunction " }}}
 function! s:LocateFileCompletionInit(action, scope, project, workspace) " {{{
   let file = expand('%')
   let bufnum = bufnr('%')
+  let winnr = winnr()
   let winrestcmd = winrestcmd()
 
   topleft 12split [Locate\ Results]
   set filetype=locate_results
   setlocal nonumber nowrap
   setlocal noswapfile nobuflisted
+  setlocal nospell norelativenumber
   setlocal buftype=nofile bufhidden=delete
 
   let results_bufnum = bufnr('%')
@@ -235,9 +237,11 @@ function! s:LocateFileCompletionInit(action, scope, project, workspace) " {{{
   setlocal nonumber
   setlocal nolist
   setlocal noswapfile nobuflisted
+  setlocal nospell norelativenumber
   setlocal buftype=nofile bufhidden=delete
 
   let b:bufnum = bufnum
+  let b:winnr = winnr
   let b:project = a:project
   let b:workspace = a:workspace
   let b:scope = a:scope
@@ -268,19 +272,19 @@ function! s:LocateFileCompletionInit(action, scope, project, workspace) " {{{
   " enable completion after user starts typing
   call s:LocateFileCompletionAutocmdDeferred()
 
-  imap <buffer> <silent> <tab> <c-r>=<SID>LocateFileSelection("n")<cr>
-  imap <buffer> <silent> <c-j> <c-r>=<SID>LocateFileSelection("n")<cr>
-  imap <buffer> <silent> <down> <c-r>=<SID>LocateFileSelection("n")<cr>
-  imap <buffer> <silent> <s-tab> <c-r>=<SID>LocateFileSelection("p")<cr>
-  imap <buffer> <silent> <up> <c-r>=<SID>LocateFileSelection("p")<cr>
-  imap <buffer> <silent> <c-k> <c-r>=<SID>LocateFileSelection("p")<cr>
-  exec 'imap <buffer> <silent> <cr> ' .
+  inoremap <buffer> <silent> <tab> <c-r>=<SID>LocateFileSelection("n")<cr>
+  inoremap <buffer> <silent> <c-j> <c-r>=<SID>LocateFileSelection("n")<cr>
+  inoremap <buffer> <silent> <down> <c-r>=<SID>LocateFileSelection("n")<cr>
+  inoremap <buffer> <silent> <s-tab> <c-r>=<SID>LocateFileSelection("p")<cr>
+  inoremap <buffer> <silent> <up> <c-r>=<SID>LocateFileSelection("p")<cr>
+  inoremap <buffer> <silent> <c-k> <c-r>=<SID>LocateFileSelection("p")<cr>
+  exec 'inoremap <buffer> <silent> <cr> ' .
     \ '<c-r>=<SID>LocateFileSelect("' . a:action . '")<cr>'
-  imap <buffer> <silent> <c-e> <c-r>=<SID>LocateFileSelect('edit')<cr>
-  imap <buffer> <silent> <c-s> <c-r>=<SID>LocateFileSelect('split')<cr>
-  imap <buffer> <silent> <c-t> <c-r>=<SID>LocateFileSelect("tablast \| tabnew")<cr>
-  imap <buffer> <silent> <c-l> <c-r>=<SID>LocateFileChangeScope()<cr>
-  imap <buffer> <silent> <c-h> <c-r>=<SID>LocateFileHelp()<cr>
+  inoremap <buffer> <silent> <c-e> <c-r>=<SID>LocateFileSelect('edit')<cr>
+  inoremap <buffer> <silent> <c-s> <c-r>=<SID>LocateFileSelect('split')<cr>
+  inoremap <buffer> <silent> <c-t> <c-r>=<SID>LocateFileSelect("tablast \| tabnew")<cr>
+  inoremap <buffer> <silent> <c-l> <c-r>=<SID>LocateFileChangeScope()<cr>
+  inoremap <buffer> <silent> <c-h> <c-r>=<SID>LocateFileHelp()<cr>
 
   startinsert!
 endfunction " }}}
@@ -359,6 +363,7 @@ function! s:LocateFileSelect(action) " {{{
     endif
 
     let bufnum = b:bufnum
+    let winnr = b:winnr
     let winrestcmd = b:winrestcmd
 
     " close locate windows
@@ -369,7 +374,8 @@ function! s:LocateFileSelect(action) " {{{
     exec winrestcmd
 
     " open the selected result
-    call eclim#util#GoToBufferWindow(bufnum)
+    exec winnr . "wincmd w"
+    " call eclim#util#GoToBufferWindow(bufnum)
     call eclim#util#GoToBufferWindowOrOpen(file, a:action)
     call feedkeys("\<esc>", 'n')
     doautocmd WinEnter
@@ -405,6 +411,7 @@ function! s:LocateFileChangeScope() " {{{
   setlocal nonumber
   setlocal nolist
   setlocal noswapfile nobuflisted
+  setlocal nospell norelativenumber
   setlocal buftype=nofile bufhidden=delete
 
   nnoremap <buffer> <silent> <cr> :call <SID>ChooseScope()<cr>
