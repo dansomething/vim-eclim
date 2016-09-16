@@ -86,6 +86,17 @@ by invoking the command with a !:
 <
 
 
+By default the call hierarchy (caller and callee) will search across
+your entire workspace. If you want to limit the search to just the
+current project you can use the scope (-s) option:
+
+>
+
+   :JavaCallHierarchy -s project
+
+<
+
+
 
 Configuration
 -------------

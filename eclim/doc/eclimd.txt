@@ -14,6 +14,8 @@ a headless eclipse server and communicating with that server inside of
 vim. Starting and stopping of the headless eclipse instance is
 detailed below.
 
+*eclimd-start*
+
 Starting eclimd
 
 Linux / Mac / BSD (and other unix based systems): To start eclimd from
@@ -31,6 +33,8 @@ Note: Even though an eclipse gui is not started in eclim's headless
   mode, eclipse still requires a running X server to function.  To run
   eclimd on a truely headless server, please see the headless guide
   (install#install-headless).
+
+*eclimd-stop*
 
 Stopping eclimd
 
@@ -299,10 +303,6 @@ Ex.
 
    # increase heap size
    -Xmx256M
-
-   # increase perm gen size
-   -XX:PermSize=64m
-   -XX:MaxPermSize=128m
 
 <
 

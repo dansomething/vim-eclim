@@ -123,13 +123,21 @@ What's New?
 [image: Rss Feed for What's New][image] (index.rss)
 
 
+Jul 21, 2016
+------------
+
+A new version of eclim is now available with support for Eclipse 4.6
+(Neon).
+
+- Eclim 2.6.0 (changes#id1)
+
 Jul 25, 2015
 ------------
 
 A new version of eclim is now available with support for Eclipse 4.5
 (Mars).
 
-- Eclim 2.5.0 (changes#id1)
+- Eclim 2.5.0 (changes#id2)
 
 Jan 22, 2015
 ------------
@@ -138,7 +146,7 @@ The latest version of eclim is now available with scala support
 re-enabled, new groovy support, java debugging support, many bug
 fixes, and more.
 
-- Eclim 2.4.1 (changes#id2)
+- Eclim 2.4.1 (changes#id3)
 
 Aug 24, 2014
 ------------
@@ -150,14 +158,14 @@ want to hold up the rest of eclim any longer. If you want to use
 eclim's scala support, you'll need to install the ScalaIDE 4.0.0
 milestone and build eclim from the master git branch.
 
-- Eclim 2.4.0 (changes#id3)
+- Eclim 2.4.0 (changes#id4)
 
 May 07, 2014
 ------------
 
 Release of eclim for indigo users.
 
-- Eclim 1.7.19 (changes#id4)
+- Eclim 1.7.19 (changes#id5)
 
 Apr. 12, 2014
 -------------
@@ -165,7 +173,7 @@ Apr. 12, 2014
 Eclim has been updated to fix an issue on Windows that could prevent
 many features from working.
 
-- Eclim 2.3.4 (changes#id5)
+- Eclim 2.3.4 (changes#id6)
 
 Apr. 06, 2014
 -------------
@@ -173,7 +181,7 @@ Apr. 06, 2014
 This release includes many bug fixes and refinements as well as a
 rewrite of eclim's python support to utilize pydev instead of rope.
 
-- Eclim 2.3.3 (changes#id6)
+- Eclim 2.3.3 (changes#id7)
 Warning: Any exiting eclim python projects you have should be
   re-created with the new python nature:>
 
@@ -189,8 +197,8 @@ Sep. 12, 2013
 This release fixes the extraction of the necessary vim files when
 installing scala support.
 
-- Eclim 2.3.2 (changes#id7) for Eclipse 4.3 (Kepler).
-- Eclim 1.7.18 (changes#id8) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.3.2 (changes#id8) for Eclipse 4.3 (Kepler).
+- Eclim 1.7.18 (changes#id9) for Eclipse 3.7/3.8 (Indigo).
 
 Jul. 27, 2013
 -------------
@@ -198,7 +206,7 @@ Jul. 27, 2013
 The previous eclim installer for Kepler was still pointing at the Juno
 update site. This release remedies that.
 
-- Eclim 2.3.1 (changes#id9) for Eclipse 4.3 (Kepler).
+- Eclim 2.3.1 (changes#id10) for Eclipse 4.3 (Kepler).
 
 Jul. 21, 2013
 -------------
@@ -207,8 +215,8 @@ The focus of this release is to bring eclim fully up to date with
 Eclipse Kepler support. The installer for eclim 2.3.0 now requires
 that you install against Kepler.
 
-- Eclim 2.3.0 (changes#id10) for Eclipse 4.3 (Kepler).
-- Eclim 1.7.17 (changes#id11) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.3.0 (changes#id11) for Eclipse 4.3 (Kepler).
+- Eclim 1.7.17 (changes#id12) for Eclipse 3.7/3.8 (Indigo).
 
 Jul. 14, 2013
 -------------
@@ -220,8 +228,8 @@ should work fine on Kepler as well, with the exception of scala
 support which has not been tested. Indigo support will continue but
 will likely end with the release of Luna, possibly sooner.
 
-- Eclim 2.2.7 (changes#id12) for Eclipse 4.2 (Juno).
-- Eclim 1.7.16 (changes#id13) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.2.7 (changes#id13) for Eclipse 4.2 (Juno).
+- Eclim 1.7.16 (changes#id14) for Eclipse 3.7/3.8 (Indigo).
 
 May 18, 2013
 ------------
@@ -230,8 +238,8 @@ Eclim has been updated to support the Android Development Toolkit
 version 22.0.0, scala is now supported for both Juno and Indigo, and
 there are a few other improvements and many bug fixes.
 
-- Eclim 2.2.6 (changes#id14) for Eclipse 4.2 (Juno).
-- Eclim 1.7.14 (changes#id15) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.2.6 (changes#id15) for Eclipse 4.2 (Juno).
+- Eclim 1.7.14 (changes#id16) for Eclipse 3.7/3.8 (Indigo).
 Eclim News Archive (|archive-news|)
 
 vim:ft=eclimhelp

@@ -117,10 +117,6 @@ couple options:
       # increase heap size
       -Xmx256M
 
-      # increase perm gen size
-      -XX:PermSize=64m
-      -XX:MaxPermSize=128m
-
    <
 
    On Windows systems you can use the same steps described above, for

@@ -1435,8 +1435,9 @@ Vim:
      One vim file was moved as a result, so you should delete the old
      file when upgrading.
 
-     Warning: - ftplugin/java/eclim_util.vim removed.
+     Warning:
 
+       - ftplugin/java/eclim_util.vim removed.
 Git Log (1.1.1)
 (https://github.com/ervandew/eclim/compare/1.1.0...1.1.1)
 

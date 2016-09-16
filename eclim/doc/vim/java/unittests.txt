@@ -161,7 +161,7 @@ Eclim Settings (|vim-settings|)
   Ex.
 
   >
-     org.eclim.java.junit.jvmargs=["-Xmx512m", "-XX:MaxPermSize=128m"]
+     org.eclim.java.junit.jvmargs=["-Xmx512m"]
 
   <
 

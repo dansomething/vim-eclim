@@ -16,7 +16,7 @@ things:
 >
 
    $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 \
-       -classpath ./bin org.eclim.test.debug.Main
+       -classpath ./bin org.test.debug.Main
 
 <
 

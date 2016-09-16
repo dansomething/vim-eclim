@@ -146,8 +146,8 @@ Java Commands
 - |:JavaGetSet| - Create both a java bean getter and setter method.
 - |:JavaConstructor| - Creates class constructor, either empty or
   based on selected class fields.
-- |:JavaCallHierarchy| - Display the call hierarchy for the method
-  under the cursor.
+- |:JavaCallHierarchy| [-s <scope>] - Display the call hierarchy for
+  the method under the cursor.
 - |:JavaHierarchy| - View the type hierarchy tree.
 - |:JavaImpl| - View implementable / overridable methods from super
   classes and implemented interfaces.

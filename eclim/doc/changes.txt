@@ -3,7 +3,16 @@
 History of Changes
 ******************
 
-*2.5.0*
+*2.6.0*
+
+
+2.6.0 (Jul. 21, 2016)
+=====================
+
+Eclim:
+   - Eclim now supports, and requires, Eclipse 4.6 (Neon)
+   Git Log (2.6.0) (https://github.com/ervandew/eclim/compare/2.5.0...2.6.0)
+ *2.5.0*
 
 
 2.5.0 (Jul. 25, 2015)

@@ -62,8 +62,8 @@ Download
 You can find the official eclim installer on eclim's sourceforge
 downloads page (https://sourceforge.net/projects/eclim/files/eclim/):
 
-- eclim_2.5.0.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.5.0/eclim_2.5.0.jar/download)
+- eclim_2.6.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.6.0/eclim_2.6.0.jar/download)
 
 Third Party Packages
 --------------------
@@ -97,11 +97,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.5.0.jar
-  (http://sourceforge.net/projects/eclim/files/eclim/2.5.0/eclim_2.5.0.jar/download)
+- First download the installer:  eclim_2.6.0.jar
+  (http://sourceforge.net/projects/eclim/files/eclim/2.6.0/eclim_2.6.0.jar/download)
 - Next run the installer:
   >
-     $ java -jar eclim_2.5.0.jar
+     $ java -jar eclim_2.6.0.jar
 
   <
 
@@ -196,7 +196,7 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.5.0.jar
+   $ java -Dhttp.proxyHost=my.proxy -Dhttp.proxyPort=8080 -jar eclim_2.6.0.jar
 
 <
 
@@ -209,7 +209,7 @@ proxy settings:
 
 >
 
-   $ java -Djava.net.useSystemProxies=true -jar eclim_2.5.0.jar
+   $ java -Djava.net.useSystemProxies=true -jar eclim_2.6.0.jar
 
 <
 
@@ -249,7 +249,7 @@ In some rare cases you might encounter one of the following errors:
    installer like so:
 
    >
-      $ java -Djava.ext.dirs -jar eclim_2.5.0.jar
+      $ java -Djava.ext.dirs -jar eclim_2.6.0.jar
 
    <
 
@@ -273,7 +273,7 @@ your eclipse install via system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.5.0.jar install
+     -jar eclim_2.6.0.jar install
 
 <
 
@@ -517,7 +517,7 @@ eclim installer's automated install option (see the Unattended
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.5.0.jar install
+     -jar eclim_2.6.0.jar install
 
 <
 
@@ -565,7 +565,7 @@ argument like so:
 
 >
 
-   $ java -jar eclim_2.5.0.jar uninstaller
+   $ java -jar eclim_2.6.0.jar uninstaller
 
 <
 
@@ -593,7 +593,7 @@ system properties:
    $ java \
      -Dvim.files=$HOME/.vim \
      -Declipse.home=/opt/eclipse \
-     -jar eclim_2.5.0.jar uninstall
+     -jar eclim_2.6.0.jar uninstall
 
 <
 

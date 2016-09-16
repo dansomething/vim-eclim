@@ -16,6 +16,9 @@ Commands (|development-commands|)
 Plugins (|development-plugins|)
    Details the process of adding a new plugin to eclim.
 
+Building the eclim installer (|development-installer|)
+   Short guide on how to build the eclim installer.
+
 ... More To Come
 
 vim:ft=eclimhelp
