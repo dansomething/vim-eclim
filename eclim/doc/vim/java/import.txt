@@ -32,7 +32,7 @@ formating of all the file's import statements using the command:
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *org.eclipse.jdt.ui.importorder*
 

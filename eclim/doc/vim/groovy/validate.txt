@@ -22,7 +22,7 @@ to manually validate the current file.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimGroovyValidate*
 

@@ -65,7 +65,7 @@ Code Completion
 ===============
 
 Ant code completion uses the standard Vim code completion mechanism
-(|vim-code_completion|) like so:
+(vim-code_completion) like so:
 
 >
 
@@ -167,7 +167,7 @@ cactus project.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimAntCompilerAdditionalErrorFormat*
 

@@ -5,8 +5,8 @@ Features
 
 The following is a partial list of eclim features with much more still
 to come.  For more details please see the detailed documentation
-(|vim-index|).  For a more comprehensive list you can also visit the
-cheatsheet (|cheatsheet|).
+(vim-index).  For a more comprehensive list you can also visit the
+cheatsheet (cheatsheet).
 
 
 Eclipse Projects

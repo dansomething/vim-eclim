@@ -49,7 +49,7 @@ the command :Validate is available to manually execute the validation.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavascriptValidate*
 

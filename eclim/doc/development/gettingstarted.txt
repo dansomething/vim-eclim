@@ -219,6 +219,6 @@ architecture and to review the detailed docs on how new features are
 added.
 
 All of that and more can be found in the eclim development docs
-(|development-index|).
+(development-index).
 
 vim:ft=eclimhelp

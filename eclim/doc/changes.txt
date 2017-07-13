@@ -3,7 +3,16 @@
 History of Changes
 ******************
 
-*2.6.0*
+*2.7.0*
+
+
+2.7.0 (Jul. 12, 2017)
+=====================
+
+Eclim:
+   - Eclim now supports, and requires, Eclipse 4.7 (Oxygen)
+   Git Log (2.7.0) (https://github.com/ervandew/eclim/compare/2.6.0...2.7.0)
+ *2.6.0*
 
 
 2.6.0 (Jul. 21, 2016)
@@ -45,7 +54,7 @@ Project:
    - Added |:ProjectImportDiscover| to bulk import projects from a
      common parent directory.  Thanks to Kannan Rajah
 Java:
-   - Added support for java debugging (|vim-java-debug|).  Thanks to
+   - Added support for java debugging (vim-java-debug).  Thanks to
      Kannan Rajah
    - Added a |:JavaNew| command to create new classes, interfaces,
      etc in your project.  Thanks to Daniel Leong
@@ -56,8 +65,8 @@ Java:
      (vim-java-search#org-eclim-java-search-sort) the results by
      relative path.  Thanks to Kannan Rajah
 Groovy:
-   - Added support for groovy validation (|vim-groovy-validate|) and
-     code completion (|vim-groovy-complete|).  Thanks to Yves Zoundi
+   - Added support for groovy validation (vim-groovy-validate) and
+     code completion (vim-groovy-complete).  Thanks to Yves Zoundi
 Python:
    - Fixed eclim's python support to work against the pydev 3.9.1
 Scala:
@@ -278,10 +287,9 @@ Installer:
    - The installer will now properly shutdown eclimd instances
      registered using the old non-json format.
 Docs:
-   - Expanded the developer docs (|development-index|) to include
-     docs on creating new commands (|development-commands|) along with
-     some of the basics for adding new eclim plugins
-     (|development-plugins|).
+   - Expanded the developer docs (development-index) to include docs
+     on creating new commands (development-commands) along with some
+     of the basics for adding new eclim plugins (development-plugins).
    Git Log (2.2.7) (https://github.com/ervandew/eclim/compare/2.2.6...2.2.7)
    Git Log (1.7.16) (https://github.com/ervandew/eclim/compare/1.7.14...1.7.16)
  *2.2.6* *1.7.14*
@@ -306,7 +314,7 @@ Java:
      properly handle suggesting methods from a nested superclass.
 Php:
    - Eclim will no longer run php files through html validation by
-     default (see the Php Validation (|vim-php-validate|) doc for
+     default (see the Php Validation (vim-php-validate) doc for
      settings to enable html validation).
 Scala:
    - Scala support updated for Scala IDE 3.0.0.
@@ -315,6 +323,6 @@ Scala:
    Git Log (2.2.6) (https://github.com/ervandew/eclim/compare/2.2.5...2.2.6)
    Git Log (1.7.14) (https://github.com/ervandew/eclim/compare/1.7.13...1.7.14)
 
-Eclim Changes Archive (|archive-changes|)
+Eclim Changes Archive (archive-changes)
 
 vim:ft=eclimhelp

@@ -158,7 +158,7 @@ which provide the redo counterpart to the undo commands.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimRefactorDiffOrientation_java*
 

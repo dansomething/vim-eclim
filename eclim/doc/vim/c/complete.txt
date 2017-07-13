@@ -4,7 +4,7 @@ C/C++ Code Completion
 *********************
 
 C/C++ code completion uses the standard Vim code completion mechanism
-(|vim-code_completion|) like so:
+(vim-code_completion) like so:
 
 >
 

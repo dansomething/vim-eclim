@@ -200,7 +200,7 @@ Note: Alternate searching is bound to the performance of the file
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *org.eclim.java.search.sort*
 
@@ -215,7 +215,7 @@ Eclim Settings (|vim-settings|)
 
   <
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavaSearchSingleResult*
 

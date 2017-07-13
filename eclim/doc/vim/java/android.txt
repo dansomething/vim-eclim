@@ -44,7 +44,7 @@ project creation.
 Once you've finished supplying the necessary information, your android
 project will be created. An android project is simply a specialized
 java project, so you can now leverage all the eclim provided java
-functionality (|vim-java-index|) while developing your app.
+functionality (vim-java-index) while developing your app.
 
 
 Commands
@@ -60,7 +60,7 @@ outside of eclipse (installed a new target platform, etc).
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *com.android.ide.eclipse.adt.sdk*
 

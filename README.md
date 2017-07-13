@@ -1,21 +1,21 @@
 # VIM Eclim
 
-Mirror of the VIM files from [Eclim][1] to support installation via various plugin managers.
+Mirror of the VIM files from [Eclim][1] to support quick installation via various plugin managers.
 
-**Version 2.6.0**
+**Version 2.7.0**
 
 # Installation
 
 *  [Pathogen][2]
-  *  `git clone https://github.com/dansomething/vim-eclim.git ~/.vim/bundle/vim-eclim`
+    *  `git clone https://github.com/dansomething/vim-eclim.git ~/.vim/bundle/vim-eclim`
 *  [NeoBundle][3]
-  *  `NeoBundle 'dansomething/vim-eclim'`
+    *  `NeoBundle 'dansomething/vim-eclim'`
 *  [Vundle][4]
-  *  `Plugin 'dansomething/vim-eclim'`
+    *  `Plugin 'dansomething/vim-eclim'`
 *  [Plug][5]
-  *  `Plug 'dansomething/vim-eclim'`
+    *  `Plug 'dansomething/vim-eclim'`
 *  manual
-  *  copy all of the files into your `~/.vim` directory
+    *  copy all of the files into your `~/.vim` directory
 
 [1]: https://github.com/ervandew/eclim
 [2]: https://github.com/tpope/vim-pathogen

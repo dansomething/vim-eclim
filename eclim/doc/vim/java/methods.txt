@@ -175,7 +175,7 @@ the body of the inner or anonymous class.
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavaImplInsertAtCursor*
 

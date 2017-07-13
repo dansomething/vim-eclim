@@ -66,7 +66,7 @@ Eclipse Settings
 
   And there you can edit your settings as necessary.
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimKeepLocalHistory*
 

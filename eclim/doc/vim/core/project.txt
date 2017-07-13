@@ -98,8 +98,8 @@ may use Vim's command line completion to complete the project name.
   changes by simply writing the file in the usual Vim manner (:w). The
   format of the buffer is in the standard properties file format as
   supported by java, so all the same rules apply when editing. You can
-  refer to the settings (|vim-settings|) documentation for a
-  description of the available settings.
+  refer to the settings (vim-settings) documentation for a description
+  of the available settings.
 
 *:ProjectDelete*
 
@@ -139,7 +139,7 @@ may use Vim's command line completion to complete the project name.
     :ProjectRename, eclim will reload those files in the current
     session, but it must do so via an :edit, which means that vim's
     undo tree will be lost. However, you will still have access to the
-    eclipse history (|vim-core-history|).
+    eclipse history (vim-core-history).
 
 *:ProjectRefresh*
 
@@ -228,7 +228,7 @@ may use Vim's command line completion to complete the project name.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimQuickFixOpen*
   - g:EclimQuickFixOpen (Default: 'botright copen')
@@ -344,7 +344,7 @@ may use Vim's command line completion to complete the project name.
   - ? - View the help buffer
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimProjectTreeAutoOpen*
   - g:EclimProjectTreeAutoOpen (Default: 0)
@@ -422,7 +422,7 @@ may use Vim's command line completion to complete the project name.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimProjectTabTreeAutoOpen*
   - g:EclimProjectTabTreeAutoOpen (Default: 1)
@@ -467,7 +467,7 @@ may use Vim's command line completion to complete the project name.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimTodoSearchPattern*
   - g:EclimTodoSearchPattern

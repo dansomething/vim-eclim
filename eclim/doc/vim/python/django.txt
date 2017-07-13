@@ -31,7 +31,7 @@ set the proper file type.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimDjangoAdmin*
 
@@ -199,7 +199,7 @@ Contextual Find
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:HtmlDjangoUserBodyElements*
 

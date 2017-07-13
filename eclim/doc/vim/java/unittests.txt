@@ -141,7 +141,7 @@ overriding stub will be generated.
 Configuration
 -------------
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *org.eclim.java.junit.output_dir*
 

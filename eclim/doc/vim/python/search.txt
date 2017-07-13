@@ -55,7 +55,7 @@ the element under the cursor.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimPythonSearchSingleResult*
 

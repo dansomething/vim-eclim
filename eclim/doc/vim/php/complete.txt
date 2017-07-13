@@ -4,7 +4,7 @@ Php Code Completion
 *******************
 
 Php code completion uses the standard Vim code completion mechanism
-(|vim-code_completion|) like so:
+(vim-code_completion) like so:
 
 >
 

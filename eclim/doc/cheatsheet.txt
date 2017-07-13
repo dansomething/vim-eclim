@@ -189,6 +189,7 @@ Java Commands
   java processes.
 - :Validate (|:Validate_java|) - Manually runs source code
   validation.
+- |:JavaNew|- Creates a new class, interface, enum, or annotation.
 
 Java .classpath Commands
 ========================

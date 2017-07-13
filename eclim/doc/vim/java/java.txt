@@ -31,7 +31,7 @@ Configuration
 
 *org.eclim.java.run.mainclass*
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 - org.eclim.java.run.mainclass - Fully qualified name of the class
   containing the main method.

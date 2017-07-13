@@ -27,7 +27,7 @@ Note: Like the scala-ide (as of the time of this writting), imports
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 - |org.eclim.java.import.exclude| - Scala importing honors the java
   import exclussion setting.

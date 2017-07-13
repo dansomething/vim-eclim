@@ -3,7 +3,7 @@
 Source code completion, searching, and other features make use of the
 eclipse dltk's (http://eclipse.org/dltk/) .buildpath to locate
 resources. When you first create a dltk project (currently php
-(|vim-php-index|) or ruby (|vim-ruby-index|)), a .buildpath file is
+(vim-php-index) or ruby (vim-ruby-index)), a .buildpath file is
 created in the project's root directory.  If your project depends on
 any source files located outside your project or in another project,
 then you'll need to edit your .buildpath accordingly.

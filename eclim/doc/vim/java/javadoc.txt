@@ -33,7 +33,7 @@ Searching
 =========
 
 Eclim supports searching of javadocs just like you would search the
-source code (|vim-java-search|).
+source code (vim-java-search).
 
 The only difference is that you use :JavaDocSearch instead of
 :JavaSearch.
@@ -89,12 +89,12 @@ Note: Please note that this command is not intended to be a full
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 - org.eclim.user.name - Used as the name portion of the author tag.
-  Consult the settings page (|vim-settings|) for more info.
+  Consult the settings page (vim-settings) for more info.
 - org.eclim.user.email - Used as the email portion of the author
-  tag. Consult the settings page (|vim-settings|) for more info.
+  tag. Consult the settings page (vim-settings) for more info.
 - org.eclim.java.doc.dest (Default: doc) - The project relative
   directory where the javadocs with be written to.
 - org.eclim.java.doc.packagenames - Optional space separated list of

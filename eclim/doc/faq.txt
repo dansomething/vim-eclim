@@ -212,7 +212,7 @@ Below are a series of sections broken up by the behavior (or lack of)
 experienced and the steps for diagnosing the cause of that behavior.
 
 If you can't find the answer to your question here, be sure to take a
-look at the faq to see if your question is answered there.
+look at the faq () to see if your question is answered there.
 
 *ts_workspace*
 

@@ -3,12 +3,12 @@
 Getting Started
 ***************
 
-Once you've installed (|install|) eclim, the next step is to create
-your first project after which you can then start writing code and
+Once you've installed (install) eclim, the next step is to create your
+first project after which you can then start writing code and
 familiarizing yourself with eclim's features.
 
-First make sure eclimd is running (see the eclimd docs (|eclimd|) if
-you are unsure how to start eclimd).
+First make sure eclimd is running (see the eclimd docs (eclimd) if you
+are unsure how to start eclimd).
 
 *gettingstarted-create*
 
@@ -60,10 +60,10 @@ The name of this file will vary depending on your project's nature,
 but in all cases eclim will provide you with commands to manage this
 file:
 
-- java, android - .classpath file (|vim-java-classpath|)
-- php, ruby - .buildpath file (|vim-dltk-buildpath|)
+- java, android - .classpath file (vim-java-classpath)
+- php, ruby - .buildpath file (vim-dltk-buildpath)
 - c, c++ - .cproject, managed via the |:CProjectConfigs| command
-- python - .pydevproject file (|vim-python-path|)
+- python - .pydevproject file (vim-python-path)
 Once you've created your project you can use the :ProjectList command
 to list the available projects and you should see your newly created
 one in the list.
@@ -94,10 +94,10 @@ We will use a java project in this example but the steps for other
 languages are very similar.  Please see the relevant docs for your
 language for more details:
 
-- java and android (|vim-java-classpath|)
-- php and ruby (|vim-dltk-buildpath|)
+- java and android (vim-java-classpath)
+- php and ruby (vim-dltk-buildpath)
 - c and c++ (|:CProjectConfigs|)
-- python (|vim-python-path|)
+- python (vim-python-path)
 For the purpose of this example we will assume that you will store
 your source files at:
 
@@ -144,7 +144,7 @@ The contents of this file should now look something like this:
 
 Now that your source directory is setup, you can proceed to edit java
 files in that directory and make use of the java functionality
-(|vim-java-index|) provided by eclim.
+(vim-java-index) provided by eclim.
 
 *gettingstarted-coding*
 
@@ -161,12 +161,12 @@ Note: Below we'll walk through a trivial java example, but some of
   with the language of your choice, please see the relevant section of
   the docs:
 
-  - c/c++ (|vim-c-index|)
-  - java (|vim-java-index|)
-  - php (|vim-php-index|)
-  - python (|vim-python-index|)
-  - ruby (|vim-ruby-index|)
-  - etc. (|vim-index|)
+  - c/c++ (vim-c-index)
+  - java (vim-java-index)
+  - php (vim-php-index)
+  - python (vim-python-index)
+  - ruby (vim-ruby-index)
+  - etc. (vim-index)
 Lets get started writing our first java application using eclim.
 
 1. First, navigate to your new project's source directory (src/java
@@ -234,7 +234,7 @@ Lets get started writing our first java application using eclim.
    output in a new split window.
 
 This only scratches the surface on the number of java features
-(|vim-java-index|) that eclim provides, but hopefully this example was
+(vim-java-index) that eclim provides, but hopefully this example was
 enough to get you started.
 
 *gettingstarted-android*
@@ -280,7 +280,7 @@ project creation.
 Once you've finished supplying the necessary information, your android
 project will be created. An android project is simply a specialized
 java project, so you can now leverage all the eclim provided java
-functionality (|vim-java-index|) while developing your app.
+functionality (vim-java-index) while developing your app.
 
 *gettingstarted-maven*
 

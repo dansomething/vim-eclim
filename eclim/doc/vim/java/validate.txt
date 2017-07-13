@@ -26,7 +26,7 @@ to manually validate the current file.
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavaValidate*
 
@@ -61,10 +61,10 @@ Code Correction
 ===============
 
 Code correction in eclim is equivalent to the quick fix functionality
-of Eclipse. When you save a java source file, eclim validates the file
-and notes which lines contain errors. To have eclim suggest possible
-corrections for an error, you simply place the cursor on the error
-line and issue :JavaCorrect.
+of Eclipse. When you save a java source file, eclim validates () the
+file and notes which lines contain errors. To have eclim suggest
+possible corrections for an error, you simply place the cursor on the
+error line and issue :JavaCorrect.
 
 The result will be a small window opened at the bottom of Vim where
 any correction proposals will be noted. To apply a suggested change,
@@ -96,7 +96,7 @@ To apply the above change you would hit <enter> on the line:
 
 
 Note: Java code corrections are handled just like a refactoring
-  (|vim-java-refactor|) so the RefactorUndo (|:RefactorUndo|) and
+  (vim-java-refactor) so the RefactorUndo (|:RefactorUndo|) and
   RefactorRedo (|:RefactorRedo|) commands can be used to undo/redo
   corrections that can't be handled by vim's undo (like file moves).
 
@@ -123,7 +123,7 @@ configuration section below.
 Configuration
 -------------
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *org.eclim.java.checkstyle.config*
 

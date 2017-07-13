@@ -21,7 +21,7 @@ the command :Validate is available to manual validate the file.
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimPythonValidate*
 

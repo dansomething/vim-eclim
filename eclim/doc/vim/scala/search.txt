@@ -26,7 +26,7 @@ supplying the -a <action> arg:
 Configuration
 =============
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimScalaSearchSingleResult*
 

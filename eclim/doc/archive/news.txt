@@ -45,7 +45,7 @@ Sep. 09, 2012
 =============
 
    Eclim 1.7.9 (archive-changes#id9) for Eclipse 3.7 (Indigo) is now available.
-   This release adds initial support for scala (|vim-scala-index|).
+   This release adds initial support for scala (vim-scala-index).
 
 Please note that the Scala IDE (http://scala-ide.org) , which eclim
 uses to provide scala support, is not yet available for Eclipse 4.2

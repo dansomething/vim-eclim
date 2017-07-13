@@ -28,9 +28,9 @@ Commands
 *:WorkspaceSettings*
 
 - :WorkspaceSettings - Allows you to view / edit the global
-  workspace settings (|vim-settings|). For project level settings see
+  workspace settings (vim-settings). For project level settings see
   the |:ProjectSettings| command on the project documentation page
-  (|vim-core-project|).
+  (vim-core-project).
 *:EclimDisable*
 
 - :EclimDisable - Allows you to temporarily disable all
@@ -61,7 +61,7 @@ Commands
 Configuration
 =============
 
-Eclim Settings (|vim-settings|)
+Eclim Settings (vim-settings)
 
 *org.eclim.user.name*
 
@@ -79,7 +79,7 @@ Eclim Settings (|vim-settings|)
   info to a file or utilize the version number in some other manner.
   Defaults to "1.0".
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 The following is a list of some of the common Vim variables available.
 

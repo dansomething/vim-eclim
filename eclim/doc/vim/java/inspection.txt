@@ -40,7 +40,7 @@ under the cursor using one of the following key bindings:
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavaHierarchyDefaultAction*
 
@@ -101,7 +101,7 @@ current project you can use the scope (-s) option:
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimJavaCallHierarchyDefaultAction*
 

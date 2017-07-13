@@ -214,7 +214,7 @@ Project Settings
 At this point you should have the minimum of what is needed for a new
 plugin. Hopefully you can now create new projects with your plugin's
 defined nature. The next step would be to start adding commands
-(|development-commands|) to provide validation, code completion, etc.
+(development-commands) to provide validation, code completion, etc.
 The remaining items in this list are not required to continue. They
 provide you with the ability to setup your own preferences or to
 expose the parent plugin's defined preferences inside of vim. When

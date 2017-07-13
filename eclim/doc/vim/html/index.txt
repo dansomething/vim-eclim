@@ -14,7 +14,7 @@ Code Completion
 ---------------
 
 Html code completion uses the standard Vim code completion mechanism
-(|vim-code_completion|) like so:
+(vim-code_completion) like so:
 
 >
 
@@ -72,7 +72,7 @@ your convience.
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimHtmlValidate*
 
@@ -105,7 +105,7 @@ Code Completion
 ---------------
 
 Css code completion uses the standard Vim code completion mechanism
-(|vim-code_completion|) like so:
+(vim-code_completion) like so:
 
 >
 
@@ -146,7 +146,7 @@ the command :Validate to manually execute the validation of the file.
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimCssValidate*
 

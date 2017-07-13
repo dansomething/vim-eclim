@@ -73,7 +73,7 @@ of eclim.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimBuffersSort*
   - g:EclimBuffersSort (defaults to 'path')  Supports one of 'path',
@@ -110,7 +110,7 @@ of eclim.
   g:EclimOnlyExclude and g:EclimOnlyExcludeFixed variables.
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimOnlyExclude*
   - g:EclimOnlyExclude (defaults to '^NONE$') - Regex used to match
@@ -159,7 +159,7 @@ of eclim.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimOpenUrlInVimPatterns*
   - g:EclimOpenUrlInVimPatterns (Default: []) - Defines a list of

@@ -9,7 +9,7 @@ Maven
 Running
 =======
 
-Much like the provided ant (|vim-java-ant|) execution functionality,
+Much like the provided ant (vim-java-ant) execution functionality,
 eclim also provides commands for running maven 1.x or 2.x.
 
 Eclim provides the following commands:

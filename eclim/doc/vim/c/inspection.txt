@@ -48,7 +48,7 @@ method by invoking the command with a !:
 Configuration
 -------------
 
-Vim Settings (|vim-settings|)
+Vim Settings (vim-settings)
 
 *g:EclimCCallHierarchyDefaultAction*
 

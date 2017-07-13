@@ -75,7 +75,7 @@ and open files or buffers.
 
   Configuration
 
-  Vim Settings (|vim-settings|)
+  Vim Settings (vim-settings)
 
   *g:EclimLocateFileDefaultAction*
   - g:EclimLocateFileDefaultAction (Default: 'split') - Determines

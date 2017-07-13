@@ -106,9 +106,9 @@ Java:
 =====================
 
 Scala:
-   - Add support for scala code completion (|vim-scala-complete|),
-     code validation (|vim-scala-validate|), and element definition
-     searches (|vim-scala-search|).
+   - Add support for scala code completion (vim-scala-complete),
+     code validation (vim-scala-validate), and element definition
+     searches (vim-scala-search).
 Git Log (1.7.9)
 (https://github.com/ervandew/eclim/compare/1.7.8...1.7.9)
 
@@ -250,7 +250,7 @@ Common:
    - Added |:ProjectBuild| to build the current or supplied project.
    - Updated |:ProjectProblems| to support optional bang
      (:ProjectProblems!) to only show project errors.
-   - Updating eclipse's local history (|vim-core-history|) when
+   - Updating eclipse's local history (vim-core-history) when
      writing in vim is now only enabled by default when gvim is opened
      from the eclipse gui.
 C/C++:
@@ -623,7 +623,7 @@ Java:
    - Updated |:JavaImport| and :JavaImportSort to honor eclipse's
      import order preference and added the ability to edit that
      preference via |:ProjectSettings| and :EclimSettings.
-   - Added initial refactoring (|vim-java-refactor|) support.
+   - Added initial refactoring (vim-java-refactor) support.
 Git Log (1.5.2)
 (https://github.com/ervandew/eclim/compare/1.5.1...1.5.2)
 
@@ -644,8 +644,8 @@ Eclipse:
 Eclim:
    - Added initial support for linked folders in eclipse projects.
    - Added new g:EclimValidateSortResults setting to support sorting
-     validation results (java (|vim-java-validate|), c/c++
-     (|vim-c-validate|), php (|vim-php-validate|), etc.) by priority
+     validation results (java (vim-java-validate), c/c++
+     (vim-c-validate), php (vim-php-validate), etc.) by priority
      (errors > warnings > etc.).
 C/C++:
    - Fixed :CSearch results on Windows platforms.
@@ -677,9 +677,8 @@ Eclipse:
    - Eclim now requires the latest version of eclipse (Galileo,
      3.5.x).
 Ruby:
-   - Added ruby support for code completion (|vim-ruby-complete|),
-     searching (|vim-ruby-search|), and validation
-     (|vim-ruby-validate|).
+   - Added ruby support for code completion (vim-ruby-complete),
+     searching (vim-ruby-search), and validation (vim-ruby-validate).
 Java:
    - Added ability to configure java indentation globally via
      :EclimSettings or per project using |:ProjectSettings|.
@@ -744,8 +743,8 @@ Git Log (1.4.7)
 Bug Fixes:
    - Various bug fixes.
 C/C++:
-   - Added c/c++ support for code completion (|vim-c-complete|),
-     searching (|vim-c-search|), and validation (|vim-c-validate|).
+   - Added c/c++ support for code completion (vim-c-complete),
+     searching (vim-c-search), and validation (vim-c-validate).
      Requires the eclipse cdt (http://eclipse.org/cdt/) plugin.
 Java:
    - Added command to run java (|:Java|).
@@ -769,7 +768,7 @@ Bug Fixes:
    - Various other bug fixes.
 Eclim:
    - Added integration with eclipse's local history
-     (|vim-core-history|) support.
+     (vim-core-history) support.
 Java:
    - Added command to view type hierarchy (|:JavaHierarchy|).
    - Added command to import all undefined types.
@@ -795,11 +794,11 @@ Eclim:
      (eclimd#gvim-embedded).
    - eclimd start scripts now available in the eclipse home.
    - Consolidated the various :LocateFile* commands into a single
-     :LocateFile (|vim-core-locate|) command with a new setting to
+     :LocateFile (vim-core-locate) command with a new setting to
      specify the default means to open a result and various key
      bindings for opening via other means.
 Php:
-   - Restored php support (|vim-php-index|) via the new eclipse pdt
+   - Restored php support (vim-php-index) via the new eclipse pdt
      (http://eclipse.org/pdt/) 2.0.
 Vcs:
    - Added option to set the split orientation (horizontal or
@@ -820,13 +819,13 @@ Bug Fixes:
 Installer:
    - Updated to make use of the new ganymede p2 provisioning system.
 Eclim:
-   - Rewrote :LocateFile* (|vim-core-locate|) commands to provide
+   - Rewrote :LocateFile* (vim-core-locate) commands to provide
      functionality similar to eclipse's "Open Resource" command or
      Textmate's "Find in Project".
 Python:
-   - Added support for code completion (|vim-python-complete|).
+   - Added support for code completion (vim-python-complete).
    - Added support for finding an element definition
-     (|vim-python-search|).
+     (vim-python-search).
    - Improved :PyLint support.
 Git Log (1.4.3)
 (https://github.com/ervandew/eclim/compare/1.4.2...1.4.3)
@@ -963,10 +962,9 @@ Installer:
    - Fixed some issues with running the installer on the icedtea
      jvm.
 Php:
-   - Added php support for code completion (|vim-php-complete|),
-     searching (|vim-php-search|), and validation
-     (|vim-php-validate|). Requires the eclipse pdt
-     (http://eclipse.org/pdt/) plugin.
+   - Added php support for code completion (vim-php-complete),
+     searching (vim-php-search), and validation (vim-php-validate).
+     Requires the eclipse pdt (http://eclipse.org/pdt/) plugin.
 Git Log (1.3.4)
 (https://github.com/ervandew/eclim/compare/1.3.3...1.3.4)
 
@@ -1005,13 +1003,13 @@ Java / Python:
      determine if the regex should be applied to the whole sample text
      at once, or to each line individually.
 Java:
-   - Updated the java logger (|vim-java-logging|) functionality to
+   - Updated the java logger (vim-java-logging) functionality to
      support a custom logger template.
 Javascript:
-   - Added javascript validation (|vim-javascript-index|) using jsl
+   - Added javascript validation (vim-javascript-index) using jsl
      (http://www.javascriptlint.com/).
 Python:
-   - Added basic python validation (|vim-python-validate|) using
+   - Added basic python validation (vim-python-validate) using
      pyflakes (http://www.divmod.org/trac/wiki/DivmodPyflakes) and the
      python compiler.
    - Added support for pylint (http://www.logilab.org/857) using new
@@ -1103,9 +1101,9 @@ Dtd:
    - Added dtd validation (vim-xml-index#dtd).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Html:
-   - Added html code completion (|vim-html-index|).  Requires the
+   - Added html code completion (vim-html-index).  Requires the
      eclipse wst (http://eclipse.org/webtools/main.php) plugin.
-   - Added html validation (|vim-html-index|).  Requires the eclipse
+   - Added html validation (vim-html-index).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Log4j:
    - Added log4j xml file validation (vim-java-logging#log4j).
@@ -1115,7 +1113,7 @@ Django:
    - Added |:DjangoManage|, |:DjangoFind|, |:DjangoTemplateOpen|,
      |:DjangoViewOpen|, and |:DjangoContextOpen|.
 WebXml:
-   - Added web.xml file validation (|vim-java-webxml|).
+   - Added web.xml file validation (vim-java-webxml).
 Vim:
    - Added :ArgsRelative, :ArgAddRelative, :ReadRelative.
    - Added |:Sign|, |:Signs|, |:SignClearUser|, |:SignClearAll|.
@@ -1128,7 +1126,7 @@ Xsd:
    - Added xsd validation (vim-xml-index#xsd).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Xml:
-   - Added xml code completion (|vim-xml-index|).  Requires the
+   - Added xml code completion (vim-xml-index).  Requires the
      eclipse wst (http://eclipse.org/webtools/main.php) plugin.
 Git Log (1.3.0)
 (https://github.com/ervandew/eclim/compare/1.2.3...1.3.0)
@@ -1325,8 +1323,8 @@ Bug Fixes:
    - Other various bug fixes.
 Ant:
    - Added |:Ant| command to allow execution of ant from any file.
-   - Added ant code completion (|vim-java-ant|).
-   - Added ant file validation (|vim-java-ant|).
+   - Added ant code completion (vim-java-ant).
+   - Added ant file validation (vim-java-ant).
    - Added |:AntDoc| command to quickly find ant type / task
      documentation.
 Java:
@@ -1452,13 +1450,13 @@ Bug Fixes:
      == 'dos'.
    - Several other minor fixes and enhancements.
 Java:
-   - Source validation (|vim-java-validate|).
-   - Javadoc (|vim-java-javadoc|) viewing.
+   - Source validation (vim-java-validate).
+   - Javadoc (vim-java-javadoc) viewing.
    - Override/Impl (|:JavaImpl|) stub generation.
    - Bean getter/setter (|:JavaGetSet|) generation.
-   - Junit (|vim-java-unittests|) test method stub generation.
-   - Alternate searching (|vim-java-search|) in code bases outside
-     of an eclipse project.
+   - Junit (vim-java-unittests) test method stub generation.
+   - Alternate searching (vim-java-search) in code bases outside of
+     an eclipse project.
    - Code correction (|:JavaCorrect|) via eclipse quickfix
      functionality.
    - Support for viewing source files located in archives (zip, jar)

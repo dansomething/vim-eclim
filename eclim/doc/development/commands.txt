@@ -233,10 +233,9 @@ commands found in the eclim source code to see detailed examples of
 how to access various eclipse features to expose them for use in vim
 or the editor of your choice.
 
-You should also take a look at the eclim Plugins
-(|development-plugins|) documentation which documents how to create a
-new eclim plugin, including information on adding new eclim settings,
-managing the plugin's dependencies through its META-INF/MANIFEST.MF,
-etc.
+You should also take a look at the eclim Plugins (development-plugins)
+documentation which documents how to create a new eclim plugin,
+including information on adding new eclim settings, managing the
+plugin's dependencies through its META-INF/MANIFEST.MF, etc.
 
 vim:ft=eclimhelp
