@@ -2,7 +2,7 @@
 
 Mirror of the VIM files from [Eclim][1] to support quick installation via various plugin managers.
 
-**Version 2.7.1**
+**Version 2.7.2**
 
 # Installation
 
