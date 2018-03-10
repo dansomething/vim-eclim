@@ -73,7 +73,7 @@ Note: If your eclipse home path contains a space, be sure to quote
 
 Note: If your vimfiles directory is not located at the default
   location for your OS, then you can specify the location using the
-  "vim.files" property:>
+  “vim.files” property:>
 
      $ ant -Dvim.files=<your vimfiles dir>
 
@@ -107,7 +107,7 @@ In this case we can see that four eclim plugins will be skipped along
 with the eclipse feature that would be required to build those
 plugins.
 
-If you don't want to supply the eclipse home directory, or any other
+If you don’t want to supply the eclipse home directory, or any other
 properties, on the command line every time you build eclim, you can
 create a user.properties file at the eclim source root and put all
 your properties in there:
@@ -141,7 +141,7 @@ Note: The eclim vim help files, used by the :EclimHelp
     not loading. Another issue you may run into is the docutils
     package, which sphinx depends on, is outdated on debian/ubuntu,
     resulting in another set of errors.So to get around these issues
-    you'll need to install sphinx using pip
+    you’ll need to install sphinx using pip
     (http://pip.readthedocs.org/en/latest/index.html) or similar.
 
 
@@ -165,7 +165,7 @@ Coding Style
 ============
 
 When contributing code please try to adhere to the coding style of
-similar code so that eclim's source can retain consistency throughout.
+similar code so that eclim’s source can retain consistency throughout.
 For java code, eclim includes a checkstyle configuration which can be
 run against the whole project:
 
@@ -196,7 +196,7 @@ github fork. Github provides a nice guide to forking
 (http://help.github.com/forking/) which should get you started.
 
 Although using a github fork is preferred, you can of course still
-submit patches via email using git's format-patch command:
+submit patches via email using git’s format-patch command:
 
 >
 
@@ -210,10 +210,10 @@ can be submitted to the eclim development group
 (http://groups.google.com/group/eclim-dev).
 
 
-What's Next
+What’s Next
 ===========
 
-Now that you're familiar with the basics of building and patching
+Now that you’re familiar with the basics of building and patching
 eclim, the next step is to familiarize yourself with the eclim
 architecture and to review the detailed docs on how new features are
 added.

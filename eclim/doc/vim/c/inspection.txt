@@ -52,7 +52,7 @@ Vim Settings (vim-settings)
 
 *g:EclimCCallHierarchyDefaultAction*
 
-- g:EclimCCallHierarchyDefaultAction (defaults to 'split') -
+- g:EclimCCallHierarchyDefaultAction (defaults to ‘split’) -
   Determines the command used to open the file when hitting <enter> on
   an entry in the hierarchy buffer.
 

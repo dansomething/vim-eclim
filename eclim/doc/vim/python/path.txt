@@ -13,18 +13,18 @@ first create a python (pydev) project:
 <
 
 
-If you haven't already configured a python interpreter, then you will
+If you haven’t already configured a python interpreter, then you will
 be prompted to do so when creating your first python project. When
 creating your project a .pydevproject file will be also be created.
 This file is used to define which interpreter to use for your project,
-the location of your project's python source files, and the location
+the location of your project’s python source files, and the location
 of any third party libraries your project requires (if not already on
-your project's interpreter path).
+your project’s interpreter path).
 
 Note: When saving the .pydevproject file from within vim, eclim will
-  update your project's configuration in memory or report any errors
+  update your project’s configuration in memory or report any errors
   raised by pydev.Also note that although the .pydevproject file is
-  xml, pydev doesn't handle stripping leading/trailing space or new
+  xml, pydev doesn’t handle stripping leading/trailing space or new
   lines from xml text values, so refrain from attempting to format
   this file and try to stick to using the commands below to configure
   your project.
@@ -68,7 +68,7 @@ each of your projects.
 - :PythonInterpreter [<interpreter_name or /path/to/interpreter>]
   When invoked with no arguments this command will print out the path
   to the python interpreter currently set for your project. This
-  command can also be use to set your project's interpreter by
+  command can also be use to set your project’s interpreter by
   supplying either the name of an interpreter already configured with
   pydev (via |:PythonInterpreterAdd|), or the absolute path to an
   interpreter on your system.

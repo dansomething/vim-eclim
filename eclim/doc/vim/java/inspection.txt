@@ -44,7 +44,7 @@ Vim Settings (vim-settings)
 
 *g:EclimJavaHierarchyDefaultAction*
 
-- g:EclimJavaHierarchyDefaultAction (defaults to 'split') -
+- g:EclimJavaHierarchyDefaultAction (defaults to ‘split’) -
   Determines the command used to open the type when hitting <enter> on
   the type entry in the hierarchy buffer.
 *:JavaCallHierarchy*
@@ -105,7 +105,7 @@ Vim Settings (vim-settings)
 
 *g:EclimJavaCallHierarchyDefaultAction*
 
-- g:EclimJavaCallHierarchyDefaultAction (defaults to 'split') -
+- g:EclimJavaCallHierarchyDefaultAction (defaults to ‘split’) -
   Determines the command used to open the file when hitting <enter> on
   an entry in the hierarchy buffer.
 

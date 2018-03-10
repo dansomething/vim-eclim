@@ -35,13 +35,13 @@ Vim Settings (vim-settings)
 
 *g:EclimDjangoAdmin*
 
-- g:EclimDjangoAdmin (Default: 'django-admin.py') - This setting
+- g:EclimDjangoAdmin (Default: ‘django-admin.py’) - This setting
   specifies the location of your django-admin.py file. By default it
   will attempt to locate it in your system path, but you can
   optionally set an absolute path for eclim to use. Eclim currently
   only needs access to this script when running :DjangoManage
   startproject <project_name> [destination]. All other :DjangoManage
-  commands will use your project's manage.py.
+  commands will use your project’s manage.py.
 
 Django python support
 =====================
@@ -148,7 +148,7 @@ Contextual Find
 
      <
 
-   - If on the tag/filter definition portion of of a 'load' tag,
+   - If on the tag/filter definition portion of of a ‘load’ tag,
      attempt to find the definition file.
      Ex.
 
@@ -158,8 +158,8 @@ Contextual Find
 
      <
 
-   - If on a reference to a template for ethier an 'extends' or
-     'include' tag, attempt to find that template file.
+   - If on a reference to a template for ethier an ‘extends’ or
+     ‘include’ tag, attempt to find that template file.
      Ex.
 
      >
@@ -168,7 +168,7 @@ Contextual Find
 
      <
 
-   - If on static file reference, as defined in a 'src' or 'href'
+   - If on static file reference, as defined in a ‘src’ or ‘href’
      attribute of an element, attempt to find that static file.
      Ex.
 
@@ -181,7 +181,7 @@ Contextual Find
      Note: this functionality requires that g:EclimDjangoStaticPaths
      is set to a list of absolute or django project relative (relative
      to directory containing manage.py and settings.py) directories,
-     though it will fallback to using eclim's locate file
+     though it will fallback to using eclim’s locate file
      functionality.
 
      Ex.
@@ -216,14 +216,14 @@ Vim Settings (vim-settings)
 
   <
 
-  This setting is used for indentation of the custom tag's body, as
+  This setting is used for indentation of the custom tag’s body, as
   well as arguments for proper matchit support, end tag completion,
   and syntax highlighting.
 
 *g:HtmlDjangoUserTags*
 
 - g:HtmlDjangoUserTags - This setting is a list of any non-body tags
-  which don't require indentation or matchit support.  The items
+  which don’t require indentation or matchit support.  The items
   configured here will be used for syntax highlighting.
 *g:HtmlDjangoUserFilters*
 
@@ -278,7 +278,7 @@ Vim Settings (vim-settings)
 
 *g:EclimDjangoFindAction*
 
-- g:EclimDjangoFindAction (Default: "split") - For :DjangoFind and
+- g:EclimDjangoFindAction (Default: “split”) - For :DjangoFind and
   :DjangoTemplateOpen, used as the action to perform on the file
   found.
 

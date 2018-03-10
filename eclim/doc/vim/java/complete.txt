@@ -28,7 +28,7 @@ Vim Settings (vim-settings)
 
 - g:EclimJavaCompleteCaseSensitive (Default: !&ignorecase) - When
   set to a value greater than 0, eclim will filter out completions
-  that don't start with the same case base that you are attempting to
+  that don’t start with the same case base that you are attempting to
   complete (the base and the suggested completion must have the same
   case).
 

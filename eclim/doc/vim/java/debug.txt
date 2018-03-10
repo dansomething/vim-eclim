@@ -22,7 +22,7 @@ things:
 
 
 2. Start vim with the --servername argument (eclimd currently sends
-   debugger updates to vim using vim's remote invocation support):
+   debugger updates to vim using vim’s remote invocation support):
 >
 
    $ vim --servername debug ...
@@ -30,10 +30,10 @@ things:
 <
 
 
-Note: The server name you choose doesn't matter as long as you don't
+Note: The server name you choose doesn’t matter as long as you don’t
   have another vim instance running with that same name.
 
-Once you've got your java program running and vim started with a
+Once you’ve got your java program running and vim started with a
 servername, you can then start your debug session using the
 :JavaDebugStart command. This command requires the hostname/IP and the
 port number on which the debug server is running.
@@ -55,7 +55,7 @@ To add a breakpoint, simply open the file, position the cursor on the
 desired line and run the :JavaDebugBreakpointToggle command. If now
 breakpoint exists, one will be created. If a breakpoint does exist,
 then :JavaDebugBreakpointToggle will toggle whether that breakpoint is
-enabled or not. If you'd like to delete the breakpoint on the current
+enabled or not. If you’d like to delete the breakpoint on the current
 line instead of disabling it, then run the toggle command with the !
 option.
 
@@ -223,15 +223,15 @@ Configuration
 
 *g:EclimJavaDebugLineHighlight*
 
-- g:EclimJavaDebugLineHighlight (Default: 'DebugBreak') Highlight
+- g:EclimJavaDebugLineHighlight (Default: ‘DebugBreak’) Highlight
   group to use for showing the current line being debugged.
 *g:EclimJavaDebugLineSignText*
 
-- g:EclimJavaDebugLineSignText (Default: '•') Text to use on sign
+- g:EclimJavaDebugLineSignText (Default: ‘•’) Text to use on sign
   column for showing the current line being debugged.
 *g:EclimJavaDebugStatusWinOrientation*
 
-- g:EclimJavaDebugStatusWinOrientation (Default: 'vertical') Sets
+- g:EclimJavaDebugStatusWinOrientation (Default: ‘vertical’) Sets
   the orientation for the splits inside the debug status windows; if
   they should be tiled vertically or horizontally. Possible values: -
   horizontal - vertical
@@ -250,7 +250,7 @@ Troubleshooting
 ===============
 
 - Expanding a variable shows an empty line with just a dot. You
-  probably haven't pressed the <Enter> key on the variable. Nested
+  probably haven’t pressed the <Enter> key on the variable. Nested
   variables are retreived one level at a time from the server to be
   performant. Since we are using VIM folds, any mapping that simply
   opens a fold will not cause variables to be retrieved.

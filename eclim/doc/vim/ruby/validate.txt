@@ -8,9 +8,9 @@ Ruby Validation
 
 When saving a ruby source file that resides in a project, eclim will
 update that source file in Eclipse and will report any validation
-errors found.  Any errors will be placed in the current window's
+errors found.  Any errors will be placed in the current window’s
 location list (:help location-list) and the corresponding lines in the
-source file will be marked via Vim's :sign functionality with '>>'
+source file will be marked via Vim’s :sign functionality with ‘>>’
 markers in the left margin.
 
 Automatic validation of ruby source files can be disabled via the
@@ -30,9 +30,9 @@ Vim Settings (vim-settings)
   code validation.
   Note: When enabled, syntastic
     (https://github.com/scrooloose/syntastic) is disabled so that
-    eclim and syntastic don't step on each other. If you'd like to use
-    syntastic over eclim for validation, then simply disable eclim's
-    validation.If you'd like to disable eclim's source code validation
+    eclim and syntastic don’t step on each other. If you’d like to use
+    syntastic over eclim for validation, then simply disable eclim’s
+    validation.If you’d like to disable eclim’s source code validation
     for all languages, eclim provides a global variable for that as
     well:>
 
@@ -41,8 +41,8 @@ Vim Settings (vim-settings)
     <
 
 
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 
 vim:ft=eclimhelp

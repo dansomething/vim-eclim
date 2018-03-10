@@ -19,7 +19,7 @@ Note: Please note that this command is not intended to be a full
 
 The :Java will locate the main class to run using the following steps:
 
-1. if the first argument is '%' (:Java %) then run the current
+1. if the first argument is ‘%’ (:Java %) then run the current
    class.
 2. if the setting org.eclim.java.run.mainclass is set, then use the
    value as the fully qualified class name to run.
@@ -44,7 +44,7 @@ Echo the classpath for the current project
 ------------------------------------------
 
 When editing a java file, eclim provides the command :JavaClasspath
-which will echo the project's resolved classpath entries separated by
+which will echo the project’s resolved classpath entries separated by
 the system path separator or a supplied delimiter:
 
 >

@@ -20,7 +20,7 @@ and one of the following events will occur:
 - If an element with the same name is already imported then no
   changes will occur.
 Note: Like the scala-ide (as of the time of this writting), imports
-  are simply appended to the end of your file's import block. There is
+  are simply appended to the end of your file’s import block. There is
   no attempt made to sort or group imports.
 
 

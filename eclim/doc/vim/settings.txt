@@ -29,7 +29,7 @@ These are the settings you use to control how vim (the primary eclimd
 client) behaves. You can edit these settings one of two ways:
 
 - :VimSettings (|vim-core-eclim#:VimSettings|): Allows you to view
-  and edit all of eclim's vim client settings. Settings edited here
+  and edit all of eclim’s vim client settings. Settings edited here
   will be stored at $HOME/.eclim/.eclim_settings.
 - Alternately, you can add the equivalent g:EclimXXX setting to your
   vimrc or an ftplugin file, and that setting will take precedence

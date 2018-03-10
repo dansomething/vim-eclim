@@ -13,7 +13,7 @@ Global Commands
 - :PingEclim (|vim-core-eclim#:PingEclim|) - Pings eclimd server.
 - :ShutdownEclim (|vim-core-eclim#:ShutdownEclim|) - Shuts down
   eclimd server.
-- :VimSettings (|vim-core-eclim#:VimSettings|) - View / edit eclim's
+- :VimSettings (|vim-core-eclim#:VimSettings|) - View / edit eclim’s
   vim client settings.
 - :WorkspaceSettings (|vim-core-eclim#:WorkspaceSettings|) - View /
   edit global workspace settings.
@@ -29,8 +29,8 @@ Global Commands
 Project Commands
 ================
 
-- |:ProjectCreate| <folder> [-p <project_name>] -n <nature> ... [-d
-  <project_dependency> ...] - Create a new project.
+- |:ProjectCreate| <folder> [-p <project_name>] -n <nature> … [-d
+  <project_dependency> …] - Create a new project.
 - |:ProjectImport| <folder> - Import a project from an existing
   eclipse project folder.
 - |:ProjectList| - List current projects.
@@ -38,9 +38,9 @@ Project Commands
 - |:ProjectDelete| <project> - Delete a project.
 - |:ProjectRename| [<project>] <name> - Rename a project.
 - |:ProjectMove| [<project>] <dir> - Move a project.
-- |:ProjectRefresh| [<project> <project> ...] - Refresh supplied
-  list of projects against the current files on disk.  If no project
-  names supplied, refresh the current project.
+- |:ProjectRefresh| [<project> <project> …] - Refresh supplied list
+  of projects against the current files on disk.  If no project names
+  supplied, refresh the current project.
 - |:ProjectRefreshAll| - Refresh all projects.
 - |:ProjectBuild| [<project>] - Build the current or supplied
   project.
@@ -50,31 +50,31 @@ Project Commands
 - |:ProjectClose| [<project>] - Closes a project.
 - |:ProjectNatures| [<project>] - View the configured natures for
   one or all projects.
-- |:ProjectNatureAdd| <project> [<nature> ...] - Add one or more
+- |:ProjectNatureAdd| <project> [<nature> …] - Add one or more
   natures to a project.
-- |:ProjectNatureRemove| <project> [<nature> ...] - Remove one or
-  more natures from a project.
-- |:ProjectProblems| [<project>] - Populates vim's quickfix with all
+- |:ProjectNatureRemove| <project> [<nature> …] - Remove one or more
+  natures from a project.
+- |:ProjectProblems| [<project>] - Populates vim’s quickfix with all
   eclipse build errors and warnings for the current, or specified
   project, and all related projects.
 - |:ProjectCD| - Changes the global current working directory to the
-  root directory of the current file's project (executes a :cd).
+  root directory of the current file’s project (executes a :cd).
 - |:ProjectLCD| - Changes the current working directory of the
-  current window to the root directory of the current file's project
+  current window to the root directory of the current file’s project
   (executes a :lcd).
-- |:ProjectTree| [<project> <project> ...] - Opens navigable a tree
+- |:ProjectTree| [<project> <project> …] - Opens navigable a tree
   for one or more projects.
 - |:ProjectsTree| - Opens a tree containing all projects.
 - |:ProjectTab| <project> - Opens a new tab containing the project
   tree and the tab local working directory set to the supplied
-  project's root.
-- |:ProjectGrep| /<pattern>/ file_pattern [file_pattern ...] -
-  Issues a vimgrep starting at the root of the current project.
-- |:ProjectGrepAdd| /<pattern>/ file_pattern [file_pattern ...] -
+  project’s root.
+- |:ProjectGrep| /<pattern>/ file_pattern [file_pattern …] - Issues
+  a vimgrep starting at the root of the current project.
+- |:ProjectGrepAdd| /<pattern>/ file_pattern [file_pattern …] -
   Issues a vimgrepadd starting at the root of the current project.
-- |:ProjectLGrep| /<pattern>/ file_pattern [file_pattern ...] -
-  Issues a lvimgrep starting at the root of the current project.
-- |:ProjectLGrepAdd| /<pattern>/ file_pattern [file_pattern ...] -
+- |:ProjectLGrep| /<pattern>/ file_pattern [file_pattern …] - Issues
+  a lvimgrep starting at the root of the current project.
+- |:ProjectLGrepAdd| /<pattern>/ file_pattern [file_pattern …] -
   Issues a lvimgrepadd starting at the root of the current project.
 - |:ProjectTodo| - Searches project files for todo / fixme patterns
   and adds them to the location list.
@@ -85,13 +85,13 @@ Android Commands
 ================
 
 - |:AndroidReload| - Reloads the Android SDK environment in the
-  running eclimd/eclipse instance. Useful if you've made changes to
+  running eclimd/eclipse instance. Useful if you’ve made changes to
   the SDK outside of eclipse (installed a new target platform, etc).
 
 Ant Commands
 ============
 
-- |:Ant| [<target> ...] - Execute ant from the current project.
+- |:Ant| [<target> …] - Execute ant from the current project.
 - |:AntDoc| [<element>] - Find and open the documentation for the
   element under the cursor or the element supplied as an argument.
 - :Validate (|:Validate_ant|) - Validate the current ant build file.
@@ -173,15 +173,15 @@ Java Commands
 - |:JavaDocComment| - Adds or updates the comments for the element
   under the cursor.
 - |:JavaDocPreview| - Display the javadoc of the element under the
-  cursor in vim's preview window.
+  cursor in vim’s preview window.
 - |:JavaRename| [new_name] - Rename the element under the cursor.
 - |:JavaMove| [new_package] - Move the current class/interface to
   another package.
-- |:Java| - Executes the java using your project's main class.
-- |:JavaClasspath| [-d <delim>] - Echos the project's classpath
+- |:Java| - Executes the java using your project’s main class.
+- |:JavaClasspath| [-d <delim>] - Echos the project’s classpath
   delimited by the system path separator or the supplied delimiter.
-- |:Javadoc| [file, file, ...] - Executes the javadoc utility
-  against all or just the supplied source files.
+- |:Javadoc| [file, file, …] - Executes the javadoc utility against
+  all or just the supplied source files.
 - |:JavaListInstalls| - List known JDK/JRE installs.
 - |:JavaFormat| - Formats java source code.
 - |:Checkstyle| - Invokes checkstyle on the current file.
@@ -224,13 +224,12 @@ Log4j Commands
 Maven Commands
 ==============
 
-- |:Maven| [<goal> ...] - Execute maven 1.x from the current
-  project.
-- |:Mvn| [<goal> ...] - Execute maven 2.x from the current project.
+- |:Maven| [<goal> …] - Execute maven 1.x from the current project.
+- |:Mvn| [<goal> …] - Execute maven 2.x from the current project.
 - |:MavenRepo| - Sets the necessary MAVEN_REPO classpath variable
-  for maven's (1.x) eclipse support.
+  for maven’s (1.x) eclipse support.
 - |:MvnRepo| - Sets the necessary M2_REPO classpath variable for
-  maven's (2.x) eclipse support.
+  maven’s (2.x) eclipse support.
 
 Php Commands
 ============
@@ -250,7 +249,7 @@ Python Commands
 - |:PythonSearchContext| - Find the element under the cursor or its
   references based on the current context in the file.
 - :Validate (|:Validate_python|) - Validates the current file.
-- |:DjangoManage| - Invokes django's manage.py from any file in the
+- |:DjangoManage| - Invokes django’s manage.py from any file in the
   same directory as your manage.py or in any of the child directories.
 - |:DjangoFind| - Available when editing a django html template
   file. Finds tag/filter definition, other template files, and static
@@ -296,9 +295,9 @@ WebXml Commands
 Xml Commands
 ============
 
-- |:DtdDefinition| [<element>] - Open the current xml file's dtd and
+- |:DtdDefinition| [<element>] - Open the current xml file’s dtd and
   jump to the element definition if supplied.
-- |:XsdDefinition| [<element>] - Open the current xml file's xsd and
+- |:XsdDefinition| [<element>] - Open the current xml file’s xsd and
   jump to the element definition if supplied.
 - :Validate (|:Validate_xml|) [<file>] - Validates the supplied xml
   file or the current file if none supplied.
@@ -313,7 +312,7 @@ Misc. Commands
 ==============
 
 - |:LocateFile| [file] - Locates a relative file and opens it.
-- |:Tcd| dir - Like :lcd but sets the tab's local working directory.
+- |:Tcd| dir - Like :lcd but sets the tab’s local working directory.
 - |:DiffLastSaved| - Performs a diffsplit with the last saved
   version of the currently modifed file.
 - |:SwapWords| - Swaps two words (with cursor placed on the first

@@ -44,9 +44,9 @@ File Validation
 ---------------
 
 When editing a html file eclim will default to validating the file
-when it is written. Any errors will be added to the current window's
+when it is written. Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
 If you do not want your html files validated automatically when saved,
 you can set the |g:EclimHtmlValidate| variable described in the
@@ -80,9 +80,9 @@ Vim Settings (vim-settings)
   validation when saving the file.
   Note: When enabled, syntastic
     (https://github.com/scrooloose/syntastic) is disabled so that
-    eclim and syntastic don't step on each other. If you'd like to use
-    syntastic over eclim for validation, then simply disable eclim's
-    validation.If you'd like to disable eclim's source code validation
+    eclim and syntastic don’t step on each other. If you’d like to use
+    syntastic over eclim for validation, then simply disable eclim’s
+    validation.If you’d like to disable eclim’s source code validation
     for all languages, eclim provides a global variable for that as
     well:>
 
@@ -91,8 +91,8 @@ Vim Settings (vim-settings)
     <
 
 
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 *css*
 
@@ -129,9 +129,9 @@ Validation
 ----------
 
 When editing a css file eclim will default to validating the file when
-it is written.  Any errors will be added to the current window's
+it is written.  Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
 If you do not want your css files validated automatically when saved,
 you can set the |g:EclimCssValidate| variable described in the
@@ -152,8 +152,8 @@ Vim Settings (vim-settings)
 
 - g:EclimCssValidate (Default: 1) - If set to 0, disables validation
   when saving the file.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 
 vim:ft=eclimhelp

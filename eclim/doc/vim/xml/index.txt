@@ -12,7 +12,7 @@ Xml
 Note: If you have xml files that do not have a .xml extension then
   eclipse may not recognize it as an xml file resulting in validation,
   completion, etc not working. Although the vim side may have the
-  correct file type set, you may still need to add the file's
+  correct file type set, you may still need to add the file’s
   extension to the list of xml content types in the eclipse
   gui:Preferences ‣ General ‣ Content Types ‣ Text ‣ XML
 
@@ -44,7 +44,7 @@ Definition Lookup
 -----------------
 
 When editing xml files, eclim provides a couple commands which allow
-you to quickly and easily open the file's data definition and
+you to quickly and easily open the file’s data definition and
 optionally jump to the definition of a particular element.
 
 Note: When opening urls, these commands rely on netrw (:help netrw).
@@ -70,11 +70,11 @@ Validation
 ----------
 
 When editing a xml file eclim will default to validating the file when
-it is written.  Any errors will be added to the current window's
+it is written.  Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
-If you don't want xml files validated when saving them, you can set
+If you don’t want xml files validated when saving them, you can set
 the g:EclimXmlValidate variable described in the configuration section
 below.
 
@@ -130,8 +130,8 @@ Vim Settings (vim-settings)
 
 - g:EclimXmlValidate (Defualt: 1) - If set to 0, disables xml
   validation when saving the file.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 *dtd*
 
@@ -144,9 +144,9 @@ Validation
 ----------
 
 When editing a dtd file eclim will default to validating the file when
-it is written. Any errors will be added to the current window's
+it is written. Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
 If you do not want your dtd files validated automatically when saved,
 you can set the |g:EclimDtdValidate| variable described in the
@@ -167,8 +167,8 @@ Vim Settings (vim-settings)
 
 - g:EclimDtdValidate (Default: 1) - If set to 0, disables validation
   when saving the file.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 *xsd*
 
@@ -181,9 +181,9 @@ Validation
 ----------
 
 When editing a xsd file eclim will default to validating the file when
-it is written.  Any errors will be added to the current window's
+it is written.  Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
 If you do not want your xsd files validated automatically when saved,
 you can set the |g:EclimXsdValidate| variable described in the
@@ -204,8 +204,8 @@ Vim Settings (vim-settings)
 
 - g:EclimXsdValidate (Default: 1) - If set to 0, disables validation
   when saving the file.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 
 vim:ft=eclimhelp

@@ -18,7 +18,7 @@ Commands
 - :ShutdownEclim - Shuts down the current running eclimd instance.
 *:VimSettings*
 
-- :VimSettings - Allows you to view and edit all of eclim's vim
+- :VimSettings - Allows you to view and edit all of eclim’s vim
   client settings. Settings edited here will be stored at
   $HOME/.eclim/.eclim_settings.
   Note: If you have any g:EclimXXX settings in your vimrc or
@@ -35,8 +35,8 @@ Commands
 
 - :EclimDisable - Allows you to temporarily disable all
   communication with eclimd for the current vim session.  Useful if
-  you need to shutdown eclimd for one reason or antoher, and would
-  like to disable vim's attempts to communicate with the non-existant
+  you need to shutdown eclimd for one reason or another, and would
+  like to disable vim’s attempts to communicate with the non-existent
   server.
 *:EclimEnable*
 
@@ -44,7 +44,7 @@ Commands
   of :EclimDisable).
 *:EclimHelp*
 
-- :EclimHelp [<topic>] - Similar to vim's :help command, with the
+- :EclimHelp [<topic>] - Similar to vim’s :help command, with the
   exception that this command is limited to opening topics for eclim.
 *:EclimHelpGrep*
 
@@ -77,7 +77,7 @@ Eclim Settings (vim-settings)
 - org.eclim.project.version Should be set to the version number of
   your project.  This is used by various commands that add version
   info to a file or utilize the version number in some other manner.
-  Defaults to "1.0".
+  Defaults to “1.0”.
 
 Vim Settings (vim-settings)
 
@@ -85,33 +85,33 @@ The following is a list of some of the common Vim variables available.
 
 *g:EclimLogLevel*
 
-- g:EclimLogLevel (Default: 'info')
+- g:EclimLogLevel (Default: ‘info’)
   This variable allows you to control the level of output from eclim
   as follows:
 
-  - 'trace' - Show all trace, debug, info, warning, and error
+  - ‘trace’ - Show all trace, debug, info, warning, and error
     messages.
-  - 'debug' - Show all debug, info, warning, and error messages.
-  - 'info' - Show all info, warning, and error messages.
-  - 'warning' - Show only warning, and error messages.
-  - 'error' - Show only error messages.
-  - 'off' - Don't display any messages.
+  - ‘debug’ - Show all debug, info, warning, and error messages.
+  - ‘info’ - Show all info, warning, and error messages.
+  - ‘warning’ - Show only warning, and error messages.
+  - ‘error’ - Show only error messages.
+  - ‘off’ - Don’t display any messages.
   Each level also has a corresponding variable to set the highlighting
   group used for the text.
 
   *g:EclimHighlightError*
-  - g:EclimHighlightError (Default: "Error")
+  - g:EclimHighlightError (Default: “Error”)
   *g:EclimHighlightWarning*
-  - g:EclimHighlightWarning (Default: "WarningMsg")
+  - g:EclimHighlightWarning (Default: “WarningMsg”)
   *g:EclimHighlightInfo*
-  - g:EclimHighlightInfo (Default: "Statement")
+  - g:EclimHighlightInfo (Default: “Statement”)
   *g:EclimHighlightDebug*
-  - g:EclimHighlightDebug (Default: "Normal")
+  - g:EclimHighlightDebug (Default: “Normal”)
   *g:EclimHighlightTrace*
-  - g:EclimHighlightTrace (Default: "Normal")
+  - g:EclimHighlightTrace (Default: “Normal”)
 *g:EclimSignLevel*
 
-- g:EclimSignLevel (Default: 'info')
+- g:EclimSignLevel (Default: ‘info’)
   Behaves just like g:EclimLogLevel except this applies to placing of
   Vim signs for displaying validation errors / warnings, or marking
   quickfix/location list entries.
@@ -126,12 +126,10 @@ The following is a list of some of the common Vim variables available.
   system, but if it cannot find a compatible browser, you will need to
   set one in your vimrc.
 
-     - Firefox let g:EclimBrowser = 'firefox'
-     - Mozilla let g:EclimBrowser = 'mozilla'
-     - Opera let g:EclimBrowser = 'opera'
-     - IE let g:EclimBrowser = 'iexplore'
+     - Firefox let g:EclimBrowser = ‘firefox’
+     - Chromium let g:EclimBrowser = ‘chromium’
   Note: The above examples assume that the browser executable is in
-  your path. On windows machines they won't be by default, so you will
+  your path. On windows machines they won’t be by default, so you will
   need to add them.
 
 *g:EclimShowCurrentError*
@@ -145,7 +143,7 @@ The following is a list of some of the common Vim variables available.
 
 - g:EclimMakeLCD (Default: 1)
   When set to a non-0 value, all eclim based make commands (:Ant,
-  :Maven, :Mvn, etc) will change to the current file's project root
+  :Maven, :Mvn, etc) will change to the current file’s project root
   before executing.
 
   Enabling this has the benefit of allowing you to run these commands
@@ -153,7 +151,7 @@ The following is a list of some of the common Vim variables available.
   to worry about the directory it is executing from.  For example if
   you have a file open from project A and split a file from project B,
   you can execute :Ant from the project B file and it will utilize
-  project B's build.xml even though your current working directory is
+  project B’s build.xml even though your current working directory is
   in project A.
 
 *g:EclimMenus*

@@ -9,8 +9,8 @@ Validation
 
 When editing a javascript file eclim will default to validating the
 file when it is written.  Any errors will be added to the current
-window's location list (:help location-list) and their corresponding
-line number noted via Vim's sign functionality.
+window’s location list (:help location-list) and their corresponding
+line number noted via Vim’s sign functionality.
 
 Javascript validation currently uses JavaScript Lint
 (http://www.javascriptlint.com/) to perform the validation.  To use it
@@ -36,7 +36,7 @@ machine (your paths may vary):
 <
 
 
-If you don't want javascript files validated when saving them, you can
+If you don’t want javascript files validated when saving them, you can
 set the g:EclimJavascriptValidate variable described in the
 configuration section below.
 
@@ -55,12 +55,12 @@ Vim Settings (vim-settings)
 
 - g:EclimJavascriptValidate (Default: 1) - If set to 0, disables
   javascript validation when saving the file.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 *g:EclimJavascriptLintConf*
 
-- g:EclimJavascriptLintConf (Default: '~/.jslrc') - Used to set the
+- g:EclimJavascriptLintConf (Default: ‘~/.jslrc’) - Used to set the
   location of your jsl config file.
 
 vim:ft=eclimhelp

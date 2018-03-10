@@ -25,7 +25,7 @@ For example if you have the following class:
 <
 
 
-If you were to select the range containing the 'id' and 'name' fields
+If you were to select the range containing the ‘id’ and ‘name’ fields
 and issue :JavaConstructor, then you would end up with the following
 code.
 
@@ -53,13 +53,13 @@ If you issue the command with no fields selected, then a default empty
 constructor is created.
 
 When attempting to create an empty constructor, if the super class
-doesn't define a default constructor, but instead has one or more
+doesn’t define a default constructor, but instead has one or more
 constructors which takes arguments, then calling :JavaConstructor
 without a range will result in the creation of a constructor which
 overrides the super class constructor containing the least number of
-arguments. Although an empty constructor won't pass code validation,
+arguments. Although an empty constructor won’t pass code validation,
 you can force the creation of one in this case by suffixing the
-command with a '!':
+command with a ‘!’:
 
 >
 
@@ -85,7 +85,7 @@ Getters / Setters
 - :JavaSet - Generates setters for the field under the cursor or for
   all fields in the specified range.
 Note: If you would like to generate the indexed getter or setter
-  then you can suffix the appropriate command above with '!' and if
+  then you can suffix the appropriate command above with ‘!’ and if
   the property is an array, an indexed accessor will be created.>
 
      :JavaGetSet!
@@ -180,7 +180,7 @@ Vim Settings (vim-settings)
 *g:EclimJavaImplInsertAtCursor*
 
 - g:EclimJavaImplInsertAtCursor (Default: 0) - By default eclim will
-  insert methods you've chosen after all the existing methods, but
+  insert methods you’ve chosen after all the existing methods, but
   before any inner classes. If you enable this setting, then the
   methods will instead be inserted near where your cursor was when you
   first invoked :JavaImpl.
@@ -196,7 +196,7 @@ on a global field (in the main source file class or within an inner
 class), and then invoke the :JavaDelegate command.
 
 In the following source, you can place the cursor anywhere starting
-from the first 'p' in private, to the trailing semicolon, and then
+from the first ‘p’ in private, to the trailing semicolon, and then
 invoke the :JavaDelegate command.
 
 >

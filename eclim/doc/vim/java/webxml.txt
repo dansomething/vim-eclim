@@ -8,9 +8,9 @@ Validation
 ==========
 
 When editing a web.xml file eclim will default to validating the file
-when it is written.  Any errors will be added to the current window's
+when it is written.  Any errors will be added to the current window’s
 location list (:help location-list) and their corresponding line
-number noted via Vim's sign functionality.
+number noted via Vim’s sign functionality.
 
 Eclim also combines the above validation with xml validation
 (vim-xml-index#xml-validation) to validate that the file is well

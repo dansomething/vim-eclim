@@ -3,7 +3,20 @@
 History of Changes
 ******************
 
-*2.7.0*
+*2.7.1*
+
+
+2.7.1 (Jan. 01, 2018)
+=====================
+
+Eclim:
+   - Eclim updated to support Eclipse 4.7.2 (Oxygen)
+   - Eclim updated to latest versions of dltk, pydev, and scalaide.
+   - All new installer that supports several different eclipse file
+     system layouts, including the one from the eclipse GUI installer.
+   - Windows support has been removed.
+   Git Log (2.7.1) (https://github.com/ervandew/eclim/compare/2.7.0...2.7.1)
+ *2.7.0*
 
 
 2.7.0 (Jul. 12, 2017)
@@ -39,17 +52,17 @@ Eclim:
 Install:
    - Fixed unattended installation.
 Eclim:
-   - Updated the search behavior across all eclim's supported
-     languages to now use vim's quickfix list instead of the location
+   - Updated the search behavior across all eclim’s supported
+     languages to now use vim’s quickfix list instead of the location
      list, and to only do so if there is more than one result.
-   - Updated eclim's sign support for quickfix results to now be
+   - Updated eclim’s sign support for quickfix results to now be
      disabled by default.
-   - Updated eclim's signs to use more unique ids to support
+   - Updated eclim’s signs to use more unique ids to support
      multiple different sign types on a single line and to avoid
      clashing with other plugins that may be setting signs on the same
      lines as eclim.
 Project:
-   - Added a |:ProjectRun| command to invoke your project's eclipse
+   - Added a |:ProjectRun| command to invoke your project’s eclipse
      run configuration.  Thanks to Daniel Leong
    - Added |:ProjectImportDiscover| to bulk import projects from a
      common parent directory.  Thanks to Kannan Rajah
@@ -68,7 +81,7 @@ Groovy:
    - Added support for groovy validation (vim-groovy-validate) and
      code completion (vim-groovy-complete).  Thanks to Yves Zoundi
 Python:
-   - Fixed eclim's python support to work against the pydev 3.9.1
+   - Fixed eclim’s python support to work against the pydev 3.9.1
 Scala:
    - Scala support has been re-enabled now that ScalaIDE 4.0.0 for
      Luna has been released.
@@ -84,7 +97,7 @@ Eclim:
    - :EclimSettings renamed to :WorkspaceSettings to better reflect
      what is being edited.
    - Added :VimSettings (|vim-core-eclim#:VimSettings|) command to
-     make viewing/editing of eclim's vim client settings easier.
+     make viewing/editing of eclim’s vim client settings easier.
    - All eclim make based commands (:Ant, :Mvn, etc.) will now use
      dispatch (https://github.com/tpope/vim-dispatch) if available. If
      you would like to disable this behavior, add the following to
@@ -97,9 +110,9 @@ Eclim:
    - Lot of bugs have also been fixed.
 Scala:
    - Scala support is disabled in this release. I tried waiting for
-     a final release of ScalaIDE 4.0.0 for Luna, but I don't want to
-     hold up the rest of eclim any longer. If you want to use eclim's
-     scala support, you'll need to install the ScalaIDE 4.0.0
+     a final release of ScalaIDE 4.0.0 for Luna, but I don’t want to
+     hold up the rest of eclim any longer. If you want to use eclim’s
+     scala support, you’ll need to install the ScalaIDE 4.0.0
      milestone and build eclim from the master git branch.
    Git Log (2.4.0) (https://github.com/ervandew/eclim/compare/2.3.4...2.4.0)
  *1.7.19*
@@ -159,12 +172,12 @@ Java:
    - Some of the eclipse java code completion settings are now
      available via :ProjectSettings.
 Javascript:
-   - Let tern supersede eclim's limited javascript completion.
+   - Let tern supersede eclim’s limited javascript completion.
 Maven/Ivy:
    - Removed dependency searching since the search provider no
      longer exists.
 Python:
-   - Eclim's python support been re-written to use pydev instead of
+   - Eclim’s python support been re-written to use pydev instead of
      rope.
      Note: Any exiting eclim python projects you have should be
        re-created with the new python nature:>
@@ -225,7 +238,7 @@ Php:
      searching and code completion has changed in Kepler which may
      result in searching / code completion not returning any results,
      both in eclim and in the standard eclipse php editor.  To fix
-     this you'll need to stop eclipse, remove the old index, and then
+     this you’ll need to stop eclipse, remove the old index, and then
      restart:>
 
         $ rm -r <your workspace>/.metadata/.plugins/org.eclipse.dltk.core.index.sql.h2/
@@ -261,7 +274,7 @@ Php:
    Warning: The format of the h2 database used for php searching and
      code completion has changed in Kepler which may result in
      searching / code completion not returning any results, both in
-     eclim and in the standard eclipse php editor. To fix this you'll
+     eclim and in the standard eclipse php editor. To fix this you’ll
      need to stop eclipse, remove the old index, and then restart:>
 
         $ rm -r <your workspace>/.metadata/.plugins/org.eclipse.dltk.core.index.sql.h2/
@@ -282,7 +295,7 @@ Vimplugin:
      now disabled by default, but when enabled, it should be less
      likely to have unintended side affects.
 Cygwin:
-   - Performance optimization for user's with many projects.
+   - Performance optimization for user’s with many projects.
 Installer:
    - The installer will now properly shutdown eclimd instances
      registered using the old non-json format.

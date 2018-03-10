@@ -3,9 +3,9 @@
 Getting Started
 ***************
 
-Once you've installed (install) eclim, the next step is to create your
+Once you’ve installed (install) eclim, the next step is to create your
 first project after which you can then start writing code and
-familiarizing yourself with eclim's features.
+familiarizing yourself with eclim’s features.
 
 First make sure eclimd is running (see the eclimd docs (eclimd) if you
 are unsure how to start eclimd).
@@ -16,7 +16,7 @@ are unsure how to start eclimd).
 Creating your first project
 ===========================
 
-Once you've got eclimd running, open an instance of vim and create
+Once you’ve got eclimd running, open an instance of vim and create
 your project like so:
 
 Note: Android Users: the android section below contains additional
@@ -52,11 +52,11 @@ simply changing the nature accordingly:
 
 The path supplied to the |:ProjectCreate| command will be the path to
 the root of your project.  This path may or may not exist.  If it does
-not exist it will be created for you.  After you've created your
-project, there will be a .project file added to your project's root
-along with another file where references to your project's source
+not exist it will be created for you.  After you’ve created your
+project, there will be a .project file added to your project’s root
+along with another file where references to your project’s source
 directories and any third party libraries your project uses reside.
-The name of this file will vary depending on your project's nature,
+The name of this file will vary depending on your project’s nature,
 but in all cases eclim will provide you with commands to manage this
 file:
 
@@ -64,7 +64,7 @@ file:
 - php, ruby - .buildpath file (vim-dltk-buildpath)
 - c, c++ - .cproject, managed via the |:CProjectConfigs| command
 - python - .pydevproject file (vim-python-path)
-Once you've created your project you can use the :ProjectList command
+Once you’ve created your project you can use the :ProjectList command
 to list the available projects and you should see your newly created
 one in the list.
 
@@ -85,7 +85,7 @@ Adding project source directories
 =================================
 
 Before you can start writing code, you will first need to create and
-register your project's source directories.  If you created your
+register your project’s source directories.  If you created your
 project from an existing code base, then this step may have been
 perform automatically for you, but you should validate the settings to
 be sure.
@@ -155,7 +155,7 @@ Writing code in your new project
 Now that you have a project created, you can start writing code and
 utilize the features that eclim provides.
 
-Note: Below we'll walk through a trivial java example, but some of
+Note: Below we’ll walk through a trivial java example, but some of
   the steps apply to all the languages that eclim supports, although
   the command names may differ a bit.  For additional docs on working
   with the language of your choice, please see the relevant section of
@@ -169,7 +169,7 @@ Note: Below we'll walk through a trivial java example, but some of
   - etc. (vim-index)
 Lets get started writing our first java application using eclim.
 
-1. First, navigate to your new project's source directory (src/java
+1. First, navigate to your new project’s source directory (src/java
    in this example) and create any necessary package directories:
    >
       $ cd /path/to/my_project/src/java
@@ -198,7 +198,7 @@ Lets get started writing our first java application using eclim.
 
 3. You can start to use some of the core features now.  For
    example, lets add the following code to the main method so we can
-   test eclim's source code validation:
+   test eclim’s source code validation:
    >
       System.
 
@@ -209,8 +209,8 @@ Lets get started writing our first java application using eclim.
    error message is printed at the bottom of your vim window.  You can
    also run :lopen to view all the errors in the file at once.
 
-4. Now lets try out code completion.  Place your cursor on the '.'
-   of 'System.' and start insert mode in vim using 'a', then follow
+4. Now lets try out code completion.  Place your cursor on the ‘.’
+   of ‘System.’ and start insert mode in vim using ‘a’, then follow
    the example below:
    >
       System.<ctrl-x><ctrl-u>             // starts the completion mode
@@ -254,7 +254,7 @@ project, but you use the android nature instead:
 
 
 This will result in a series of prompts for you to input your
-project's information:
+project’s information:
 
 Note: at any point in this process you can use Ctrl+C to cancel the
 project creation.
@@ -271,13 +271,13 @@ project creation.
    com.mycompany.myapp).
 3. Then you will need to supply a name for your application.
 4. The next prompt will ask you if you are creating a library
-   project or not. Most likely you are not, so type 'n' here to
+   project or not. Most likely you are not, so type ‘n’ here to
    proceed.
 5. Lastly, if you are not creating a library project, you will be
    asked whether or not you want to have a new android activity
    created for you and if so, you will be asked for the name of that
    activity.
-Once you've finished supplying the necessary information, your android
+Once you’ve finished supplying the necessary information, your android
 project will be created. An android project is simply a specialized
 java project, so you can now leverage all the eclim provided java
 functionality (vim-java-index) while developing your app.
@@ -290,16 +290,16 @@ Maven Users
 
 Creating your first project with maven can be accomplished using the
 same method as any other java project, or you can utilize some of
-maven's built in features to get your project started.
+maven’s built in features to get your project started.
 
-1. Run maven's generate archetype to create the project directory
+1. Run maven’s generate archetype to create the project directory
    and samples:
    >
       $ mvn archetype:generate
 
    <
 
-2. Once you've created the initial project directory, cd into that
+2. Once you’ve created the initial project directory, cd into that
    directory and run the following command to generate the necessary
    eclipse files:
    >
@@ -308,7 +308,7 @@ maven's built in features to get your project started.
 
    <
 
-3. Now you can start an instance of vim at the project's root
+3. Now you can start an instance of vim at the project’s root
    directory and run the following commands to:
    - set the necessary eclipse classpath variable to point to your
      maven repository.

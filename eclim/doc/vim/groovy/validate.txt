@@ -8,9 +8,9 @@ Groovy Validation
 
 When saving a groovy source file that resides in a project, eclim will
 update that source file in Eclipse and will report any validation
-errors found. Any errors will be placed in the current window's
+errors found. Any errors will be placed in the current window’s
 location list (:help location-list) and the corresponding lines in the
-source file will be marked via Vim's :sign functionality with '>>'
+source file will be marked via Vim’s :sign functionality with ‘>>’
 markers in the left margin.
 
 Automatic validation of groovy source files can be disabled via the
@@ -28,8 +28,8 @@ Vim Settings (vim-settings)
 
 - g:EclimGroovyValidate (Default: 1) - If set to 0, disables source
   code validation.
-- g:EclimValidateSortResults (Default: 'occurrence') - If set to
-  'severity', the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
+  ‘severity’, the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 
 vim:ft=eclimhelp

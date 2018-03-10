@@ -19,6 +19,6 @@ Plugins (development-plugins)
 Building the eclim installer (development-installer)
    Short guide on how to build the eclim installer.
 
-... More To Come
+… More To Come
 
 vim:ft=eclimhelp
