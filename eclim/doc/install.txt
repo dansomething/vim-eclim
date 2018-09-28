@@ -64,8 +64,8 @@ Download
 You can find the official eclim installer on eclim’s github releases
 page (https://github.com/ervandew/eclim/releases/):
 
-- eclim_2.7.2.bin
-  (https://github.com/ervandew/eclim/releases/download/2.7.2/eclim_2.7.2.bin)
+- eclim_2.8.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin)
 
 Third Party Packages
 --------------------
@@ -99,11 +99,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.7.2.bin
-  (https://github.com/ervandew/eclim/releases/download/2.7.2/eclim_2.7.2.bin)
+- First download the installer:  eclim_2.8.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin)
 - Next run the installer:
   >
-     $ ./eclim_2.7.2.bin
+     $ ./eclim_2.8.0.bin
 
   <
 
@@ -186,7 +186,7 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ ./eclim_2.7.2.bin --proxy my.proxy:8080
+   $ ./eclim_2.8.0.bin --proxy my.proxy:8080
 
 <
 
@@ -196,7 +196,7 @@ username and password as well:
 
 >
 
-   $ ./eclim_2.7.2.bin --proxy myuser:mypass@my.proxy:8080
+   $ ./eclim_2.8.0.bin --proxy myuser:mypass@my.proxy:8080
 
 <
 
@@ -217,7 +217,7 @@ install:
 
 >
 
-   $ ./eclim_2.7.2.bin \
+   $ ./eclim_2.8.0.bin \
      --yes \
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
@@ -426,7 +426,7 @@ Once eclipse is installed, you can then install eclim normally:
 
 >
 
-   $ ./eclim_2.7.2.bin
+   $ ./eclim_2.8.0.bin
 
 <
 
@@ -472,7 +472,7 @@ To uninstall eclim you can use the eclim installer like so:
 
 >
 
-   $ ./eclim_2.7.2.bin uninstall
+   $ ./eclim_2.8.0.bin uninstall
 
 <
 
@@ -489,7 +489,7 @@ directories:
 
 >
 
-   $ ./eclim_2.7.2.bin
+   $ ./eclim_2.8.0.bin
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
      uninstall

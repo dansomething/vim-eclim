@@ -149,6 +149,8 @@ Java Commands
 - |:JavaCallHierarchy| [-s <scope>] - Display the call hierarchy for
   the method under the cursor.
 - |:JavaHierarchy| - View the type hierarchy tree.
+- |:JavaOutline| - Open a buffer with an outline of the current
+  source file.
 - |:JavaImpl| - View implementable / overridable methods from super
   classes and implemented interfaces.
 - |:JavaDelegate| - View list of methods that delegate to the field
