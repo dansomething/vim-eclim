@@ -18,15 +18,10 @@ Core Functionality
 Supported Languages
 ===================
 
-- C/C++ (vim-c-index)
 - Html / Css (vim-html-index)
-- Groovy (vim-groovy-index)
 - Java (vim-java-index)
 - Javascript (vim-javascript-index)
-- Php (vim-php-index)
 - Python (vim-python-index)
-- Ruby (vim-ruby-index)
-- Scala (vim-scala-index)
 - Xml / Dtd / Xsd (vim-xml-index)
 
 vim:ft=eclimhelp

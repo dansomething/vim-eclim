@@ -10,7 +10,7 @@ Jul 21, 2016
 A new version of eclim is now available with support for Eclipse 4.6
 (Neon).
 
-- Eclim 2.6.0 (changes#id5)
+- Eclim 2.6.0 (changes#id6)
 
 Jul 25, 2015
 ============
@@ -18,7 +18,7 @@ Jul 25, 2015
 A new version of eclim is now available with support for Eclipse 4.5
 (Mars).
 
-- Eclim 2.5.0 (changes#id6)
+- Eclim 2.5.0 (changes#id7)
 
 Jan 22, 2015
 ============
@@ -27,26 +27,26 @@ The latest version of eclim is now available with scala support
 re-enabled, new groovy support, java debugging support, many bug
 fixes, and more.
 
-- Eclim 2.4.1 (changes#id7)
+- Eclim 2.4.1 (changes#id8)
 
 Aug 24, 2014
 ============
 
 Eclim has finally been released with Eclipse Luna support. Please note
 however that scala support is disabled in this release. I tried
-waiting for a final release of ScalaIDE 4.0.0 for Luna, but I don’t
+waiting for a final release of ScalaIDE 4.0.0 for Luna, but I don't
 want to hold up the rest of eclim any longer. If you want to use
-eclim’s scala support, you’ll need to install the ScalaIDE 4.0.0
+eclim's scala support, you'll need to install the ScalaIDE 4.0.0
 milestone and build eclim from the master git branch.
 
-- Eclim 2.4.0 (changes#id8)
+- Eclim 2.4.0 (changes#id9)
 
 May 07, 2014
 ============
 
 Release of eclim for indigo users.
 
-- Eclim 1.7.19 (changes#id9)
+- Eclim 1.7.19 (changes#id10)
 
 Apr. 12, 2014
 =============
@@ -54,15 +54,15 @@ Apr. 12, 2014
 Eclim has been updated to fix an issue on Windows that could prevent
 many features from working.
 
-- Eclim 2.3.4 (changes#id10)
+- Eclim 2.3.4 (changes#id11)
 
 Apr. 06, 2014
 =============
 
 This release includes many bug fixes and refinements as well as a
-rewrite of eclim’s python support to utilize pydev instead of rope.
+rewrite of eclim's python support to utilize pydev instead of rope.
 
-- Eclim 2.3.3 (changes#id11)
+- Eclim 2.3.3 (changes#id12)
 Warning: Any exiting eclim python projects you have should be
   re-created with the new python nature:>
 
@@ -78,8 +78,8 @@ Sep. 12, 2013
 This release fixes the extraction of the necessary vim files when
 installing scala support.
 
-- Eclim 2.3.2 (changes#id12) for Eclipse 4.3 (Kepler).
-- Eclim 1.7.18 (changes#id13) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.3.2 (changes#id13) for Eclipse 4.3 (Kepler).
+- Eclim 1.7.18 (changes#id14) for Eclipse 3.7/3.8 (Indigo).
 
 Jul. 27, 2013
 =============
@@ -87,7 +87,7 @@ Jul. 27, 2013
 The previous eclim installer for Kepler was still pointing at the Juno
 update site. This release remedies that.
 
-- Eclim 2.3.1 (changes#id14) for Eclipse 4.3 (Kepler).
+- Eclim 2.3.1 (changes#id15) for Eclipse 4.3 (Kepler).
 
 Jul. 21, 2013
 =============
@@ -96,8 +96,8 @@ The focus of this release is to bring eclim fully up to date with
 Eclipse Kepler support. The installer for eclim 2.3.0 now requires
 that you install against Kepler.
 
-- Eclim 2.3.0 (changes#id15) for Eclipse 4.3 (Kepler).
-- Eclim 1.7.17 (changes#id16) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.3.0 (changes#id16) for Eclipse 4.3 (Kepler).
+- Eclim 1.7.17 (changes#id17) for Eclipse 3.7/3.8 (Indigo).
 
 Jul. 14, 2013
 =============
@@ -109,8 +109,8 @@ should work fine on Kepler as well, with the exception of scala
 support which has not been tested. Indigo support will continue but
 will likely end with the release of Luna, possibly sooner.
 
-- Eclim 2.2.7 (changes#id17) for Eclipse 4.2 (Juno).
-- Eclim 1.7.16 (changes#id18) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.2.7 (changes#id18) for Eclipse 4.2 (Juno).
+- Eclim 1.7.16 (changes#id19) for Eclipse 3.7/3.8 (Indigo).
 
 May 18, 2013
 ============
@@ -119,8 +119,8 @@ Eclim has been updated to support the Android Development Toolkit
 version 22.0.0, scala is now supported for both Juno and Indigo, and
 there are a few other improvements and many bug fixes.
 
-- Eclim 2.2.6 (changes#id19) for Eclipse 4.2 (Juno).
-- Eclim 1.7.14 (changes#id20) for Eclipse 3.7/3.8 (Indigo).
+- Eclim 2.2.6 (changes#id20) for Eclipse 4.2 (Juno).
+- Eclim 1.7.14 (changes#id21) for Eclipse 3.7/3.8 (Indigo).
 
 Nov. 25, 2012
 =============
@@ -163,11 +163,11 @@ Sep. 09, 2012
 =============
 
    Eclim 1.7.9 (archive-changes#id9) for Eclipse 3.7 (Indigo) is now available.
-   This release adds initial support for scala (vim-scala-index).
+   This release adds initial support for scala.
 
 Please note that the Scala IDE (http://scala-ide.org) , which eclim
 uses to provide scala support, is not yet available for Eclipse 4.2
-(Juno), so eclim’s scala support will not be available for the eclim
+(Juno), so eclim's scala support will not be available for the eclim
 2.2.x releases until sometime after the Scala IDE has been updated for
 Juno.
 
@@ -225,7 +225,7 @@ Mar. 18, 2012
 
 Warning: Non vim users (emacs-eclim, subclim, etc.): The underlying
   command response format for eclim has changed, which means that any
-  project relying on the old format isn’t going to work. So if you are
+  project relying on the old format isn't going to work. So if you are
   installing eclim for use with a client other than vim, then be sure
   to check with the client project to see if it has been updated for
   eclim 1.7.3 or later.
@@ -238,7 +238,7 @@ Warning: Non vim users (emacs-eclim, subclim, etc.): The underlying
    This version fixes running the installer with java 7 as well as several other
    small bug fixes and improvements.
 
-I’d also like to announce the #eclim channel on freenode.
+I'd also like to announce the #eclim channel on freenode.
 
 
 2011-07-02
@@ -354,8 +354,7 @@ I’d also like to announce the #eclim channel on freenode.
 - Eclim has been upgraded to support Eclipse 3.5 (Galileo).
   Note: Eclim now requires Eclipse 3.5.
 
-- Ruby support has been added using the eclipse dltk
-  (http://eclipse.org/dltk/).
+- Ruby support has been added using the eclipse dltk.
 
 2009-06-14
 ==========
@@ -384,7 +383,7 @@ I’d also like to announce the #eclim channel on freenode.
 
    Eclim 1.4.6 (archive-changes#id37) is now available.
    The major highlight of this release is support for c/c++ using the
-   eclipse cdt (http://eclipse.org/cdt/) plugin.
+   eclipse cdt plugin.
 
 
 2009-04-04
@@ -408,7 +407,7 @@ I’d also like to announce the #eclim channel on freenode.
 ==========
 
    Eclim 1.4.3 (archive-changes#id41) is now available.
-   This release focuses on updating the installer to support ganymede’s p2 for
+   This release focuses on updating the installer to support ganymede's p2 for
    upgrading / installing external dependencies and adding additional python
    support.
 
@@ -436,7 +435,7 @@ I’d also like to announce the #eclim channel on freenode.
    (Ganymede, 3.4.x).
 
 Also note that the eclipse pdt plugin which serves as the base for
-eclim’s php support has not yet been released for the latest version
+eclim's php support has not yet been released for the latest version
 of eclipse.  For this reason php support has been temporarily removed
 from this release and will hopefully return soon after the pdt team
 release a Ganymede (3.4) compatible version.
@@ -544,7 +543,7 @@ To see a list of fixes you may view the release notes
    This is primarily a bug fix release, but some new functionality has been
    added as well. This release should resolve all known issues.
 
-To see a list of what’s new / changed, be sure to take a look at the
+To see a list of what's new / changed, be sure to take a look at the
 release notes (archive-changes#id53).
 
 
@@ -556,7 +555,7 @@ potentially prevent eclim from functioning.  A new version of
 eclim_vim_1.2.0.jar is now available, which fixes these issues.
 
 Simply download the new file and extract it as explained in the <a
-href=”guides/install.html#step3”>installation guide</a>.  There is no
+href="guides/install.html#step3">installation guide</a>.  There is no
 need to download or re-install the Eclipse plugins.
 
 If any other issues are encountered please report them.
@@ -568,12 +567,12 @@ If any other issues are encountered please report them.
    Eclim 1.2.0 is now available.
    This release requires Eclipse 3.2 (http://eclipse.org/downloads).
 
-To see a list of what’s new / changed, be sure to take a look at the
+To see a list of what's new / changed, be sure to take a look at the
 release notes (archive-changes#id54).
 
 Warning: The layout of eclim plugins within the Vim runtimepath has
   changed. Please read the <a
-  href=”changes.html#upgrade_1.2.0”>details</a> in the release notes
+  href="changes.html#upgrade_1.2.0">details</a> in the release notes
   and take the appropriate action prior to upgrading.
 
 
@@ -584,7 +583,7 @@ Warning: The layout of eclim plugins within the Vim runtimepath has
    Before upgrading, you should upgrade your Vim installation to the stable
    release of Vim 7.0 or greater.
 
-To see a list of what’s new / changed, be sure to take a look at the
+To see a list of what's new / changed, be sure to take a look at the
 release notes (archive-changes#id55).
 
 
@@ -596,7 +595,7 @@ release notes (archive-changes#id55).
    Please note, that this latest version requires Eclipse version 3.1.2 for some
    bug fixes and improvements.
 
-To see a list of what’s new / changed, be sure to take a look at the
+To see a list of what's new / changed, be sure to take a look at the
 release notes (archive-changes#id56).
 
 
@@ -606,7 +605,7 @@ release notes (archive-changes#id56).
    New version of eclim (1.1.0) is now available.
    All questions, issues, suggestions are welcome and encouraged.
 
-To see a list of what’s new / changed, be sure to take a look at the
+To see a list of what's new / changed, be sure to take a look at the
 release notes (archive-changes#id57).
 
 
@@ -617,7 +616,7 @@ The first eclim release (1.0.0) is now available. All questions,
 issues, suggestions are welcome and encouraged.
 
 Be sure to read the docs to see what features are currently available,
-and take a look at the <a href=”todo.html”>todo</a> to see what’s
+and take a look at the <a href="todo.html">todo</a> to see what's
 coming in future releases.
 
 
@@ -626,15 +625,15 @@ coming in future releases.
 
 Several new additions over the past couple weeks:
 
-- Java code completion: Integrated into Vim via Vim 7’s new “User
-  Defined Completion”.
+- Java code completion: Integrated into Vim via Vim 7's new "User
+  Defined Completion".
 - Added eclim command line support for creating and updating
   projects, including Vim support for editing Eclipse .classpath files
   and updating Eclipse upon writing of those files.
 - Integrated nailgun (http://www.martiansoftware.com/nailgun/) to
   greatly improve the command line client performance.
 - Started documenting eclim and its features.
-With the addition of these features I’m going to stop adding new
+With the addition of these features I'm going to stop adding new
 functionality for the time being and focus on testing and ensuring
 that everything works as expected on Windows.
 
@@ -646,7 +645,7 @@ Code navigation / searching is done!  Most of the Vim integration for
 searching is done as well.  The only thing missing is viewing code for
 results that are found in a jar file that have no corresponding source
 attachment.  I may end up doing what Eclipse appears to do, which is
-to use javap to display the class and method signatures.  That or I’ll
+to use javap to display the class and method signatures.  That or I'll
 use jad to decompile the whole source.  My only issue with jad, is
 that it is not up to date with the 1.5 byte code.
 
@@ -656,26 +655,26 @@ request and the editor (Vim in this case) handles prompting the user
 and updating the code.
 
 Note: The Vim integration now requires Vim 7.  Even though Vim 7 is
-  still alpha, I haven’t had any major issues with it and the new
+  still alpha, I haven't had any major issues with it and the new
   additions to the Vim scripting language are just too good to pass
   up.
 
 My next step is to start documenting everything and testing on a
-Windows environment to ensure there aren’t any compatibility issues.
+Windows environment to ensure there aren't any compatibility issues.
 
-After that I should be ready to put out a preliminary release. I’m
+After that I should be ready to put out a preliminary release. I'm
 trying to be very careful about releasing anything too soon.  The last
-thing I want it to scare anyone off with a broken project that doesn’t
+thing I want it to scare anyone off with a broken project that doesn't
 seem to work properly.
 
 
 2005-08-11
 ==========
 
-Sourceforge site is up!  Now it’s just a matter of getting the ball
+Sourceforge site is up!  Now it's just a matter of getting the ball
 rolling again.
 
-I’m hoping to have source code navigation working by the end of next
+I'm hoping to have source code navigation working by the end of next
 week. This includes the ability to simply hit <enter> on a class name,
 method name, method call, etc. to jump to its declaration.  Basically
 I want to replace my previous Vim plug-in

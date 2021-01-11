@@ -1,10 +1,10 @@
 # VIM Eclim
 
-Mirror of the VIM files from [Eclim][1] to support quick installation via various plugin managers.
+A mirror of the VIM files from [Eclim][1] to support quick and convenient installation via various plugin managers.
 
-**Version 2.8.0**
+**Version [2.18.0][6]**
 
-*Note, this version has [Groovy support omitted][6].*
+*Note, several features have been removed from Eclim. Please see the [Eclim release notes][6] and this [issue][7] for details.*
 
 # Installation
 
@@ -24,4 +24,5 @@ Mirror of the VIM files from [Eclim][1] to support quick installation via variou
 [3]: https://github.com/Shougo/neobundle.vim
 [4]: https://github.com/gmarik/vundle
 [5]: https://github.com/junegunn/vim-plug
-[6]: http://eclim.org/changes.html#jul-05-2018
+[6]: http://eclim.org/changes.html#jan-09-2021
+[7]: https://github.com/ervandew/eclim/issues/606#issuecomment-756864300

@@ -10,7 +10,7 @@ Creating a new Class, Interface, etc.
 =====================================
 
 :JavaNew is a command that allows you to create new classes,
-interfaces, enums, or annotations by specifying which of those you’d
+interfaces, enums, or annotations by specifying which of those you'd
 like to create, followed by the fully qualified path of the new type.
 
 The available types you can create include:

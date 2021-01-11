@@ -4,7 +4,7 @@
 "
 " License:
 "
-" Copyright (C) 2005 - 2014  Eric Van Dewoestine
+" Copyright (C) 2005 - 2020  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -30,9 +30,6 @@ call eclim#AddVimSetting(
   \ "Determines if the project tree should be auto opened when starting\n" .
   \ "vim or a new tab in a project context.",
   \ '\(0\|1\)')
-if exists('g:vimplugin_running')
-  let g:EclimProjectTreeAutoOpen = 0
-endif
 call eclim#AddVimSetting(
   \ 'Core/Projects', 'g:EclimProjectTabTreeAutoOpen', 1,
   \ "Sets whether to auto open the project tree when using :ProjectTab\n" .
@@ -73,19 +70,12 @@ call eclim#AddVimSetting(
 call eclim#AddVimSetting(
   \ 'Core/Projects', 'g:EclimProjectProblemsQuickFixOpen', 'botright copen',
   \ 'Sets the vim command used to open the :ProjectProblems quickfix window.')
-
-call eclim#AddVimSetting(
-  \ 'Core/Projects', 'g:EclimTerminateLaunchOnBufferClosed', 1,
-  \ 'Automatically terminate a running launch started by :ProjectRun' .
-  \ ' when the buffer is closed by eg :q.',
-  \ '\(0\|1\)')
 " }}}
 
 " Auto Commands {{{
 
-" w/ external vim refresh is optional, w/ embedded gvim it is mandatory
-" disabling at all though is discouraged.
-if g:EclimProjectRefreshFiles || exists('g:vimplugin_running')
+" refresh is optional, disabling it though is discouraged.
+if g:EclimProjectRefreshFiles
   augroup eclim_refresh_files
     autocmd!
     autocmd BufWritePre * call eclim#project#util#RefreshFileBootstrap()
@@ -219,13 +209,6 @@ if !exists(":Todo")
 endif
 if !exists(":ProjectTodo")
   command -nargs=0 ProjectTodo :call eclim#project#util#ProjectTodo()
-endif
-
-if !exists(":ProjectRun")
-  " TODO I *guess* we could support cross-project and autocomplete
-  command -nargs=0 ProjectRunList :call eclim#project#run#ProjectRunList()
-  command -nargs=? -bang ProjectRun 
-      \ :call eclim#project#run#ProjectRun('<args>', '<bang>')
 endif
 " }}}
 

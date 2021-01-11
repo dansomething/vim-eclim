@@ -21,12 +21,12 @@ commands.
 
 [diagram]
 
-Another important aspect of eclim’s architecture is support for
+Another important aspect of eclim's architecture is support for
 plugins. Plugins for eclim are bundled as eclipse plugins with their
 auto start attribute set to false.  When the eclim daemon starts it
-will locate and load any eclipse plugin with an ‘org.eclim.’ prefix.
+will locate and load any eclipse plugin with an 'org.eclim.' prefix.
 
-When a plugin is loaded, eclim will locate the plugin’s required
+When a plugin is loaded, eclim will locate the plugin's required
 resources provider and invoke its initialize method which will then
 inject its resources (messages, command options, etc) into eclim and
 register any new commands.

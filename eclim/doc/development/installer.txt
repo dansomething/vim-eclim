@@ -4,7 +4,7 @@ Building the eclim installer
 ****************************
 
 Unless you are working on improvements to the eclim installer, you
-shouldn’t ever need to build it, but should the need arise here are
+shouldn't ever need to build it, but should the need arise here are
 the instructions for doing so.
 
 To build the installer you first need a couple external tools

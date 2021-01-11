@@ -18,9 +18,9 @@ the javadoc comments for the element under the cursor.
 Viewing
 =======
 
-While editing java code, if you’d like to view the javadoc of the
+While editing java code, if you'd like to view the javadoc of the
 element under the cursor, you can run the :JavaDocPreview command
-which will open vim’s preview window with the element’s javadoc
+which will open vim's preview window with the element's javadoc
 content. In the preview window any links to classes, methods, etc. in
 the javadoc will be highlighted and you can follow those links by
 hitting <cr> on the link. You can also use <c-o> to navigate back to
@@ -33,7 +33,7 @@ Searching
 =========
 
 Eclim supports searching of javadocs just like you would search the
-source code (vim-java-search).
+source code (|vim-java-search|).
 
 The only difference is that you use :JavaDocSearch instead of
 :JavaSearch.
@@ -43,7 +43,7 @@ on an entry to open it using the browser you configured via
 g:EclimBrowser (|vim-core-eclim#g:EclimBrowser|).
 
 The locations of the javadocs are determined via your Eclipse
-project’s .classpath file.  For each library entry you can define a
+project's .classpath file.  For each library entry you can define a
 javadoc attribute that points to the base url of the javadoc (http,
 file, etc).
 
@@ -58,12 +58,12 @@ file, etc).
 <
 
 
-If you would like to set the javadoc url for your project’s source
+If you would like to set the javadoc url for your project's source
 files, you will instead need to set the
 org.eclipse.jdt.ui.project_javadoc_location option via
 |:ProjectSettings|. Also note that the javadocs for your source files
 are not generated automatically, so if you would like to use
-:JavaDocSearch to open your project’s javadocs, you will first need to
+:JavaDocSearch to open your project's javadocs, you will first need to
 generate those javadocs as described in the next section.
 
 *:Javadoc*
@@ -72,9 +72,9 @@ generate those javadocs as described in the next section.
 Executing javadoc
 =================
 
-To run the javadoc utility on your project’s source code, you may use
+To run the javadoc utility on your project's source code, you may use
 the :Javadoc command, which with no arguments will execute javadoc
-against all your project’s source code (as specified by any optional
+against all your project's source code (as specified by any optional
 settings described below).
 
 If you wish to run javadoc only against one or more files, you can
@@ -89,12 +89,12 @@ Note: Please note that this command is not intended to be a full
 Configuration
 =============
 
-Eclim Settings (vim-settings)
+Eclim Settings (|vim-settings|)
 
 - org.eclim.user.name - Used as the name portion of the author tag.
-  Consult the settings page (vim-settings) for more info.
+  Consult the settings page (|vim-settings|) for more info.
 - org.eclim.user.email - Used as the email portion of the author
-  tag. Consult the settings page (vim-settings) for more info.
+  tag. Consult the settings page (|vim-settings|) for more info.
 - org.eclim.java.doc.dest (Default: doc) - The project relative
   directory where the javadocs with be written to.
 - org.eclim.java.doc.packagenames - Optional space separated list of
@@ -105,6 +105,6 @@ Eclim Settings (vim-settings)
   against.  When unset, all your configured source directories will be
   used.
 - org.eclipse.jdt.ui.project_javadoc_location - URL where your
-  project’s javadocs can be found.
+  project's javadocs can be found.
 
 vim:ft=eclimhelp

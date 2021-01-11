@@ -23,7 +23,7 @@ following requirements.
   file (:h vimrc).
 
   - set nocompatible
-    Execute :h ‘compatible’ for more info.  You can confirm that
+    Execute :h 'compatible' for more info.  You can confirm that
     compatibliity is turned off by executing the following in vim:
 
     >
@@ -31,7 +31,7 @@ following requirements.
 
     <
 
-    Which should output ‘0’, but if not, then add the following to
+    Which should output '0', but if not, then add the following to
     your ~/.vimrc files:
 
     >
@@ -48,8 +48,8 @@ following requirements.
 
     <
 
-    Which should output ‘filetype detection:ON  plugin:ON indent:ON’,
-    showing at least ‘ON’ for ‘detection’ and ‘plugin’, but if not,
+    Which should output 'filetype detection:ON  plugin:ON indent:ON',
+    showing at least 'ON' for 'detection' and 'plugin', but if not,
     then update your ~/.vimrc to include:
 
     >
@@ -61,11 +61,11 @@ following requirements.
 Download
 ========
 
-You can find the official eclim installer on eclim’s github releases
+You can find the official eclim installer on eclim's github releases
 page (https://github.com/ervandew/eclim/releases/):
 
-- eclim_2.8.0.bin
-  (https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin)
+- eclim_2.18.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.18.0/eclim_2.18.0.bin)
 
 Third Party Packages
 --------------------
@@ -99,11 +99,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.8.0.bin
-  (https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin)
+- First download the installer:  eclim_2.18.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.18.0/eclim_2.18.0.bin)
 - Next run the installer:
   >
-     $ ./eclim_2.8.0.bin
+     $ ./eclim_2.18.0.bin
 
   <
 
@@ -121,7 +121,7 @@ To test eclim you first need to start the eclim daemon.  How you start
 the daemon will depend on how you intend to use eclim.
 
 Note: More info on running the eclim daemon can be found in the
-  eclimd (eclimd) docs.
+  eclimd (|eclimd|) docs.
 
 If you plan on using eclim along with the eclipse gui, then simply
 start eclipse and open the eclimd view:
@@ -186,17 +186,17 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ ./eclim_2.8.0.bin --proxy my.proxy:8080
+   $ ./eclim_2.18.0.bin --proxy my.proxy:8080
 
 <
 
 
-If your proxy requires authentication, you’ll need to supply the
+If your proxy requires authentication, you'll need to supply the
 username and password as well:
 
 >
 
-   $ ./eclim_2.8.0.bin --proxy myuser:mypass@my.proxy:8080
+   $ ./eclim_2.18.0.bin --proxy myuser:mypass@my.proxy:8080
 
 <
 
@@ -217,7 +217,7 @@ install:
 
 >
 
-   $ ./eclim_2.8.0.bin \
+   $ ./eclim_2.18.0.bin \
      --yes \
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
@@ -295,7 +295,7 @@ Note: If your eclipse home path contains a space, be sure to quote
 
 Note: If your vimfiles directory is not located at the default
   location for your OS, then you can specify the location using the
-  “vim.files” property:>
+  "vim.files" property:>
 
      $ ant -Dvim.files=<your vimfiles dir>
 
@@ -311,15 +311,9 @@ will be skipped:
 >
 
    [echo] ${eclipse}: /opt/eclipse
-   [echo] # Skipping org.eclim.adt, missing com.android.ide.eclipse.adt
-   [echo] # Skipping org.eclim.dltk, missing org.eclipse.dltk.core
-   [echo] # Skipping org.eclim.dltkruby, missing org.eclipse.dltk.ruby
-   [echo] # Skipping org.eclim.pdt, missing org.eclipse.php
+   [echo] # Skipping org.eclim.pydev, missing org.eclipse.dltk.core
    [echo] Plugins:
-   [echo]   org.eclim.cdt
    [echo]   org.eclim.jdt
-   [echo]   org.eclim.pydev
-   [echo]   org.eclim.sdt
    [echo]   org.eclim.wst
 
 <
@@ -329,7 +323,7 @@ In this case we can see that four eclim plugins will be skipped along
 with the eclipse feature that would be required to build those
 plugins.
 
-If you don’t want to supply the eclipse home directory, or any other
+If you don't want to supply the eclipse home directory, or any other
 properties, on the command line every time you build eclim, you can
 create a user.properties file at the eclim source root and put all
 your properties in there:
@@ -363,7 +357,7 @@ Note: The eclim vim help files, used by the :EclimHelp
     not loading. Another issue you may run into is the docutils
     package, which sphinx depends on, is outdated on debian/ubuntu,
     resulting in another set of errors.So to get around these issues
-    you’ll need to install sphinx using pip
+    you'll need to install sphinx using pip
     (http://pip.readthedocs.org/en/latest/index.html) or similar.
 
 *install-headless*
@@ -373,29 +367,29 @@ Installing on a headless server
 -------------------------------
 
 The eclim daemon supports running both inside of the eclipse gui and
-as a “headless” non-gui server. However, even in the headless mode,
+as a "headless" non-gui server. However, even in the headless mode,
 eclipse still requires a running X server to function. If you are
-running eclim on a desktop then this isn’t a problem, but some users
+running eclim on a desktop then this isn't a problem, but some users
 would like to run the eclim daemon on a truly headless server. To
-achieve this, you can make use of X.Org’s Xvfb server.
+achieve this, you can make use of X.Org's Xvfb server.
 
 Note: This guide uses the Ubuntu server distribution to illustrate
   the process of setting up a headless server, but you should be able
   to run Xvfb on the distro of your choice by translating the package
-  names used here to your distro’s equivalents.
+  names used here to your distro's equivalents.
 
 The first step is to install the packages that are required to run
 eclipse and eclim:
 
 - Install a java jdk, xvfb, and the necessary build tools to compile
-  eclim’s nailgun client during installation (make, gcc, etc).
+  eclim's nailgun client during installation (make, gcc, etc).
   >
      $ sudo apt-get install openjdk-6-jdk xvfb build-essential
 
   <
 
-Then you’ll need to install eclipse. You may do so by installing it
-from your distro’s package manager or using a version found on
+Then you'll need to install eclipse. You may do so by installing it
+from your distro's package manager or using a version found on
 eclipse.org (http://eclipse.org/downloads/). If you choose to install
 a version from you package manager, make sure that the version to be
 installed is compatible with eclim since the package manager version
@@ -426,7 +420,7 @@ Once eclipse is installed, you can then install eclim normally:
 
 >
 
-   $ ./eclim_2.8.0.bin
+   $ ./eclim_2.18.0.bin
 
 <
 
@@ -445,7 +439,7 @@ When starting Xvfb you may receive some errors regarding font paths
 and possibly dbus and hal, but as long as Xvfb continues to run, you
 should be able to ignore these errors.
 
-The first time you start eclimd you may want to omit the ‘start’
+The first time you start eclimd you may want to omit the 'start'
 argument so that you can see the output on the console to ensure that
 eclimd starts correctly.
 
@@ -472,7 +466,7 @@ To uninstall eclim you can use the eclim installer like so:
 
 >
 
-   $ ./eclim_2.8.0.bin uninstall
+   $ ./eclim_2.18.0.bin uninstall
 
 <
 
@@ -489,7 +483,7 @@ directories:
 
 >
 
-   $ ./eclim_2.8.0.bin
+   $ ./eclim_2.18.0.bin
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
      uninstall

@@ -12,7 +12,7 @@ Eclim Changes Archive
 Eclim:
    - 1.7.13 and above will now support Eclipse 3.8 as well as 3.7.
    - Fix |:ProjectGrep| and |:ProjectTodo| to search in all of the
-     project’s links as well.
+     project's links as well.
    - Other minor bug fixes.
    Git Log (2.2.5) (https://github.com/ervandew/eclim/compare/2.2.4...2.2.5)
    Git Log (1.7.13) (https://github.com/ervandew/eclim/compare/1.7.12...1.7.13)
@@ -25,7 +25,7 @@ Eclim:
 Eclim:
    - Updated |:ProjectTree| and |:ProjectTab| to support an
      arbitrary directory as an argument, allowing you to use the
-     command for project’s not managed by eclipse/eclim. :TreeTab has
+     command for project's not managed by eclipse/eclim. :TreeTab has
      been removed since the update to :ProjectTab makes it redundant.
    - Creation of projects in nested directories in the eclipse
      workspace (vs at the root of the workspace) is now properly
@@ -75,7 +75,7 @@ Java:
      org.eclim.java.import.package_separation_level
      (vim-java-import#org-eclim-java-import-package-separation-level).
    - g:EclimJavaBeanInsertIndexed vim variable removed in favor of
-     suffixing :JavaGetSet methods with ‘!’.
+     suffixing :JavaGetSet methods with '!'.
    - :JavaCorrect, :JavaImpl, :JavaDelegate, :JavaConstructor, and
      :JUnitImpl all now perform their code manipulations using eclipse
      operations.
@@ -89,14 +89,14 @@ Java:
      command.
    - Added the command |:JUnitFindTest| to open the corresponding
      test for the current file.
-   - Removed :Javac command since eclipse’s continuous incremental
+   - Removed :Javac command since eclipse's continuous incremental
      builds typically make the :Javac call a no op, and in cases where
      you need to induce compilation, |:ProjectBuild| does so in a
      language agnostic way.
    - Added |:JavaMove| command to move a java source file from one
      package to another.
    - Added |:JavaDocPreview| to display the javadoc of the element
-     under the cursor in vim’s preview window.
+     under the cursor in vim's preview window.
    Git Log (2.2.2) (https://github.com/ervandew/eclim/compare/2.2.1...2.2.2)
    Git Log (1.7.10) (https://github.com/ervandew/eclim/compare/1.7.9...1.7.10)
  *1.7.9*
@@ -106,9 +106,8 @@ Java:
 =====================
 
 Scala:
-   - Add support for scala code completion (vim-scala-complete),
-     code validation (vim-scala-validate), and element definition
-     searches (vim-scala-search).
+   - Add support for scala code completion, code validation, and
+     element definition searches.
 Git Log (1.7.9)
 (https://github.com/ervandew/eclim/compare/1.7.8...1.7.9)
 
@@ -126,8 +125,7 @@ Documentation:
      sprawling.
    - Improved the translation of the docs to vim help files.
 Android:
-   - Eclim now has support for creating android projects
-     (gettingstarted#gettingstarted-android).
+   - Eclim now has support for creating android projects.
 Java:
    - Fixed searching for JDK classes on OSX.
    - Added support for searching for inner classes and their
@@ -153,7 +151,7 @@ Eclipse:
 Eclimd:
    - Updated eclimd script to always set the jvm architecture
      argument, preventing possible issue starting eclimd on OSX if the
-     default architecture order of the java executable doesn’t match
+     default architecture order of the java executable doesn't match
      the eclipse architecture.
 C/C++:
    - Semantic errors are now included in the validation results.
@@ -162,11 +160,11 @@ C/C++:
      before returning focus to the user.
    - Fixed auto selecting of the tool chain when creating C/C++
      projects from eclim.
-   - Fixed |:CCallHierarchy| from possibly using a cached version of
+   - Fixed :CCallHierarchy from possibly using a cached version of
      the file resulting in incorrect or no results.
 Java:
    - Fixed inserted code from |:JavaCorrect| when file format is
-     ‘dos’.
+     'dos'.
    - Fixed off by one issue prevent several code correction
      suggestions from being suggested.
 Ruby:
@@ -176,7 +174,7 @@ Ruby:
 Vimplugin:
    - Fixed executing of some operations when vim is currently in
      insert mode (opening new file from eclipse in a new external vim
-     tab, using “Save As” from eclipse, and jumping to a line number
+     tab, using "Save As" from eclipse, and jumping to a line number
      from the project tree etc.)
    Git Log (2.2.0) (https://github.com/ervandew/eclim/compare/1.7.6...2.2.0)
    Git Log (1.7.7) (https://github.com/ervandew/eclim/compare/1.7.6...1.7.7)
@@ -189,7 +187,7 @@ Vimplugin:
 Bug Fixes:
    - Couple other minor bug fixes.
 Installer:
-   - Fixed install location of eclim’s vim help files (broken in the
+   - Fixed install location of eclim's vim help files (broken in the
      previous release).
 Git Log (1.7.6)
 (https://github.com/ervandew/eclim/compare/1.7.5...1.7.6)
@@ -206,7 +204,7 @@ Note: This release is not compatible with Eclipse Juno (4.2). The
 Installer:
    - Added uninstall (install#uninstall) support to the eclim
      installer.
-   - Updated the installer to fully embrace eclipse’s provisioning
+   - Updated the installer to fully embrace eclipse's provisioning
      framework (p2).
 Common:
    - Added |:ProjectTreeToggle|.
@@ -216,7 +214,7 @@ Vimplugin
 Java:
    - Added support for importing the necessary type during code
      completion.
-   - Improved location of a project’s main class for the |:Java|
+   - Improved location of a project's main class for the |:Java|
      command, when not explicitly set.
 Git Log (1.7.5)
 (https://github.com/ervandew/eclim/compare/1.7.4...1.7.5)
@@ -250,7 +248,7 @@ Common:
    - Added |:ProjectBuild| to build the current or supplied project.
    - Updated |:ProjectProblems| to support optional bang
      (:ProjectProblems!) to only show project errors.
-   - Updating eclipse’s local history (vim-core-history) when
+   - Updating eclipse's local history (|vim-core-history|) when
      writing in vim is now only enabled by default when gvim is opened
      from the eclipse gui.
 C/C++:
@@ -342,7 +340,7 @@ Installer:
    - Prevent possible OutOfMemoryError when invoking eclipse to
      install plugin dependencies by setting a larger heap space.
 Java:
-   - Added |:JavaClasspath| to echo the project’s current classpath.
+   - Added |:JavaClasspath| to echo the project's current classpath.
 Git Log (1.6.3)
 (https://github.com/ervandew/eclim/compare/1.6.2...1.6.3)
 
@@ -354,14 +352,14 @@ Git Log (1.6.3)
 
 Bug Fixes:
    - Fixed to use %USERPROFILE% on windows to retrieve the user home
-     (fixes several possible issues including “Unable to determine
-     your eclipse workspace”).
+     (fixes several possible issues including "Unable to determine
+     your eclipse workspace").
    - Various other bug fixes.
 Common:
    - Added rudimentary auto generated menu items for gvim (can be
      disabled via g:EclimMenus (|vim-core-eclim#g:EclimMenus|)).
    - Added support for displaying project info (|:ProjectInfo|)
-     vim’s status line (contributed by Brendan W. McAdams
+     vim's status line (contributed by Brendan W. McAdams
      (http://github.com/bwmcadams)).
 C/C++
    - Updated context search to greatly improve performance in some
@@ -410,7 +408,7 @@ Git Log (1.6.2)
 Bug Fixes:
    - Fix for |:ProjectProblems| command when any filters have been
      set from the eclipse gui.
-   - Merged in JRuby’s improvements to nailgun’s build scripts to
+   - Merged in JRuby's improvements to nailgun's build scripts to
      increase compatibility with more platforms.
    - Updated the installer and eclimd to not use the eclipse binary
      and instead run the launcher jar directly.  Removes the need to
@@ -492,7 +490,7 @@ Git Log (1.5.7)
 Bug Fixes:
    - Avoid possible gvim crashes when launched from the eclipse gui
      by disabling documentListen events if the current gvim version
-     doesn’t include the patch which resolves the crash.
+     doesn't include the patch which resolves the crash.
    - Various bug fixes.
 Common:
    - Added a |:ProjectTab| command providing the ability to work on
@@ -510,7 +508,7 @@ Eclim:
      <workspace>/.metadata/.log.eclimd
    - Added support for specifying that gvim should be refocused
      after executing an eclipse keybinding from vim using
-     eclim#vimplugin#FeedKeys (|FeedKeys|).
+     eclim#vimplugin#FeedKeys.
    - Moved user local eclim resources (templates, taglist scripts,
      etc) from ${vimfiles}/eclim/resources to ~/.eclim/resources.
      Note: The eclim installer will move your existing files from
@@ -569,20 +567,20 @@ Common:
    - Added full support for running multiple eclimd instances
      (eclimd#eclimd-multiworkspace), each backed by a separate eclipse
      workspace.
-   - Added ‘K’ mapping to |:ProjectTree| to set the tree root the
+   - Added 'K' mapping to |:ProjectTree| to set the tree root the
      either the project root of file system root depending on the
-     context.  Added ‘D’ mapping to create a new directory and ‘F’ to
-     open a new or existing file by name. Note: the ‘H’ mapping to set
-     the tree root to the user’s home directory has been changed to
-     ‘~’.
+     context.  Added 'D' mapping to create a new directory and 'F' to
+     open a new or existing file by name. Note: the 'H' mapping to set
+     the tree root to the user's home directory has been changed to
+     '~'.
    - Added setting to allow |:ProjectTree| instances to be shared
      across vim tabs.
    - Updated :VcsWeb to support github, google code, and bitbucket.
 C/C++:
-   - Improved |:CSearchContext| to search for declaration when on a
+   - Improved :CSearchContext to search for declaration when on a
      definition, allowing you to jump back and forth between
      declaration and definition.
-   - Added |:CCallHierarchy| to display the call hierarchy for the
+   - Added :CCallHierarchy to display the call hierarchy for the
      function or method under the cursor.
 Java:
    - Added |:JavaListInstalls| to list all the installed JDKs/JREs
@@ -601,13 +599,13 @@ Bug Fixes:
 Eclim:
    - Added |:ProjectRename| and |:ProjectMove| commands to allow
      renaming and moving of projects.
-   - Added |:ProjectProblems| command to populate vim’s quickfix
+   - Added |:ProjectProblems| command to populate vim's quickfix
      with a list of all eclipse build errors and warnings for the
      current and all related projects.
      Note: To have problems reported for java projects created via
        eclim, you may need to recreate your java projects to ensure
        that the java builder is properly added.  As of eclim 1.5.2,
-       eclim’s java project creation now adds the java builder.
+       eclim's java project creation now adds the java builder.
 
    - Added |:HistoryDiffNext| and |:HistoryDiffPrev| commands to
      view history diffs while navigating the history stack.
@@ -620,10 +618,10 @@ Java:
    - Updated |:JavaImpl|, |:JavaDelegate|, and |:JUnitImpl| to
      better support generics.
    - Updated |:JUnitImpl| to support junit 4 method signatures.
-   - Updated |:JavaImport| and :JavaImportSort to honor eclipse’s
+   - Updated |:JavaImport| and :JavaImportSort to honor eclipse's
      import order preference and added the ability to edit that
      preference via |:ProjectSettings| and :EclimSettings.
-   - Added initial refactoring (vim-java-refactor) support.
+   - Added initial refactoring (|vim-java-refactor|) support.
 Git Log (1.5.2)
 (https://github.com/ervandew/eclim/compare/1.5.1...1.5.2)
 
@@ -644,9 +642,8 @@ Eclipse:
 Eclim:
    - Added initial support for linked folders in eclipse projects.
    - Added new g:EclimValidateSortResults setting to support sorting
-     validation results (java (vim-java-validate), c/c++
-     (vim-c-validate), php (vim-php-validate), etc.) by priority
-     (errors > warnings > etc.).
+     validation results (java (|vim-java-validate|), c/c++, php, etc.)
+     by priority (errors > warnings > etc.).
 C/C++:
    - Fixed :CSearch results on Windows platforms.
    - Re-implemented c/c++ project creation.
@@ -677,8 +674,8 @@ Eclipse:
    - Eclim now requires the latest version of eclipse (Galileo,
      3.5.x).
 Ruby:
-   - Added ruby support for code completion (vim-ruby-complete),
-     searching (vim-ruby-search), and validation (vim-ruby-validate).
+   - Added ruby support for code completion, searching, and
+     validation.
 Java:
    - Added ability to configure java indentation globally via
      :EclimSettings or per project using |:ProjectSettings|.
@@ -743,9 +740,8 @@ Git Log (1.4.7)
 Bug Fixes:
    - Various bug fixes.
 C/C++:
-   - Added c/c++ support for code completion (vim-c-complete),
-     searching (vim-c-search), and validation (vim-c-validate).
-     Requires the eclipse cdt (http://eclipse.org/cdt/) plugin.
+   - Added c/c++ support for code completion, searching, and
+     validation. Requires the eclipse cdt plugin.
 Java:
    - Added command to run java (|:Java|).
    - Added command to run javac.
@@ -767,8 +763,8 @@ Bug Fixes:
      files with dos line endings or multi-byte unicode characters.
    - Various other bug fixes.
 Eclim:
-   - Added integration with eclipse’s local history
-     (vim-core-history) support.
+   - Added integration with eclipse's local history
+     (|vim-core-history|) support.
 Java:
    - Added command to view type hierarchy (|:JavaHierarchy|).
    - Added command to import all undefined types.
@@ -785,21 +781,19 @@ Bug Fixes:
    - Various bug fixes.
 Java:
    - |:Checkstyle| command now creates a project classloader giving
-     checkstyle access to any classes reachable via your project’s
+     checkstyle access to any classes reachable via your project's
      .classpath file.
 Eclim:
    - Added the ability to run eclimd inside of eclipse
      (eclimd#eclimd-headed).
-   - Added support for embedding gvim inside of eclipse
-     (eclimd#gvim-embedded).
+   - Added support for embedding gvim inside of eclipse.
    - eclimd start scripts now available in the eclipse home.
    - Consolidated the various :LocateFile* commands into a single
-     :LocateFile (vim-core-locate) command with a new setting to
+     :LocateFile (|vim-core-locate|) command with a new setting to
      specify the default means to open a result and various key
      bindings for opening via other means.
 Php:
-   - Restored php support (vim-php-index) via the new eclipse pdt
-     (http://eclipse.org/pdt/) 2.0.
+   - Restored php support via the new eclipse pdt 2.0.
 Vcs:
    - Added option to set the split orientation (horizontal or
      vertical) used when executing diffs.
@@ -819,13 +813,13 @@ Bug Fixes:
 Installer:
    - Updated to make use of the new ganymede p2 provisioning system.
 Eclim:
-   - Rewrote :LocateFile* (vim-core-locate) commands to provide
-     functionality similar to eclipse’s “Open Resource” command or
-     Textmate’s “Find in Project”.
+   - Rewrote :LocateFile* (|vim-core-locate|) commands to provide
+     functionality similar to eclipse's "Open Resource" command or
+     Textmate's "Find in Project".
 Python:
-   - Added support for code completion (vim-python-complete).
+   - Added support for code completion (|vim-python-complete|).
    - Added support for finding an element definition
-     (vim-python-search).
+     (|vim-python-search|).
    - Improved :PyLint support.
 Git Log (1.4.3)
 (https://github.com/ervandew/eclim/compare/1.4.2...1.4.3)
@@ -911,7 +905,7 @@ Vcs:
    - Removed :Trac* and :Viewvc* commands and replaced them with
      :VcsWeb* commands
 Vim:
-   - Added |:Only| as a configurable alternative to vim’s :only
+   - Added |:Only| as a configurable alternative to vim's :only
      command.
    - Added :OtherWorkingCopyDiff, :OtherWorkingCopyEdit,
      :OtherWorkingCopySplit, and :OtherWorkingCopyTabopen.
@@ -954,7 +948,7 @@ Bug Fixes:
    - Various other bug fixes.
 Eclim:
    - Added |:ProjectInfo|.
-   - Added an eclim/after directory to vim’s runtime path for any
+   - Added an eclim/after directory to vim's runtime path for any
      user scripts to be sourced after eclim.
 Installer:
    - Updated installer to handle eclipse installs which have a local
@@ -962,9 +956,8 @@ Installer:
    - Fixed some issues with running the installer on the icedtea
      jvm.
 Php:
-   - Added php support for code completion (vim-php-complete),
-     searching (vim-php-search), and validation (vim-php-validate).
-     Requires the eclipse pdt (http://eclipse.org/pdt/) plugin.
+   - Added php support for code completion, searching, and
+     validation. Requires the eclipse pdt plugin.
 Git Log (1.3.4)
 (https://github.com/ervandew/eclim/compare/1.3.3...1.3.4)
 
@@ -996,20 +989,20 @@ Css:
 Html:
    - Added |:BrowserOpen|
 Html / Xml:
-   - Added auto completion of end tags when typing ‘</’. This can be
+   - Added auto completion of end tags when typing '</'. This can be
      disabled by setting g:EclimSgmlCompleteEndTag to 0.
 Java / Python:
    - :JavaRegex and :PythonRegex now support b:eclim_regex_type to
      determine if the regex should be applied to the whole sample text
      at once, or to each line individually.
 Java:
-   - Updated the java logger (vim-java-logging) functionality to
+   - Updated the java logger (|vim-java-logging|) functionality to
      support a custom logger template.
 Javascript:
-   - Added javascript validation (vim-javascript-index) using jsl
+   - Added javascript validation (|vim-javascript-index|) using jsl
      (http://www.javascriptlint.com/).
 Python:
-   - Added basic python validation (vim-python-validate) using
+   - Added basic python validation (|vim-python-validate|) using
      pyflakes (http://www.divmod.org/trac/wiki/DivmodPyflakes) and the
      python compiler.
    - Added support for pylint (http://www.logilab.org/857) using new
@@ -1101,9 +1094,9 @@ Dtd:
    - Added dtd validation (vim-xml-index#dtd).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Html:
-   - Added html code completion (vim-html-index).  Requires the
+   - Added html code completion (|vim-html-index|).  Requires the
      eclipse wst (http://eclipse.org/webtools/main.php) plugin.
-   - Added html validation (vim-html-index).  Requires the eclipse
+   - Added html validation (|vim-html-index|).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Log4j:
    - Added log4j xml file validation (vim-java-logging#log4j).
@@ -1113,7 +1106,7 @@ Django:
    - Added |:DjangoManage|, |:DjangoFind|, |:DjangoTemplateOpen|,
      |:DjangoViewOpen|, and |:DjangoContextOpen|.
 WebXml:
-   - Added web.xml file validation (vim-java-webxml).
+   - Added web.xml file validation (|vim-java-webxml|).
 Vim:
    - Added :ArgsRelative, :ArgAddRelative, :ReadRelative.
    - Added |:Sign|, |:Signs|, |:SignClearUser|, |:SignClearAll|.
@@ -1126,7 +1119,7 @@ Xsd:
    - Added xsd validation (vim-xml-index#xsd).  Requires the eclipse
      wst (http://eclipse.org/webtools/main.php) plugin.
 Xml:
-   - Added xml code completion (vim-xml-index).  Requires the
+   - Added xml code completion (|vim-xml-index|).  Requires the
      eclipse wst (http://eclipse.org/webtools/main.php) plugin.
 Git Log (1.3.0)
 (https://github.com/ervandew/eclim/compare/1.2.3...1.3.0)
@@ -1138,10 +1131,10 @@ Git Log (1.3.0)
 =====================
 
 Bug Fixes:
-   - Vim scripts now account for possibly disruptive ‘wildignore’
+   - Vim scripts now account for possibly disruptive 'wildignore'
      option.
    - On Windows, vim scripts account for users who have modified the
-     ‘shell’ that vim uses, temporarily restoring the default.
+     'shell' that vim uses, temporarily restoring the default.
    - Reimplemented :EclimSettings and :ProjectSettings saving to be
      more fault tolerant.
    - Several other bug fixes.
@@ -1154,7 +1147,7 @@ Java:
      :IvyDependencySearch.
    - Fixed junit support to handle execution via maven 1.x and 2.x.
 Xml:
-   - Added command |:XmlFormat| to reformat a xml file.
+   - Added command :XmlFormat to reformat a xml file.
 Git Log (1.2.3)
 (https://github.com/ervandew/eclim/compare/1.2.2...1.2.3)
 
@@ -1183,8 +1176,8 @@ Git Log (1.2.2)
 
 Bug Fixes:
    - Fixed issues when eclipse is installed in a directory
-     containing a space, like “Program Files”.
-   - Fixed error when .classpath src dir is “” or “.”.
+     containing a space, like "Program Files".
+   - Fixed error when .classpath src dir is "" or ".".
    - Fixed error if taglist.vim is not installed.
    - Fixed auto setting of jre source.
    - Fixed couple java code completion issues.
@@ -1203,9 +1196,9 @@ Java:
    - Updated ivy support (vim-java-classpath#classpath-ivy) to
      behave more like maven.
    - Added commands to ease setting of classpath repo variables for
-     maven’s (vim-java-classpath#classpath-maven) and mvn’s
+     maven's (vim-java-classpath#classpath-maven) and mvn's
      (vim-java-classpath#classpath-maven) eclipse support.
-   - Added TestNG to ant compiler’s error format.
+   - Added TestNG to ant compiler's error format.
    - Added :JUnitExecute and |:JUnitResult|.
 Xml:
    - Added |:DtdDefinition| and |:XsdDefinition|.
@@ -1213,7 +1206,7 @@ Vim:
    - Added :FindCommandDef and :FindCommandRef.
    - Changed :FindFunctionVariableContext to :FindByContext.
    - Added :Tabnew and :TabnewRelative.
-   - :Split and :SplitRelative now support ‘*’ and ‘**’ wildcards.
+   - :Split and :SplitRelative now support '*' and '**' wildcards.
 Git Log (1.2.1)
 (https://github.com/ervandew/eclim/compare/1.2.0...1.2.1)
 
@@ -1244,7 +1237,7 @@ Eclim:
    - Added |:ProjectCD| and |:ProjectLCD|.
    - Added |:JavaSearchContext|.
    - Added means to preserve manually added classpath entries when
-     utilizing eclim’s integration with ivy or maven dependency files.
+     utilizing eclim's integration with ivy or maven dependency files.
    - Updated |:JavaSearch| to provide sensible defaults if command
      ommits various arguments. Also added support for supplying only a
      pattern to the :JavaSearch command which will result in a search
@@ -1257,12 +1250,12 @@ Eclim:
      2.x.
    - Added :MavenDependencySearch and :MvnDependencySearch for
      searching for and adding dependencies to your maven pom file.
-   - <anchor id=”upgrade_1.2.0”/> Re-organized eclim files within
+   - <anchor id="upgrade_1.2.0"/> Re-organized eclim files within
      the vim runtime path. Based on suggestion by Marc Weber.
      Warning: This change will require you to remove all the old
        eclim vim plugins prior to installing the new set.  A
        comprehensive list of plugins to be deleted is provided <a
-       href=”upgrade/resources/1.2.0/vim_plugin_list.txt”>here</a>.You
+       href="upgrade/resources/1.2.0/vim_plugin_list.txt">here</a>.You
        may also use one of the following scripts to help automate the
        process.  Just download the appropriate file to the directory
        where you extracted the eclim vim plugins and execute it.
@@ -1270,14 +1263,14 @@ Eclim:
        aware of what it does. Please report any issues as well.
 
        *nix users:
-             <a href=”upgrade/resources/1.2.0/upgrade.sh”>upgrade.sh</a>
+             <a href="upgrade/resources/1.2.0/upgrade.sh">upgrade.sh</a>
              Be sure to either make the file executable
              $ chmod 755 upgrade.sh
              or run via sh
              $ sh upgrade.sh
 
        Windows users:
-             <a href=”upgrade/resources/1.2.0/upgrade.bat”>upgrade.bat</a>
+             <a href="upgrade/resources/1.2.0/upgrade.bat">upgrade.bat</a>
              Run via a command prompt so that you can monitor the output.
 
        After executing either of these scripts you may be left with
@@ -1313,7 +1306,7 @@ Bug Fixes:
    - Bug 1440606
      (https://sourceforge.net/tracker/index.php?func=detail&aid=1440606&group_id=145869&atid=763323)
      Note: The original implementation of :JavaImportClean was
-       written entirely in vim (didn’t require eclim server).  To
+       written entirely in vim (didn't require eclim server).  To
        properly handle ignoring comments when determining what imports
        are unused, this functionality had to be reimplemented with
        server side help.  However, the vim only version is preserved
@@ -1323,19 +1316,19 @@ Bug Fixes:
    - Other various bug fixes.
 Ant:
    - Added |:Ant| command to allow execution of ant from any file.
-   - Added ant code completion (vim-java-ant).
-   - Added ant file validation (vim-java-ant).
+   - Added ant code completion (|vim-java-ant|).
+   - Added ant file validation (|vim-java-ant|).
    - Added |:AntDoc| command to quickly find ant type / task
      documentation.
 Java:
-   - Utilizing vim’s new dictionary based completion results.
+   - Utilizing vim's new dictionary based completion results.
    - Added |:JavaConstructor|.
    - |:JavaImpl| now supports overriding constructors.
    - Added |:JavaDocComment| command to add or update javadocs
      comment for the element under the cursor.
    - Added :JavaRegex for testing java regular expressions.
    - JDT classpath_variables.properties no longer requires system
-     property placeholder to use ‘_’ instead of ‘.’.
+     property placeholder to use '_' instead of '.'.
    - Velocity templates broken up into more logical templates to
      ease customization.
    - |:JavaGetSet| now has variable to determine whether or not to
@@ -1349,12 +1342,12 @@ Vim:
    - Added groovy script based ctags implementation for use with the
      vim taglist plugin.
    - All of the functionality that previously placed results /
-     errors into the quickfix window, now utilizes vim’s new location
+     errors into the quickfix window, now utilizes vim's new location
      list functionality.
    - Added web lookup commands.
    - Added vim script function / global variable searching.
    - Added vim doc lookup.
-   - Various improvements to ‘sign’ support for marking errors,
+   - Various improvements to 'sign' support for marking errors,
      warnings, etc.
 Xml:
    - Xml validation now caches remote entities (like dtds).
@@ -1377,8 +1370,8 @@ Bug Fixes:
    - Java import command is now restricted to the current project.
    - Java src file location (for almost all java commands) now uses
      the full path to find the file in eclipse rather than build the
-     path from the file’s package declaration and class name.  Fixes
-     cases where the package name doesn’t match up with the folder
+     path from the file's package declaration and class name.  Fixes
+     cases where the package name doesn't match up with the folder
      structure.
    - Xml validation errors that occur when no dtd is defined are
      filtered out (limitation of using xerces to support jdk 1.4).
@@ -1428,14 +1421,13 @@ Vim:
      highlight varibles.
    - Removed all default key mappings. See the suggested set of
      mappings.
-   - Now utilizing vim’s autoload functionality to load functions on
+   - Now utilizing vim's autoload functionality to load functions on
      demand.
      One vim file was moved as a result, so you should delete the old
      file when upgrading.
 
-     Warning:
+     Warning: - ftplugin/java/eclim_util.vim removed.
 
-       - ftplugin/java/eclim_util.vim removed.
 Git Log (1.1.1)
 (https://github.com/ervandew/eclim/compare/1.1.0...1.1.1)
 
@@ -1447,16 +1439,16 @@ Git Log (1.1.1)
 
 Bug Fixes:
    - Code completion, searching, etc fixed on files with fileformat
-     == ‘dos’.
+     == 'dos'.
    - Several other minor fixes and enhancements.
 Java:
-   - Source validation (vim-java-validate).
-   - Javadoc (vim-java-javadoc) viewing.
+   - Source validation (|vim-java-validate|).
+   - Javadoc (|vim-java-javadoc|) viewing.
    - Override/Impl (|:JavaImpl|) stub generation.
    - Bean getter/setter (|:JavaGetSet|) generation.
-   - Junit (vim-java-unittests) test method stub generation.
-   - Alternate searching (vim-java-search) in code bases outside of
-     an eclipse project.
+   - Junit (|vim-java-unittests|) test method stub generation.
+   - Alternate searching (|vim-java-search|) in code bases outside
+     of an eclipse project.
    - Code correction (|:JavaCorrect|) via eclipse quickfix
      functionality.
    - Support for viewing source files located in archives (zip, jar)
@@ -1465,7 +1457,7 @@ Java:
      results that do not have a corresponding source file attached.
    - Added some handy abbreviations.
    - Added validation of the .classpath file when saving.  Errors
-     are then reported via vim’s quickfix.
+     are then reported via vim's quickfix.
 Vim:
    - A few vim scripts were renamed, so you will need to delete the
      old file when upgrading.

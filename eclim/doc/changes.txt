@@ -3,6 +3,37 @@
 History of Changes
 ******************
 
+*2.18.0*
+
+
+2.18.0 (Jan. 09, 2021)
+======================
+
+Eclim:
+   - Eclim updated for Eclipse 4.18 (2020-12), so java 11 or newer
+     is also required.
+Removals:
+   Note: Since eclim's inception 15 years ago, some better
+     alternatives have been created, especially in the last 2-5 years.
+     The creation of the Language Server Protocol
+     (https://langserver.org/) in particular provides the means for
+     IDEs, etc to expose their functionality to editors like vim. So
+     instead of trying to solely maintain all of eclim's features,
+     I've decided to strip out much of the stuff I don't use and refer
+     people to actively maintained projects that hopefully have the
+     time and resources to keep their features current and expand on
+     them. So below I've listed several plugins/features that have
+     been removed from eclim.
+
+   - Android: google stopped supporting eclipse years ago.
+   - C/C++
+   - Php
+   - Ruby
+   - Groovy
+   - Scala: Metals (https://scalameta.org/metals/) looks like a good
+     alternative that supports LSP + Vim.
+   - Vimplugin: this was never part of eclim's goal, just seemed
+     like something that was easy enough to include at the time.
 *2.8.0*
 
 
@@ -83,23 +114,22 @@ Eclim:
 Install:
    - Fixed unattended installation.
 Eclim:
-   - Updated the search behavior across all eclim’s supported
-     languages to now use vim’s quickfix list instead of the location
+   - Updated the search behavior across all eclim's supported
+     languages to now use vim's quickfix list instead of the location
      list, and to only do so if there is more than one result.
-   - Updated eclim’s sign support for quickfix results to now be
+   - Updated eclim's sign support for quickfix results to now be
      disabled by default.
-   - Updated eclim’s signs to use more unique ids to support
+   - Updated eclim's signs to use more unique ids to support
      multiple different sign types on a single line and to avoid
      clashing with other plugins that may be setting signs on the same
      lines as eclim.
 Project:
-   - Added a |:ProjectRun| command to invoke your project’s eclipse
+   - Added a :ProjectRun command to invoke your project's eclipse
      run configuration.  Thanks to Daniel Leong
    - Added |:ProjectImportDiscover| to bulk import projects from a
      common parent directory.  Thanks to Kannan Rajah
 Java:
-   - Added support for java debugging (vim-java-debug).  Thanks to
-     Kannan Rajah
+   - Added support for java debugging.  Thanks to Kannan Rajah
    - Added a |:JavaNew| command to create new classes, interfaces,
      etc in your project.  Thanks to Daniel Leong
    - Added ability to configure :JavaImpl to insert methods at the
@@ -109,10 +139,10 @@ Java:
      (vim-java-search#org-eclim-java-search-sort) the results by
      relative path.  Thanks to Kannan Rajah
 Groovy:
-   - Added support for groovy validation (vim-groovy-validate) and
-     code completion (vim-groovy-complete).  Thanks to Yves Zoundi
+   - Added support for groovy validation and code completion.
+     Thanks to Yves Zoundi
 Python:
-   - Fixed eclim’s python support to work against the pydev 3.9.1
+   - Fixed eclim's python support to work against the pydev 3.9.1
 Scala:
    - Scala support has been re-enabled now that ScalaIDE 4.0.0 for
      Luna has been released.
@@ -128,7 +158,7 @@ Eclim:
    - :EclimSettings renamed to :WorkspaceSettings to better reflect
      what is being edited.
    - Added :VimSettings (|vim-core-eclim#:VimSettings|) command to
-     make viewing/editing of eclim’s vim client settings easier.
+     make viewing/editing of eclim's vim client settings easier.
    - All eclim make based commands (:Ant, :Mvn, etc.) will now use
      dispatch (https://github.com/tpope/vim-dispatch) if available. If
      you would like to disable this behavior, add the following to
@@ -141,9 +171,9 @@ Eclim:
    - Lot of bugs have also been fixed.
 Scala:
    - Scala support is disabled in this release. I tried waiting for
-     a final release of ScalaIDE 4.0.0 for Luna, but I don’t want to
-     hold up the rest of eclim any longer. If you want to use eclim’s
-     scala support, you’ll need to install the ScalaIDE 4.0.0
+     a final release of ScalaIDE 4.0.0 for Luna, but I don't want to
+     hold up the rest of eclim any longer. If you want to use eclim's
+     scala support, you'll need to install the ScalaIDE 4.0.0
      milestone and build eclim from the master git branch.
    Git Log (2.4.0) (https://github.com/ervandew/eclim/compare/2.3.4...2.4.0)
  *1.7.19*
@@ -203,12 +233,12 @@ Java:
    - Some of the eclipse java code completion settings are now
      available via :ProjectSettings.
 Javascript:
-   - Let tern supersede eclim’s limited javascript completion.
+   - Let tern supersede eclim's limited javascript completion.
 Maven/Ivy:
    - Removed dependency searching since the search provider no
      longer exists.
 Python:
-   - Eclim’s python support been re-written to use pydev instead of
+   - Eclim's python support been re-written to use pydev instead of
      rope.
      Note: Any exiting eclim python projects you have should be
        re-created with the new python nature:>
@@ -221,7 +251,7 @@ Python:
 Scala:
    - Disabled use of temp files which could cause some validation
      errors.
-   - Added support for automated imports (|:ScalaImport|).
+   - Added support for automated imports.
 Xml:
    - Fixed validation of xml files with no dtd/schema to not raise
      errors on missing dtd for non-english users.
@@ -269,7 +299,7 @@ Php:
      searching and code completion has changed in Kepler which may
      result in searching / code completion not returning any results,
      both in eclim and in the standard eclipse php editor.  To fix
-     this you’ll need to stop eclipse, remove the old index, and then
+     this you'll need to stop eclipse, remove the old index, and then
      restart:>
 
         $ rm -r <your workspace>/.metadata/.plugins/org.eclipse.dltk.core.index.sql.h2/
@@ -285,7 +315,7 @@ Scala:
      eclim (1.7.17) still supports the Scala 2.9.x version of Scala
      IDE 3.0.0.
 Xml:
-   - |:XmlFormat| now uses the DOM3 APIs to improve the formatted
+   - XmlFormat now uses the DOM3 APIs to improve the formatted
      result, honoring your textwidth and indent settings.
    Git Log (2.3.0) (https://github.com/ervandew/eclim/compare/2.2.7...2.3.0)
    Git Log (1.7.17) (https://github.com/ervandew/eclim/compare/1.7.16...1.7.17)
@@ -305,7 +335,7 @@ Php:
    Warning: The format of the h2 database used for php searching and
      code completion has changed in Kepler which may result in
      searching / code completion not returning any results, both in
-     eclim and in the standard eclipse php editor. To fix this you’ll
+     eclim and in the standard eclipse php editor. To fix this you'll
      need to stop eclipse, remove the old index, and then restart:>
 
         $ rm -r <your workspace>/.metadata/.plugins/org.eclipse.dltk.core.index.sql.h2/
@@ -326,14 +356,15 @@ Vimplugin:
      now disabled by default, but when enabled, it should be less
      likely to have unintended side affects.
 Cygwin:
-   - Performance optimization for user’s with many projects.
+   - Performance optimization for user's with many projects.
 Installer:
    - The installer will now properly shutdown eclimd instances
      registered using the old non-json format.
 Docs:
-   - Expanded the developer docs (development-index) to include docs
-     on creating new commands (development-commands) along with some
-     of the basics for adding new eclim plugins (development-plugins).
+   - Expanded the developer docs (|development-index|) to include
+     docs on creating new commands (|development-commands|) along with
+     some of the basics for adding new eclim plugins
+     (|development-plugins|).
    Git Log (2.2.7) (https://github.com/ervandew/eclim/compare/2.2.6...2.2.7)
    Git Log (1.7.16) (https://github.com/ervandew/eclim/compare/1.7.14...1.7.16)
  *2.2.6* *1.7.14*
@@ -352,14 +383,14 @@ Bug Fixes:
 Android:
    - Updated for ADT 22.0.0
 C/C++:
-   - |:CCallHierarchy| now support showing callee tree.
+   - :CCallHierarchy now support showing callee tree.
 Java:
    - |:JavaImpl| now supports anonymous inner classes and will also
      properly handle suggesting methods from a nested superclass.
 Php:
    - Eclim will no longer run php files through html validation by
-     default (see the Php Validation (vim-php-validate) doc for
-     settings to enable html validation).
+     default (see the Php Validation doc for settings to enable html
+     validation).
 Scala:
    - Scala support updated for Scala IDE 3.0.0.
    - Scala now supported on both versions of eclim (Juno and
@@ -367,6 +398,6 @@ Scala:
    Git Log (2.2.6) (https://github.com/ervandew/eclim/compare/2.2.5...2.2.6)
    Git Log (1.7.14) (https://github.com/ervandew/eclim/compare/1.7.13...1.7.14)
 
-Eclim Changes Archive (archive-changes)
+Eclim Changes Archive (|archive-changes|)
 
 vim:ft=eclimhelp

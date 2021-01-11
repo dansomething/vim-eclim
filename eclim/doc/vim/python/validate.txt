@@ -4,11 +4,11 @@ Python Validation
 *****************
 
 When editing a python file eclim will default to validating the file
-when it is written. Any errors will be added to the current window’s
+when it is written. Any errors will be added to the current window's
 location list (:help location-list) and their corresponding line
-number noted via Vim’s sign functionality.
+number noted via Vim's sign functionality.
 
-If you don’t want python files validated when saving them, you can set
+If you don't want python files validated when saving them, you can set
 the g:EclimPythonValidate variable described in the configuration
 section below.
 
@@ -21,7 +21,7 @@ the command :Validate is available to manual validate the file.
 Configuration
 =============
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimPythonValidate*
 
@@ -29,9 +29,9 @@ Vim Settings (vim-settings)
   validation when saving the file.
   Note: When enabled, syntastic
     (https://github.com/scrooloose/syntastic) is disabled so that
-    eclim and syntastic don’t step on each other. If you’d like to use
-    syntastic over eclim for validation, then simply disable eclim’s
-    validation.If you’d like to disable eclim’s source code validation
+    eclim and syntastic don't step on each other. If you'd like to use
+    syntastic over eclim for validation, then simply disable eclim's
+    validation.If you'd like to disable eclim's source code validation
     for all languages, eclim provides a global variable for that as
     well:>
 
@@ -40,8 +40,8 @@ Vim Settings (vim-settings)
     <
 
 
-- g:EclimValidateSortResults (Default: ‘occurrence’) - If set to
-  ‘severity’, the validation results will be sorted by severity
+- g:EclimValidateSortResults (Default: 'occurrence') - If set to
+  'severity', the validation results will be sorted by severity
   (errors > warnings > info > etc.)
 
 vim:ft=eclimhelp

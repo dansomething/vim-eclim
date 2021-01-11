@@ -9,7 +9,7 @@ of eclim.
 
 *:Tcd*
 
-- :Tcd dir - Mimics vim’s :lcd command but sets the current working
+- :Tcd dir - Mimics vim's :lcd command but sets the current working
   directory local to the current tab instead of just the current
   window.
 *:DiffLastSaved*
@@ -47,11 +47,13 @@ of eclim.
 - :Buffers - Opens a temporary window with a list of all the
   currently listed buffers in vim (like :buffers).  From this list you
   can open any of the files using one of the following shortcuts:
-  - E (shift-e) - Open the file with ‘edit’.
-  - S (shift-s) - Open the file with ‘split’.
-  - V (shift-v) - Open the file with ‘vsplit’.
-  - T (shift-t) - Open the file with ‘tabnew’.
+  - E (shift-e) - Open the file with 'edit'.
+  - S (shift-s) - Open the file with 'split'.
+  - V (shift-v) - Open the file with 'vsplit'.
+  - T (shift-t) - Open the file with 'tabnew'.
   - D (shift-d) - Deletes the buffer and removes it from the list.
+  - O (shift-o) - Delete all hidden buffers and remove them from the
+    list (analogous to :only).
   - ? - View the help buffer.
   In addition to the above mappings you can also use <return> to
   execute the configured default action on the buffer under the
@@ -59,13 +61,13 @@ of eclim.
 
   To configure the default action you can set the following variable:
 
-  g:EclimBuffersDefaultAction (defaults to ‘split’)
+  g:EclimBuffersDefaultAction (defaults to 'split')
 
   Note that eclim will track the tab where buffers are opened and
   closed allowing :Buffers to filter the list to those whose primary
   tab is the current tab, or for buffers not open, show those that
   were last open on the current tab. If however you would like to
-  still see all listed buffers, you can append ‘!’ to the command:
+  still see all listed buffers, you can append '!' to the command:
   :Buffers!
 
   By default entries will be sorted by path name, but you may change
@@ -73,27 +75,27 @@ of eclim.
 
   Configuration
 
-  Vim Settings (vim-settings)
+  Vim Settings (|vim-settings|)
 
   *g:EclimBuffersSort*
-  - g:EclimBuffersSort (defaults to ‘path’)  Supports one of ‘path’,
-    ‘status’ (active or hidden), ‘bufnr’.
+  - g:EclimBuffersSort (defaults to 'path')  Supports one of 'path',
+    'status' (active or hidden), 'bufnr'.
   *g:EclimBuffersSortDirection*
-  - g:EclimBuffersSortDirection (defaults to ‘asc’) Supports one of
-    ‘asc’ or ‘desc’.
+  - g:EclimBuffersSortDirection (defaults to 'asc') Supports one of
+    'asc' or 'desc'.
   *g:EclimBuffersTabTracking*
   - g:EclimBuffersTabTracking (defaults to 1) When set to a non-0
     value, eclim will keep track of which tabs buffers are opened on
     allowing the :Buffers command to filter the list of buffers to
     those accessed by the current tab. As noted above, you can still
-    view all buffers with this option enabled by using :Buffers! (‘!’
+    view all buffers with this option enabled by using :Buffers! ('!'
     appended).
   *g:EclimBuffersDeleteOnTabClose*
   - g:EclimBuffersDeleteOnTabClose (defaults to 0) When set to a
     non-0 value and g:EclimBuffersTabTracking is enabled, then eclim
     will delete any non-active buffers associated with the current tab
     when that tab is closed. The can be useful if you use a tab per
-    project workflow and would like to close a project’s tab and have
+    project workflow and would like to close a project's tab and have
     any buffers for that project deleted as well.
 *:BuffersToggle*
 
@@ -102,7 +104,7 @@ of eclim.
   mapping to quickly open/close the buffers window.
 *:Only*
 
-- :Only - Alternative for vim’s :only command.  The purpose of this
+- :Only - Alternative for vim's :only command.  The purpose of this
   command and the original vim version is to close all but the current
   window.  Unfortunately there is no way to tell the vim version to
   exclude some windows you may wish to keep open (taglist, quickfix,
@@ -110,15 +112,15 @@ of eclim.
   g:EclimOnlyExclude and g:EclimOnlyExcludeFixed variables.
   Configuration
 
-  Vim Settings (vim-settings)
+  Vim Settings (|vim-settings|)
 
   *g:EclimOnlyExclude*
-  - g:EclimOnlyExclude (defaults to ‘^NONE$’) - Regex used to match
+  - g:EclimOnlyExclude (defaults to '^NONE$') - Regex used to match
     buffer names for windows that should not be closed when issuing
     the :Only command.
   *g:EclimOnlyExcludeFixed*
   - g:EclimOnlyExcludeFixed (defaults to 1) When non-0 all fixed
-    windows (ones which have ‘winfixwidth’ or ‘winfixheight’ set) will
+    windows (ones which have 'winfixwidth' or 'winfixheight' set) will
     be preserved when issuing the :Only command.
 *:OpenUrl*
 
@@ -159,13 +161,13 @@ of eclim.
 
   Configuration
 
-  Vim Settings (vim-settings)
+  Vim Settings (|vim-settings|)
 
   *g:EclimOpenUrlInVimPatterns*
   - g:EclimOpenUrlInVimPatterns (Default: []) - Defines a list of
     url patterns to open in Vim via netrw.
   *g:EclimOpenUrlInVimAction*
-  - g:EclimOpenUrlInVimAction (Default: ‘split’) - Defines the
+  - g:EclimOpenUrlInVimAction (Default: 'split') - Defines the
     command used to open files matched by g:EclimOpenUrlInVimPatterns.
 *eclim#web#SearchEngine*
 
@@ -192,7 +194,7 @@ of eclim.
      <
 
      Note that you can supply the arguments to the command just as you
-     would when using the search input via google’s homepage, allowing
+     would when using the search input via google's homepage, allowing
      you to utilize the full querying capabilities of google.
 
   2. The second method is to issue the command with no arguments.

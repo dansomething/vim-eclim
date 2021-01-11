@@ -9,7 +9,7 @@ a file. Using this local history, you can view diffs against
 previously saved versions of your file or revert to one of those
 revisions.
 
-Eclim supports updating eclipse’s local history when writing files
+Eclim supports updating eclipse's local history when writing files
 from vim, but by default this feature is disabled unless gvim was
 started from the eclipse gui, in which case eclim will honor the
 default eclipse editor behavior and update the local history. You can
@@ -66,7 +66,7 @@ Eclipse Settings
 
   And there you can edit your settings as necessary.
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimKeepLocalHistory*
 
@@ -77,9 +77,9 @@ Vim Settings (vim-settings)
   local history.
 *g:EclimHistoryDiffOrientation*
 
-- g:EclimHistoryDiffOrientation (Default: ‘vertical’) - When
+- g:EclimHistoryDiffOrientation (Default: 'vertical') - When
   initiating diffs, this setting controls whether the diff window is
   opened as a horizontal split or vertical.  Supported values include
-  ‘horizontal’ and ‘vertical’.
+  'horizontal' and 'vertical'.
 
 vim:ft=eclimhelp

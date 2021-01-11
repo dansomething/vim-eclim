@@ -26,8 +26,8 @@ Example:
 <
 
 
-To rename the class from ‘Foo’ to ‘Bar’ you simply position the cursor
-over the class name ‘Foo’ and execute:
+To rename the class from 'Foo' to 'Bar' you simply position the cursor
+over the class name 'Foo' and execute:
 
 >
 
@@ -57,7 +57,7 @@ This prompt give you three options:
    The contents of the preview window will vary depending on what you
    are renaming.
 
-   If we are renaming ‘Foo’ to ‘Bar’ the contents would be like so:
+   If we are renaming 'Foo' to 'Bar' the contents would be like so:
 
    >
        other: Rename compilation unit 'Foo.java' to 'Bar.java'
@@ -66,7 +66,7 @@ This prompt give you three options:
 
    <
 
-   If we are renaming the method ‘bar’ to ‘foo’, the contents would
+   If we are renaming the method 'bar' to 'foo', the contents would
    look like so:
 
    >
@@ -79,7 +79,7 @@ This prompt give you three options:
    If the first instance, there is not much to preview.  Since this
    particular class is not referenced anywhere else, the only
    operation eclipse will perform, is to rename the file from
-   ‘Foo.java’ to ‘Bar.java’ which will also update the class name in
+   'Foo.java' to 'Bar.java' which will also update the class name in
    that file.
 
    In the second instance eclipse provides a preview of the actual
@@ -91,7 +91,7 @@ This prompt give you three options:
 
    Once you are satisfied with changes that eclipse will perform, you
    can then execute the refactoring by positioning the cursor over the
-   “|Execute Refactoring|” link and hit <enter>.
+   "|Execute Refactoring|" link and hit <enter>.
 
 3. cancel: Cancel the refactoring (Hitting enter without typing a
    choice or hitting Ctrl-C will also cancel the refactoring).
@@ -100,12 +100,12 @@ Package Renaming
 Renaming a package is performed just like renaming any other element.
 However, the name you supply to the :JavaRename command must be the
 full package name that you are renaming the package to.  For example.
-In sample java file above, if you place the cursor on the ‘org’
-portion of the package declaration, you can rename ‘org’ to ‘com’ by
-running :JavaRename com.  If you want to rename the ‘foo’ package to
-‘baz’ you can do so by running :JavaRename org.baz.  Note that if you
-were to only supply the name ‘baz’, the ‘foo’ package would be moved
-to the same level as ‘org’ and then renamed.
+In sample java file above, if you place the cursor on the 'org'
+portion of the package declaration, you can rename 'org' to 'com' by
+running :JavaRename com.  If you want to rename the 'foo' package to
+'baz' you can do so by running :JavaRename org.baz.  Note that if you
+were to only supply the name 'baz', the 'foo' package would be moved
+to the same level as 'org' and then renamed.
 
 Warning: When renaming a package, the associated directory will also
   be renamed in the underlying file system.  Eclim will do its best to
@@ -158,14 +158,14 @@ which provide the redo counterpart to the undo commands.
 Configuration
 =============
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimRefactorDiffOrientation_java*
 
-- g:EclimRefactorDiffOrientation (Default: ‘vertical’) - Specifies
+- g:EclimRefactorDiffOrientation (Default: 'vertical') - Specifies
   the orientation used when previewing a refactoring and performing a
   diff split between the current file contents and the changes to be
-  performed by the refactoring.  Possible values include ‘vertical’ or
-  ‘horizontal’.
+  performed by the refactoring.  Possible values include 'vertical' or
+  'horizontal'.
 
 vim:ft=eclimhelp

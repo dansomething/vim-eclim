@@ -40,11 +40,11 @@ under the cursor using one of the following key bindings:
 Configuration
 -------------
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimJavaHierarchyDefaultAction*
 
-- g:EclimJavaHierarchyDefaultAction (defaults to ‘split’) -
+- g:EclimJavaHierarchyDefaultAction (defaults to 'split') -
   Determines the command used to open the type when hitting <enter> on
   the type entry in the hierarchy buffer.
 *:JavaCallHierarchy*
@@ -101,11 +101,11 @@ current project you can use the scope (-s) option:
 Configuration
 -------------
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimJavaCallHierarchyDefaultAction*
 
-- g:EclimJavaCallHierarchyDefaultAction (defaults to ‘split’) -
+- g:EclimJavaCallHierarchyDefaultAction (defaults to 'split') -
   Determines the command used to open the file when hitting <enter> on
   an entry in the hierarchy buffer.
 *:JavaOutline*
@@ -138,11 +138,11 @@ cursor using one of the following key bindings:
 Configuration
 -------------
 
-Vim Settings (vim-settings)
+Vim Settings (|vim-settings|)
 
 *g:EclimJavaOutlineDefaultAction*
 
-- g:EclimJavaOutlineDefaultAction (defaults to ‘split’) - Determines
+- g:EclimJavaOutlineDefaultAction (defaults to 'split') - Determines
   the command used when hitting <enter> on the element under the
   cursor.
 

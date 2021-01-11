@@ -5,8 +5,8 @@ Features
 
 The following is a partial list of eclim features with much more still
 to come.  For more details please see the detailed documentation
-(vim-index).  For a more comprehensive list you can also visit the
-cheatsheet (cheatsheet).
+(|vim-index|).  For a more comprehensive list you can also visit the
+cheatsheet (|cheatsheet|).
 
 
 Eclipse Projects
@@ -16,13 +16,6 @@ Eclipse Projects
 - Easily manage Eclipse .classpath files (support for maven and
   ivy).
 - Quickly and easily manage settings globally or on a project basis.
-
-C/C++
-=====
-
-- Context sensitive code completion.
-- Searching.
-- Source code validation.
 
 Css
 ===
@@ -58,11 +51,6 @@ Java
 - Support for Checkstyle.
 - Validation of log4j xml files.
 
-Android
--------
-
-- Support for creating android projects from vim.
-
 Ant
 ---
 
@@ -83,13 +71,6 @@ JavaScript
 
 - File validation using jsl (http://www.javascriptlint.com/).
 
-Php
-===
-
-- Context sensitive code completion.
-- Searching.
-- Source code validation.
-
 Python
 ======
 
@@ -98,13 +79,6 @@ Python
 - Source code validation.
 - Regular expression testing.
 - Django functionality.
-
-Ruby
-====
-
-- Context sensitive code completion.
-- Searching.
-- Source code validation.
 
 Vim Script
 ==========
@@ -117,7 +91,7 @@ Xml / Dtd / Xsd
 ===============
 
 - Automatic validation (w/ visual marking of errors and warnings).
-- Quickly look up element definition from the current xml file’s dtd
+- Quickly look up element definition from the current xml file's dtd
   or xsd.
 - Context sensitive code completion.
 
@@ -126,6 +100,6 @@ Common Vim Functionality
 
 - Commands to locate a project, workspace, or current file relative
   file and open it (split, edit, or tabnew).
-- Much more…
+- Much more...
 
 vim:ft=eclimhelp
