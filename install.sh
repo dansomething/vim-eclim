@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-V="2.8.0"
+V="2.21.0"
 
 __download() {
   url="$1"

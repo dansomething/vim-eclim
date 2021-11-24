@@ -2,9 +2,9 @@
 
 A mirror of the VIM files from [Eclim][1] to support quick and convenient installation via various plugin managers.
 
-**Version [2.18.0][6]**
+**Version [2.21.0][8]**
 
-*Note, several features have been removed from Eclim. Please see the [Eclim release notes][6] and this [issue][7] for details.*
+*Note, several features were removed from Eclim in version [2.18.0][6]. Please see the [Eclim release notes][6] and this [issue][7] for details.*
 
 # Installation
 
@@ -19,6 +19,12 @@ A mirror of the VIM files from [Eclim][1] to support quick and convenient instal
 *  manual
     *  copy all of the files into your `~/.vim` directory
 
+# File Generation
+
+These files were generated using the following command with paths replaced:
+
+    ./eclim_2.21.0.bin --eclipse=/path/to/Eclipse --vimfiles=/path/to/vim/files --plugins=jdt,wst --yes
+
 [1]: https://github.com/ervandew/eclim
 [2]: https://github.com/tpope/vim-pathogen
 [3]: https://github.com/Shougo/neobundle.vim
@@ -26,3 +32,4 @@ A mirror of the VIM files from [Eclim][1] to support quick and convenient instal
 [5]: https://github.com/junegunn/vim-plug
 [6]: http://eclim.org/changes.html#jan-09-2021
 [7]: https://github.com/ervandew/eclim/issues/606#issuecomment-756864300
+[8]: http://eclim.org/changes.html#nov-10-2021

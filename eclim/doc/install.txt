@@ -12,10 +12,10 @@ following requirements.
 
 - Java Development Kit
   (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  1.8 or greater
+  11 or greater
 - Vim (http://www.vim.org/download.php) 7.1 or greater
 - Eclipse eclipse_version (http://eclipse.org/downloads/index.php)
-- python (2.7 or 3.x)
+- python 3.x
 - make
 - gcc
   Minimum Vim Settings: In order for eclim to function properly, there
@@ -64,17 +64,8 @@ Download
 You can find the official eclim installer on eclim's github releases
 page (https://github.com/ervandew/eclim/releases/):
 
-- eclim_2.18.0.bin
-  (https://github.com/ervandew/eclim/releases/download/2.18.0/eclim_2.18.0.bin)
-
-Third Party Packages
---------------------
-
-As an alternative to the official installer, there are also some
-packages maintained by third parties:
-
-- Arch: aur (eclim) (https://aur.archlinux.org/packages/eclim/), aur
-  (eclim-git) (https://aur.archlinux.org/packages/eclim-git/)
+- eclim_2.21.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.21.0/eclim_2.21.0.bin)
 
 Installing / Upgrading
 ======================
@@ -99,11 +90,11 @@ Step 1: Run the installer
 Note: If you have eclipse running, please close it prior to starting
   the installation procedure.
 
-- First download the installer:  eclim_2.18.0.bin
-  (https://github.com/ervandew/eclim/releases/download/2.18.0/eclim_2.18.0.bin)
+- First download the installer:  eclim_2.21.0.bin
+  (https://github.com/ervandew/eclim/releases/download/2.21.0/eclim_2.21.0.bin)
 - Next run the installer:
   >
-     $ ./eclim_2.18.0.bin
+     $ ./eclim_2.21.0.bin
 
   <
 
@@ -112,6 +103,16 @@ Note: If you have eclipse running, please close it prior to starting
 
   If your machine is behind a proxy, take a look at the instructions
   for running the installer behind a proxy.
+
+  Note: For some versions of eclipse you may see some SLF4J output
+    like so during the install, which can be safely ignored:>
+
+       SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+       SLF4J: Defaulting to no-operation (NOP) logger implementation
+       SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+    <
+
 
 
 Step 2: Test the installation
@@ -127,11 +128,6 @@ If you plan on using eclim along with the eclipse gui, then simply
 start eclipse and open the eclimd view:
 
 Window ‣ Show View ‣ Other ‣ Eclim ‣ eclimd
-
-By default the eclimd view will also be auto opened when you open a
-file using:
-
-Open With ‣ Vim
 
 If you plan on using eclim without the eclipse gui, then:
 
@@ -186,7 +182,7 @@ If you are behind a proxy, you may need to run the installer like so
 
 >
 
-   $ ./eclim_2.18.0.bin --proxy my.proxy:8080
+   $ ./eclim_2.21.0.bin --proxy my.proxy:8080
 
 <
 
@@ -196,7 +192,7 @@ username and password as well:
 
 >
 
-   $ ./eclim_2.18.0.bin --proxy myuser:mypass@my.proxy:8080
+   $ ./eclim_2.21.0.bin --proxy myuser:mypass@my.proxy:8080
 
 <
 
@@ -217,7 +213,7 @@ install:
 
 >
 
-   $ ./eclim_2.18.0.bin \
+   $ ./eclim_2.21.0.bin \
      --yes \
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
@@ -420,7 +416,7 @@ Once eclipse is installed, you can then install eclim normally:
 
 >
 
-   $ ./eclim_2.18.0.bin
+   $ ./eclim_2.21.0.bin
 
 <
 
@@ -439,9 +435,9 @@ When starting Xvfb you may receive some errors regarding font paths
 and possibly dbus and hal, but as long as Xvfb continues to run, you
 should be able to ignore these errors.
 
-The first time you start eclimd you may want to omit the 'start'
-argument so that you can see the output on the console to ensure that
-eclimd starts correctly.
+The first time you start eclimd you may want to omit the '-b' argument
+so that you can see the output on the console to ensure that eclimd
+starts correctly.
 
 Note: When starting the eclim daemon, you must start it as the same
   user who will be running vim.
@@ -466,7 +462,7 @@ To uninstall eclim you can use the eclim installer like so:
 
 >
 
-   $ ./eclim_2.18.0.bin uninstall
+   $ ./eclim_2.21.0.bin uninstall
 
 <
 
@@ -483,7 +479,7 @@ directories:
 
 >
 
-   $ ./eclim_2.18.0.bin
+   $ ./eclim_2.21.0.bin
      --eclipse=/opt/eclipse \
      --vimfiles=$HOME/.vim \
      uninstall
